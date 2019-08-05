@@ -1,0 +1,17 @@
+#pragma once
+
+#include "TktkDxlibWrapper/_DxlibWrapperManager/DxlibWrapperManager.h"
+#include "TktkDxlibWrapper/Assets/LightAssets/LightAssets.h"
+#include "TktkDxlibWrapper/Assets/ModelAssets/ModelAssets.h"
+#include "TktkDxlibWrapper/Assets/ModelAssets/ModelTextureAssets.h"
+#include "TktkDxlibWrapper/Assets/ShaderAssets/VertexShaderAssets.h"
+#include "TktkDxlibWrapper/Assets/ShaderAssets/PixelShaderAssets.h"
+#include "TktkDxlibWrapper/Assets/ShaderAssets/RenderTargetAssets.h"
+#include "TktkDxlibWrapper/Assets/TextureAssets/TextureAssets.h"
+#include "TktkDxlibWrapper/GraphicsWrapper/Graphics.h"
+#include "TktkDxlibWrapper/InputWrapper/GamePad/GamePad.h"
+#include "TktkDxlibWrapper/InputWrapper/GamePad/LatePadInput.h"
+#include "TktkDxlibWrapper/InputWrapper/Keyboard/Keyboard.h"
+#include "TktkDxlibWrapper/InputWrapper/Mouse/Mouse.h"
+#include "TktkDxlibWrapper/SoundWrapper/Sound.h"
+#include "TktkDxlibWrapper/Utility/DXConverter.h"

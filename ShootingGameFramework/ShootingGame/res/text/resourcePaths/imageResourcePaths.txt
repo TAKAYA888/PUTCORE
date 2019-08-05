@@ -1,0 +1,10 @@
+1,res/image/titleLogo.png
+10,res/image/titleCursor.png
+20,res/image/gameStartItem.png
+101,res/image/player.png
+110,res/image/enemy.png
+120,res/image/enemyBoss.png
+130,res/image/playerBullet.png
+140,res/image/explosion.png,1,4
+200,res/image/playerHpGauge.png
+1000,res/image/animSample.png,1,4
