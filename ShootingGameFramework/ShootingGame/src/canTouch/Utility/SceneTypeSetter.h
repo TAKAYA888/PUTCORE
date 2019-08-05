@@ -6,6 +6,10 @@
 #include "../Scene/LoadScene.h"
 #include "../Scene/TitleScene.h"
 #include "../Scene/MainScene.h"
+#include "../Scene/ClearScene.h"
+#include "../Scene/GameOverScene.h"
+#include "../Scene/ResultScene.h"
+#include "../Scene/PauseScene.h"
 
 struct SceneTypeSetter
 {
@@ -15,6 +19,11 @@ struct SceneTypeSetter
 		SceneManager::addScene(LOAD_SCENE, std::make_shared<LoadScene>());
 		SceneManager::addScene(TITLE_SCENE, std::make_shared<TitleScene>());
 		SceneManager::addScene(MAIN_SCENE, std::make_shared<MainScene>());
+		SceneManager::addScene(CLEAR_SCENE, std::make_shared<ClearScene>());
+		SceneManager::addScene(GAMEOVER_SCENE, std::make_shared<GameOverScene>());
+		SceneManager::addScene(RESULT_SCENE, std::make_shared<ResultScene>());
+		SceneManager::addScene(PAUSE_SCENE, std::make_shared<PauseScene>());
+        
 
 		// ‰ŠúƒV[ƒ“‚ğİ’è‚·‚é
 		SceneManager::changeScene(LOAD_SCENE);
