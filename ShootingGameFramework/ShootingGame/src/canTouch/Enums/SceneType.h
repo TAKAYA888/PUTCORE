@@ -11,4 +11,16 @@ enum SceneType
 
 	// メインのシーン
 	MAIN_SCENE = 2,
+
+	// クリアのシーン
+	CLEAR_SCENE = 3,
+
+	// ゲームオーバーのシーン
+	GAMEOVER_SCENE = 4,
+
+	// リザルトのシーン
+	RESULT_SCENE = 5,
+
+	//ポーズのシーン
+	PAUSE_SCENE = 6,
 };
