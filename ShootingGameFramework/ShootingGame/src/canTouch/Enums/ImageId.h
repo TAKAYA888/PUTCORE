@@ -6,6 +6,15 @@ enum ImageId
 	// タイトルロゴの画像
 	IMAGE_TITLE_LOGO = 1,
 
+	// クリアロゴの画像
+	IMAGE_CLEAR_LOGO = 2,
+
+	// ゲームオーバーのロゴの画像
+	IMAGE_GAMEOVER_LOGO = 3,
+
+	// リザルトのロゴの画像
+	IMAGE_RESULT_LOGO = 4,
+
 	// タイトルカーソルの画像
 	IMAGE_TITLE_CURSOR = 10,
 

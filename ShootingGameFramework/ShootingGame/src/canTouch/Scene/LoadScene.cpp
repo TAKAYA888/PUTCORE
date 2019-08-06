@@ -27,7 +27,7 @@ void LoadScene::start()
 void LoadScene::update()
 {
 	// シーンをメインシーンに変更
-	changeScene(TITLE_SCENE);
+	changeScene(GAMEOVER_SCENE);
 }
 
 // シーンの終了時に呼ばれる
