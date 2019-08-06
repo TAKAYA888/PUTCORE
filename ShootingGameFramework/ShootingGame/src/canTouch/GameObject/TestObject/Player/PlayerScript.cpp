@@ -23,6 +23,8 @@ void PlayerScript::update()
 	// ‘Ì—Í‚ª‚OˆÈ‰º‚É‚È‚Á‚½‚ç
 	if (m_curHp <= 0)
 	{
+		//ƒQ[ƒ€ƒI[ƒo[‚ÉˆÚs‚·‚é
+		SceneManager::changeScene(GAMEOVER_SCENE);
 		// Ž©•ª‚ðŽE‚·
 		getGameObject().lock()->destroy();
 	}

@@ -19,6 +19,8 @@ void BossEnemyScript::update()
 	// 体力が０以下になったら
 	if (m_hp <= 0)
 	{
+		//ゲームクリアシーンに移行する
+		SceneManager::changeScene(CLEAR_SCENE);
 		// 自分を殺す
 		getGameObject().lock()->destroy();
 	}
@@ -63,6 +65,7 @@ void BossEnemyScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std
 // 消える直前に呼ばれる
 void BossEnemyScript::onDestroy()
 {
+	
 	GameObjectManager::sendMessage(ENEMY_BOSS_DEAD);
 }
 

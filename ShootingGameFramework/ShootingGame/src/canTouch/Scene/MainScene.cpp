@@ -37,6 +37,7 @@ void MainScene::start()
 // 毎フレーム呼ばれる
 void MainScene::update()
 {
+	
 }
 
 // シーンの終了時に呼ばれる
