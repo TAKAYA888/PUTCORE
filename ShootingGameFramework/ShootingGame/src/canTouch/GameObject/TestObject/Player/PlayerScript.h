@@ -55,11 +55,14 @@ private:
 private:
 
 	// Å‘å‚Ì‘Ì—Í
-	int m_maxHp{ 10 };
+	int m_maxHp{ 3 };
 
 	// Œ»İ‚Ì‘Ì—Í
-	int m_curHp{ 10 };
+	int m_curHp{ 3 };
 
 	// ˆÚ“®‘¬“x
 	float m_moveSpeed;
+
+	//–³“GŠÔ
+	int invincibleTime;
 };

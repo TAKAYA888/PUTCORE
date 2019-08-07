@@ -3,14 +3,46 @@
 #include "../PlayerBullet/PlayerBullet.h"
 #include "../Explosion/Explosion.h"
 
+//#include <string>
+//#include<iostream>
+
 PlayerScript::PlayerScript(float moveSpeed)
 	: m_moveSpeed(moveSpeed)
 {
+	invincibleTime = 0;
 }
 
 // 毎フレーム呼ばれる
 void PlayerScript::update()
 {
+	// タイマーカウントアップ
+	invincibleTime--;
+	if (invincibleTime < 0)
+	{
+		invincibleTime = 0;
+	}
+
+	if ((invincibleTime % 5) == 1)
+	{
+		if (getComponent<Sprite2dDrawer>().lock()->isActive())
+		{
+			getComponent<Sprite2dDrawer>().lock()->setActive(false);
+		}
+		else
+		{
+			getComponent<Sprite2dDrawer>().lock()->setActive(true);
+		}
+	}
+
+	if (invincibleTime > 0)
+	{
+		getComponent<RectCollider>().lock()->setActive(false);
+	}
+	else if (invincibleTime <= 0)
+	{
+		getComponent<RectCollider>().lock()->setActive(true);
+	}
+
 	// 入力による移動
 	inputToMove();
 
@@ -19,6 +51,7 @@ void PlayerScript::update()
 
 	// 入力による発射
 	inputToShot();
+
 
 	// 体力が０以下になったら
 	if (m_curHp <= 0)
@@ -40,7 +73,8 @@ void PlayerScript::onCollisionEnter(GameObjectPtr other)
 		Explosion::create(
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
-
+		//無敵時間を加算する
+		invincibleTime = 90;
 		// 体力を-1する
 		m_curHp--;
 	}
@@ -57,6 +91,8 @@ void PlayerScript::onCollisionStay(GameObjectPtr other)
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 
+		//無敵時間を加算する
+		invincibleTime = 90;
 		// 体力を-1する
 		m_curHp--;
 	}
@@ -94,25 +130,25 @@ void PlayerScript::inputToMove()
 	Vector2 moveVelocity = Vector2::zero;
 
 	// ｗキーの入力時
-	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_W))
+	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP))
 	{
 		moveVelocity.y = -1.0f;
 	}
 
 	// sキーの入力時
-	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_S))
+	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN))
 	{
 		moveVelocity.y = 1.0f;
 	}
 
 	// aキーの入力時
-	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_A))
+	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_LEFT))
 	{
 		moveVelocity.x = -1.0f;
 	}
 
 	// dキーの入力時
-	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_D))
+	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_RIGHT))
 	{
 		moveVelocity.x = 1.0f;
 	}
@@ -127,42 +163,28 @@ void PlayerScript::inputToMove()
 // 入力による回転
 void PlayerScript::inputToRotate()
 {
-	// プレイヤーの位置を取得
-	auto playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
-	// マウスカーソルの位置を取得
-	auto mousePos = Mouse::getCursorPoint();
-
-	// 「プレイヤー」->「マウスカーソル」のベクトルを求める
-	auto playerToMouse = mousePos - playerPos;
-
-	// ２つのベクトルの外積を求める
-	float cross = Vector2::cross(playerToMouse, Vector2::down);
-	// ２つのベクトルの内積を求める
-	float dot = Vector2::dot(playerToMouse, Vector2::down);
-
-	// 逆タンジェントを使って向きたい角度を求める
-	float result = -MathHelper::atan(cross, dot);
-
 	// 向きたい方向へと回転する
-	getComponent<Transform2D>().lock()->setLocalRotationDeg(result);
+	getComponent<Transform2D>().lock()->setLocalRotationDeg(0);
 }
 
 // 入力による発射
 void PlayerScript::inputToShot()
 {
 	// 左クリック入力開始時
-	if (Mouse::getState(InputType::INPUT_BEGIN, MouseButtonType::MOUSE_LEFT_BUTTON))
+	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z))
 	{
-		// 弾の出現座標
-		auto spawnPos = getComponent<Transform2D>().lock()->getWorldPosition();
+		//プレイヤーの座標の受け取り
+		auto playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
-		// 自身の回転角度
-		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
+		// 弾の出現座標座標
+		Vector2 bulletPos;
+		bulletPos.x = playerPos.x + 35.0f;
+		bulletPos.y = playerPos.y + 40.0f;
 
 		// 弾の初期速度
-		auto initVelocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 512.0f;
+		auto initVelocity = Vector2(MathHelper::sin(90), -MathHelper::cos(90)) * 512.0f;
 
 		// プレイヤーの弾を出現
-		PlayerBullet::create(spawnPos, initVelocity);
+		PlayerBullet::create(bulletPos, initVelocity);
 	}
 }

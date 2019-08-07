@@ -7,6 +7,15 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
+#pragma once
+
+#include <TktkIncludePaths.h>
+#include "ProjectIncludePaths.h"
+#ifndef _MBCS
+/*F12を押してジャンプ-> */TktkManual;
+/*F12を押してジャンプ-> */ProjectIncludePaths;
+#endif
+
 #include "PlayerScript.h"
 
 struct Player
@@ -28,7 +37,7 @@ struct Player
 
 		// ２次元の慣性移動
 		player->addComponent(std::make_shared<InertialMovement2D>(
-			3.0f					// 減速率
+			100.0f					// 減速率
 			));
 
 		// 2次元の座標のクランパー
@@ -37,14 +46,16 @@ struct Player
 			SCREEN_SIZE				// 最大座標
 			));
 
+
 		// 円の当たり判定
-		player->addComponent(std::make_shared<CircleCollider>(
+		player->addComponent(std::make_shared<RectCollider>(
 			COLLISION_GROUP_PLAYER,	// 衝突判定のグループ
-			32.0f					// 衝突判定の半径
+			Vector2(32.0f, 32.0f),   // 衝突判定の半径
+			Vector2(15, -10)
 			));
 
 		// 円の当たり判定の範囲の描画
-		player->addComponent(std::make_shared<CircleColliderWireFrameDrawer>(
+		player->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
 			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// 描画するレイヤー
 			Color::red				// 当たり判定の範囲の色
 			));
@@ -58,7 +69,7 @@ struct Player
 
 		// プレイヤーのスクリプト
 		player->addComponent(std::make_shared<PlayerScript>(
-			32.0f	// 移動速度
+			500.0f	// 移動速度
 			));
 
 		// ゲームオブジェクトを追加
