@@ -34,10 +34,12 @@ void PlayerScript::update()
 		// タイマーカウントダウン
 		flashTime -= TktkTime::deltaTime();
 	}
-	std::cout << flashTime << std::endl;
+
+
+	//std::cout << flashTime << std::endl;
 	//// タイマーカウントダウン
 	invincibleTime-= TktkTime::deltaTime();
-	std::cout << invincibleTime << std::endl;
+	//std::cout << invincibleTime << std::endl;
 	//無敵時間を0以下にしない
 	if (invincibleTime < 0)
 	{
@@ -51,6 +53,7 @@ void PlayerScript::update()
 	else if (invincibleTime <= 0)
 	{
 		getComponent<RectCollider>().lock()->setActive(true);
+		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 	}
 
 	// 入力による移動
