@@ -145,32 +145,37 @@ void PlayerScript::inputToMove()
 	// ｗキーの入力時
 	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP))
 	{
-		moveVelocity.y = -1.0f;
+		moveVelocity.y = -3.0f;
 	}
 
 	// sキーの入力時
 	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN))
 	{
-		moveVelocity.y = 1.0f;
+		moveVelocity.y = 3.0f;
 	}
 
 	// aキーの入力時
 	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_LEFT))
 	{
-		moveVelocity.x = -1.0f;
+		moveVelocity.x = -3.0f;
 	}
 
 	// dキーの入力時
 	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_RIGHT))
 	{
-		moveVelocity.x = 1.0f;
+		moveVelocity.x = 3.0f;
 	}
 
-	// 移動方向のベクトルを正規化する
 	moveVelocity = Vector2::normalize(moveVelocity);
 
-	// 移動方向と速度の分だけ力を与える
-	getComponent<InertialMovement2D>().lock()->addForce(moveVelocity * m_moveSpeed);
+	//プレイヤーのポジションを受けとる
+	Vector2 a = getComponent<Transform2D>().lock()->getWorldPosition();
+
+	//プレイヤーの座標に速度を＋
+	Vector2 movePostion = a + moveVelocity * 3;
+
+	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
+
 }
 
 // 入力による回転
