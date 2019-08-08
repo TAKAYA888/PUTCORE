@@ -28,6 +28,8 @@ MyGame::MyGame(const Vector2 & initWindowSize, bool initFullScreenFlag)
 
 void MyGame::initalize()
 {
+	SetOutApplicationLogValidFlag(FALSE);
+
 	Random::randomize();
 
 	Graphics::setUpDxlibScreen(
