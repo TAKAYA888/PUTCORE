@@ -26,8 +26,8 @@ void LoadScene::start()
 // 毎フレーム呼ばれる
 void LoadScene::update()
 {
-	// シーンをメインシーンに変更
-	changeScene(GAMEOVER_SCENE);
+	// シーンをタイトルシーンに変更
+	changeScene(TITLE_SCENE);
 }
 
 // シーンの終了時に呼ばれる

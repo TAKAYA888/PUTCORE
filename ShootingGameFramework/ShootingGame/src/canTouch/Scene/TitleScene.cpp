@@ -15,15 +15,19 @@ void TitleScene::start()
 	TitleLogo::create();
 
 	// タイトルカーソルを生成する
-	TitleCursor::create();
+	// TitleCursor::create();
 
 	// タイトルメニューのゲーム開始項目を生成する
-	GameStartItem::create(Vector2(SCREEN_SIZE.x / 2, 500.0f));
+	// GameStartItem::create(Vector2(SCREEN_SIZE.x / 2, 500.0f));
 }
 
 // 毎フレーム呼ばれる
 void TitleScene::update()
 {
+	if (Keyboard::getState(InputType::INPUT_ENDED, KeyboardKeyType::KEYBOARD_SPACE))
+	{
+		changeScene(MAIN_SCENE);
+	}
 }
 
 // シーンの終了時に呼ばれる
