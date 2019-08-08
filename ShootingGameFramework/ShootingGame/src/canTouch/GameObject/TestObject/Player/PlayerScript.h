@@ -64,5 +64,8 @@ private:
 	float m_moveSpeed;
 
 	//無敵時間
-	int invincibleTime;
+	float invincibleTime;
+
+	//点滅タイマー
+	float flashTime;
 };

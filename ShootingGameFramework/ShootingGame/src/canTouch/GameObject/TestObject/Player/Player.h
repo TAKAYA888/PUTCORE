@@ -37,7 +37,7 @@ struct Player
 
 		// ２次元の慣性移動
 		player->addComponent(std::make_shared<InertialMovement2D>(
-			100.0f					// 減速率
+			10.0f					// 減速率
 			));
 
 		// 2次元の座標のクランパー
@@ -69,7 +69,7 @@ struct Player
 
 		// プレイヤーのスクリプト
 		player->addComponent(std::make_shared<PlayerScript>(
-			500.0f	// 移動速度
+			50.0f	// 移動速度
 			));
 
 		// ゲームオブジェクトを追加

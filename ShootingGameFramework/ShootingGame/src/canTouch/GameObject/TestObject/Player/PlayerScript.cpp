@@ -3,26 +3,21 @@
 #include "../PlayerBullet/PlayerBullet.h"
 #include "../Explosion/Explosion.h"
 
-//#include <string>
-//#include<iostream>
+#include <string>
+#include<iostream>
 
 PlayerScript::PlayerScript(float moveSpeed)
 	: m_moveSpeed(moveSpeed)
 {
 	invincibleTime = 0;
+	flashTime = 0;
 }
 
 // 毎フレーム呼ばれる
 void PlayerScript::update()
 {
-	// タイマーカウントアップ
-	invincibleTime--;
-	if (invincibleTime < 0)
-	{
-		invincibleTime = 0;
-	}
-
-	if ((invincibleTime % 5) == 1)
+	//点滅処理
+	if (flashTime <= 0.0f && invincibleTime>0)
 	{
 		if (getComponent<Sprite2dDrawer>().lock()->isActive())
 		{
@@ -32,8 +27,23 @@ void PlayerScript::update()
 		{
 			getComponent<Sprite2dDrawer>().lock()->setActive(true);
 		}
+		flashTime = 0.12f;
 	}
-
+	else if(flashTime > 0.0f&& invincibleTime > 0)
+	{
+		// タイマーカウントダウン
+		flashTime -= TktkTime::deltaTime();
+	}
+	std::cout << flashTime << std::endl;
+	//// タイマーカウントダウン
+	invincibleTime-= TktkTime::deltaTime();
+	std::cout << invincibleTime << std::endl;
+	//無敵時間を0以下にしない
+	if (invincibleTime < 0)
+	{
+		invincibleTime = 0;
+	}
+	//無敵時間の処理
 	if (invincibleTime > 0)
 	{
 		getComponent<RectCollider>().lock()->setActive(false);
@@ -74,7 +84,7 @@ void PlayerScript::onCollisionEnter(GameObjectPtr other)
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 		//無敵時間を加算する
-		invincibleTime = 90;
+		invincibleTime = 1.5f;
 		// 体力を-1する
 		m_curHp--;
 	}
@@ -92,7 +102,7 @@ void PlayerScript::onCollisionStay(GameObjectPtr other)
 		);
 
 		//無敵時間を加算する
-		invincibleTime = 90;
+		invincibleTime = 1.5f;
 		// 体力を-1する
 		m_curHp--;
 	}
