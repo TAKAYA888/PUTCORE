@@ -37,7 +37,10 @@ void MainScene::start()
 // 毎フレーム呼ばれる
 void MainScene::update()
 {
-	
+	if (Keyboard::getState(InputType::INPUT_ENDED, KeyboardKeyType::KEYBOARD_TAB))
+	{
+		changeScene(PAUSE_SCENE);
+	}
 }
 
 // シーンの終了時に呼ばれる
