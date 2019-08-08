@@ -2,6 +2,7 @@
 2,res/image/clear_logo.png
 3,res/image/gameover.png
 4,res/image/result.png
+6,res/image/pause.png
 10,res/image/titleCursor.png
 20,res/image/gameStartItem.png
 101,res/image/player.png

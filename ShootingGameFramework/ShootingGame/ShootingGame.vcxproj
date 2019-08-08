@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClCompile Include="src\canTouch\GameObject\GameClearObject\GameClearLogo\GameClearLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\GameOverObject\GameOverLogo\GameOverLogoScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyBullet\EnemyNormalBullet\EnemyNormalBulletScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyGenerator\EnemyGeneratorScript.cpp" />
@@ -170,6 +171,8 @@
     <ClInclude Include="src\canTouch\GameObject\LoadObject\BgmLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\ImageLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\SeLoadObject.h" />
+    <ClInclude Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogo.h" />
+    <ClInclude Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogoScript.h" />
     <ClInclude Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogo.h" />
     <ClInclude Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogoScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\AnimSample\AnimSample.h" />

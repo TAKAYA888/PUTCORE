@@ -15,6 +15,10 @@ enum ImageId
 	// リザルトのロゴの画像
 	IMAGE_RESULT_LOGO = 4,
 
+
+	//ポーズのロゴの画像
+	IMAGE_PAUSE_LOGO = 6,
+
 	// タイトルカーソルの画像
 	IMAGE_TITLE_CURSOR = 10,
 
