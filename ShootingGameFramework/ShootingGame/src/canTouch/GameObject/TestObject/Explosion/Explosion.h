@@ -42,7 +42,7 @@ struct Explosion
 
 		// サウンドを再生するコンポーネント
 		explosion->addComponent(std::make_shared<SePlayer>(
-			TEST_SE	// サウンドの名前
+			enemy_damage 	// サウンドの名前
 			));
 
 		// 爆発のスクリプトを生成する
