@@ -5,6 +5,7 @@
 6,res/image/pause.png
 10,res/image/titleCursor.png
 20,res/image/gameStartItem.png
+50,res/image/background1.png
 101,res/image/player.png
 110,res/image/enemy.png
 120,res/image/enemyBoss.png
