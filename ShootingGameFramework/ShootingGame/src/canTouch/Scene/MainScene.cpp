@@ -43,8 +43,20 @@ void MainScene::update()
 {
 	if (Keyboard::getState(InputType::INPUT_ENDED, KeyboardKeyType::KEYBOARD_TAB))
 	{
-		changeScene(PAUSE_SCENE);
+		float TimeScale = 0.0f;
+		TimeScale = TktkTime::getTimeScale();
+		if (TimeScale >= 0.9f) {
+			// 時間の経過速度を0にする
+			TktkTime::setTimeScale(0.0f);
+			GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<PlayerScript>().lock()->setActive(false);
+		}
+		else {
+			// 時間の経過速度を1にする
+			GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<PlayerScript>().lock()->setActive(true);
+			TktkTime::setTimeScale(1.0f);
+		}
 	}
+
 }
 
 // シーンの終了時に呼ばれる
