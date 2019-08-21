@@ -25,6 +25,9 @@ enum ImageId
 	// タイトルメニューのゲームスタートの項目の画像
 	IMAGE_TITLE_MENU_GAMESTART = 20,
 
+	//ゲームプレイ画面の背景の画像
+	IMAGE_PLAY_BG = 50,
+
 	// プレイヤーの画像
 	IMAGE_PLAYER = 101,
 

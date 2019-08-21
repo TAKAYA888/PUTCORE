@@ -1,5 +1,6 @@
 #include "MainScene.h"
 
+#include "../GameObject/TestObject/BackGround/BackGround1/BackGround_1.h"
 #include "../GameObject/TestObject/Player/Player.h"
 #include "../GameObject/TestObject/EnemyGenerator/EnemyGenerator.h"
 #include "../GameObject/TestObject/PlayerHpUi/PlayerHpUi.h"
@@ -15,6 +16,9 @@ MainScene::MainScene()
 // シーンの開始時に呼ばれる
 void MainScene::start()
 {
+	//背景１を生成する
+	BackGround_1::create();
+
 	// プレイヤーを生成する
 	Player::create(SCREEN_SIZE / 2);
 
