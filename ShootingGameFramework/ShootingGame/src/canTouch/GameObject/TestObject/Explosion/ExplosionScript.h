@@ -23,6 +23,9 @@ public:
 	// 毎フレーム呼ばれる
 	void update();
 
+	// メッセージ受信時に呼ばれる
+	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
+
 private:
 
 	float m_explosionTimer{ 0.0f };
