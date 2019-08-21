@@ -54,7 +54,9 @@ struct NormalEnemy
 			IMAGE_ENEMY,				// 描画する画像のID
 			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
 			));
-
+		enemy->addComponent(std::make_shared<SePlayer>(
+			enemy_dead// サウンドの名前
+			));
 		// エネミーのスクリプト
 		enemy->addComponent(std::make_shared<NormalEnemyScript>());
 

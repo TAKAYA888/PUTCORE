@@ -1,2 +1,3 @@
 1,res/sound/se/damage.wav
 2,res/sound/se/enemy_damage.wav
+3,res/sound/se/enemy_dead.wav

@@ -19,6 +19,7 @@ void NormalEnemyScript::update()
 	// ‘Ì—Í‚ª‚OˆÈ‰º‚É‚È‚Á‚½‚ç
 	if (m_hp <= 0)
 	{
+		getComponent<SePlayer>().lock()->playSe();
 		// Ž©•ª‚ðŽE‚·
 		getGameObject().lock()->destroy();
 	}
