@@ -48,11 +48,13 @@ void MainScene::update()
 		if (TimeScale >= 0.9f) {
 			// 時間の経過速度を0にする
 			TktkTime::setTimeScale(0.0f);
+			// PlayerScriptを無効化
 			GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<PlayerScript>().lock()->setActive(false);
 		}
 		else {
 			// 時間の経過速度を1にする
 			GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<PlayerScript>().lock()->setActive(true);
+			// PlayerScriptを有効化
 			TktkTime::setTimeScale(1.0f);
 		}
 	}
