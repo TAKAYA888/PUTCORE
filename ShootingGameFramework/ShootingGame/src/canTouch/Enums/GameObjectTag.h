@@ -15,6 +15,9 @@ enum GameObjectTag
 	// プレイヤー
 	GAME_OBJECT_TAG_PLAYER,
 
+	//コア
+	GAME_OBJECT_TAG_CORE,
+
 	// 敵
 	GAME_OBJECT_TAG_ENEMY,
 
@@ -23,6 +26,9 @@ enum GameObjectTag
 
 	// プレイヤーの弾
 	GAME_OBJECT_TAG_PLAYER_BULLET,
+
+	//コアの弾
+	GAME_OBJECT_TAG_CORE_BULLET,
 
 	// 敵の弾
 	GAME_OBJECT_TAG_ENEMY_BULLET,

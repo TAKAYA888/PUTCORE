@@ -21,6 +21,9 @@ enum CollisionGroup
 	// プレイヤーの弾の衝突判定
 	COLLISION_GROUP_PLAYER_BULLET,
 
+	//コアの弾の衝突判定
+	COLLISION_GROUP_CORE_BULLET,
+
 	// 敵の弾の衝突判定
 	COLLISION_GROUP_ENEMY_BULLET,
 };

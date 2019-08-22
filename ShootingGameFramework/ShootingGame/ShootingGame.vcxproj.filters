@@ -93,6 +93,15 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\BackGround\BackGround1\BackGround_1Script.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Core\StayCore\CoreScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Core\setCore\setCoreScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\CoreBullet\CoreBulletScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dontTouch\MyGame\MyGame.h">
@@ -270,6 +279,21 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TestObject\BackGround\BackGround1\BackGround_1Script.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Core\StayCore\CoreScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Core\StayCore\Core.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Core\setCore\setCoreScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\CoreBullet\CoreBulletScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\CoreBullet\CoreBullet.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

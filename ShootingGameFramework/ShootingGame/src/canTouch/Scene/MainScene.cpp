@@ -1,5 +1,6 @@
 #include "MainScene.h"
 
+#include "../GameObject/TestObject/Core/StayCore/Core.h"
 #include "../GameObject/TestObject/BackGround/BackGround1/BackGround_1.h"
 #include "../GameObject/TestObject/Player/Player.h"
 #include "../GameObject/TestObject/EnemyGenerator/EnemyGenerator.h"
@@ -21,6 +22,9 @@ void MainScene::start()
 
 	// プレイヤーを生成する
 	Player::create(SCREEN_SIZE / 2);
+
+	//コアを生成する
+	Core::create(SCREEN_SIZE / 2);
 
 	// プレイヤーのHPゲージを生成する
 	PlayerHpUi::create(Vector2(10.0f, 10.0f));

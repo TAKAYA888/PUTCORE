@@ -16,11 +16,13 @@ struct CollisionGroupSetter
 		ClassFuncProcessor::addCollisionGroup(COLLISION_GROUP_ENEMY);
 		ClassFuncProcessor::addCollisionGroup(COLLISION_GROUP_PLAYER_BULLET);
 		ClassFuncProcessor::addCollisionGroup(COLLISION_GROUP_ENEMY_BULLET);
+		ClassFuncProcessor::addCollisionGroup(COLLISION_GROUP_CORE_BULLET);
 
 		// è’ìÀîªíËÇçsÇ§ëgÇ›çáÇÌÇπÇê›íËÇ∑ÇÈ
 		ClassFuncProcessor::addCollisionGroupPair(COLLISION_GROUP_CURSOR, COLLISION_GROUP_MENU_ITEM);
 		ClassFuncProcessor::addCollisionGroupPair(COLLISION_GROUP_PLAYER, COLLISION_GROUP_ENEMY);
 		ClassFuncProcessor::addCollisionGroupPair(COLLISION_GROUP_PLAYER, COLLISION_GROUP_ENEMY_BULLET);
 		ClassFuncProcessor::addCollisionGroupPair(COLLISION_GROUP_ENEMY, COLLISION_GROUP_PLAYER_BULLET);
+		ClassFuncProcessor::addCollisionGroupPair(COLLISION_GROUP_ENEMY, COLLISION_GROUP_CORE_BULLET);
 	}
 };

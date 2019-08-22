@@ -31,6 +31,9 @@ enum ImageId
 	// プレイヤーの画像
 	IMAGE_PLAYER = 101,
 
+	//コアの画像
+	IMAGE_CORE=102,
+
 	// エネミーの画像
 	IMAGE_ENEMY = 110,
 
