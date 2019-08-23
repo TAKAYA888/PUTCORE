@@ -21,6 +21,9 @@ enum GameObjectTag
 	// 敵
 	GAME_OBJECT_TAG_ENEMY,
 
+	//ザコウイルス1-1
+	GAME_OBJECT_TAG_VIRYS_ENEMY1,
+
 	// ボス
 	GAME_OBJECT_TAG_ENEMY_BOSS,
 

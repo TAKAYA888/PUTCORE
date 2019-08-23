@@ -142,6 +142,7 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyGenerator\EnemyGeneratorScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemyScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\NormalEnemy\NormalEnemyScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-1\VirusEnemyScript1-1.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Explosion\ExplosionScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\GameEndChecker\GameEndCheckerScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\PlayerBullet\PlayerBulletScript.cpp" />
@@ -195,6 +196,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemyScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\NormalEnemy\NormalEnemy.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\NormalEnemy\NormalEnemyScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-1\VirusEnemy1-1.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-1\VirusEnemyScript1-1.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion\Explosion.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion\ExplosionScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\GameEndChecker\GameEndChecker.h" />
@@ -225,6 +228,10 @@
     <ClInclude Include="src\dontTouch\MyGame\MyGame.h" />
     <ClInclude Include="src\dontTouch\ProjectIncludePaths\ProjectIncludePaths.h" />
     <ClInclude Include="src\canTouch\Utility\SceneTypeSetter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Desktop\ゲームプログラマーサークル\３班-20190820T045706Z-001\３班\res\image\zako\zako_virus1.png" />
+    <Image Include="..\..\..\..\Desktop\ゲームプログラマーサークル\３班-20190820T045706Z-001\３班\res\image\zako\zako_virus2.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

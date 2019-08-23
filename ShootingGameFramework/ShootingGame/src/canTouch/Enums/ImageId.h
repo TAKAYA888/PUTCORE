@@ -32,10 +32,13 @@ enum ImageId
 	IMAGE_PLAYER = 101,
 
 	//コアの画像
-	IMAGE_CORE=102,
+	IMAGE_CORE = 102,
 
 	// エネミーの画像
 	IMAGE_ENEMY = 110,
+
+	//ウイルスエネミー2の画像
+	IMAGE_VIRUS_ENEMY_TWO = 112,
 
 	// エネミーボスの画像
 	IMAGE_ENEMY_BOSS = 120,

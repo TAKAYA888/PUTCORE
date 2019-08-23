@@ -102,6 +102,9 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\CoreBullet\CoreBulletScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-1\VirusEnemyScript1-1.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dontTouch\MyGame\MyGame.h">
@@ -296,5 +299,19 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\CoreBullet\CoreBullet.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-1\VirusEnemy1-1.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-1\VirusEnemyScript1-1.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Desktop\ゲームプログラマーサークル\３班-20190820T045706Z-001\３班\res\image\zako\zako_virus2.png">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Desktop\ゲームプログラマーサークル\３班-20190820T045706Z-001\３班\res\image\zako\zako_virus1.png">
+      <Filter>リソース ファイル</Filter>
+    </Image>
   </ItemGroup>
 </Project>
