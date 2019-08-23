@@ -12,17 +12,36 @@ class Sprite2dDrawer
 {
 public:
 
+	// ”½“]ƒrƒbƒgƒtƒ‰ƒO
+	enum ReverseFlag
+	{
+		// …•½•ûŒü‚Ì”½“]i‚’¼‚Èü‚ğ²‚É‚µ‚Ä”½“]j
+		HORIZONTAL_REVERSE = 1 << 0,
+
+		// ‚’¼•ûŒü‚Ì”½“]i…•½‚Èü‚ğ²‚É‚µ‚Ä”½“]j
+		VERTICAL_REVERSE = 1 << 1,
+
+		// ”½“]–³‚µ
+		NOT_REVERSE = 0,
+	};
+
+public:
+
 	Sprite2dDrawer(
 		float drawPriority,											// •`‰æ‚·‚éƒŒƒCƒ„[‚Ìí—Ş
 		int spriteId,												// •`‰æ‚·‚é‰æ‘œ‚Ìí—Ş
-		const Vector2& spriteCenterPosRate = Vector2(0.5f, 0.5f)	// •`‰æ‚·‚é‰æ‘œ‚Ì’†SˆÊ’uiŠ„‡ 0.0`1.0j
+		const Vector2& spriteCenterPosRate = Vector2(0.5f, 0.5f),	// •`‰æ‚·‚é‰æ‘œ‚Ì’†SˆÊ’uiŠ„‡ 0.0`1.0j
+		float blendParam = 1.0f,									// •`‰æ‚·‚é‰æ‘œ‚Ì“§‰ß“x
+		unsigned int reverseFlag = NOT_REVERSE						// •`‰æ‚·‚é‰æ‘œ‚ğ”½“]‚·‚é‚©
 	);
 
 	Sprite2dDrawer(
 		float drawPriority,											// •`‰æ‚·‚éƒŒƒCƒ„[‚Ìí—Ş
 		int spriteId,												// •`‰æ‚·‚é‰æ‘œ‚Ìí—Ş
 		int splitGraphIndex,										// •`‰æ‚·‚é‰æ‘œ‚Ì•ªŠ„”Ô†
-		const Vector2& spriteCenterPosRate = Vector2(0.5f, 0.5f)	// •`‰æ‚·‚é‰æ‘œ‚Ì’†SˆÊ’uiŠ„‡ 0.0`1.0j
+		const Vector2& spriteCenterPosRate = Vector2(0.5f, 0.5f),	// •`‰æ‚·‚é‰æ‘œ‚Ì’†SˆÊ’uiŠ„‡ 0.0`1.0j
+		float blendParam = 1.0f,									// •`‰æ‚·‚é‰æ‘œ‚Ì“§‰ß“x
+		unsigned int reverseFlag = NOT_REVERSE						// •`‰æ‚·‚é‰æ‘œ‚ğ”½“]‚·‚é‚©
 	);
 
 public:
@@ -48,6 +67,15 @@ public:
 		const Vector2& clippingRightBottomPos	// Ø‚è”²‚­‰E‰ºÀ•W
 		);
 
+	// •`‰æ‚·‚é‰æ‘œ‚Ì“§‰ß“x‚ğÄİ’è
+	void setBlendParam(float blendParam);
+
+	// •`‰æ‚·‚é‰æ‘œ‚Ì“§‰ß“x‚ğæ“¾
+	float getBlendParam() const;
+
+	// •`‰æ‚·‚é‰æ‘œ‚ğ”½“]ƒtƒ‰ƒO‚ğÄİ’è
+	void setReverseFlag(unsigned int reverseFlag);
+
 private:
 
 	std::weak_ptr<Transform2D> m_transform2D;
@@ -57,6 +85,10 @@ private:
 	int m_splitGraphIndex{ -1 };
 
 	Vector2 m_spriteCenterPosRate{ Vector2(0.5f, 0.5f) };
+
+	float m_blendParam;
+
+	unsigned int m_reverseFlag{ NOT_REVERSE };
 
 	bool m_useClipping{ false };
 

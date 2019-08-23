@@ -14,7 +14,8 @@ class StateMachine
 public:
 
 	// std::shared_ptr<StateMachine>を生成する
-	static std::shared_ptr<StateMachine> create(
+	static std::weak_ptr<StateMachine> create(
+		GameObjectPtr user,
 		int stateType	// このステートマシンのステートタイプ
 	);
 

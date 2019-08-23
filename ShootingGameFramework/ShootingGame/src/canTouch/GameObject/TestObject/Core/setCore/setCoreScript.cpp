@@ -61,6 +61,10 @@ void setCoreScript::onCollisionExit(GameObjectPtr other)
 
 void setCoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
+	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
+	{
+		getGameObject().lock()->destroy();
+	}
 }
 
 void setCoreScript::inputToMove()
