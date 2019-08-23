@@ -22,6 +22,9 @@ enum ImageId
 	// タイトルカーソルの画像
 	IMAGE_TITLE_CURSOR = 10,
 
+	//スペースを押せという画像
+	IMAGE_PUSH_SPACE = 11,
+
 	// タイトルメニューのゲームスタートの項目の画像
 	IMAGE_TITLE_MENU_GAMESTART = 20,
 
