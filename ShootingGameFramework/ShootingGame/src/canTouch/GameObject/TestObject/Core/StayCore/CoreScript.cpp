@@ -5,6 +5,7 @@
 CoreScript::CoreScript()
 {
 	CoreCoolTime = 10;
+	DrawTime = 0;
 }
 
 void CoreScript::update()
@@ -21,12 +22,22 @@ void CoreScript::update()
 		getComponent<setCoreScript>().lock()->setActive(true);
 		getComponent<CoreScript>().lock()->setActive(false);
 		CoreCoolTime = 10;
+		DrawTime = 0;
 	}
 	else
 	{
 		CoreCoolTime -= TktkTime::deltaTime();
 	}
 
+	if (DrawTime <= 10)
+	{
+		DrawTime += TktkTime::deltaTime();
+		getComponent<AnimatedSprite2d>().lock()->setAnimSpeedRate(1);
+	}
+	else if(DrawTime >10)
+	{
+		getComponent<AnimatedSprite2d>().lock()->setAnimSpeedRate(0);
+	}
 
 }
 
