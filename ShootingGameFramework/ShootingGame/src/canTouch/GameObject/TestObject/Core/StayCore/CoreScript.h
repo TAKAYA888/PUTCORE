@@ -34,6 +34,9 @@ private:
 
 	float m_moveSpeed;
 
-
+	//発射timing
 	float CoreCoolTime;
+
+	//描画タイマー
+	float DrawTime;
 };

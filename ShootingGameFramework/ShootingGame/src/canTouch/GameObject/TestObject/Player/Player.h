@@ -64,6 +64,14 @@ struct Player
 			50.0f	// 移動速度
 			));
 
+		player->addComponent(std::make_shared<AnimatedSprite2d>(
+			IMAGE_PLAYER,	// アニメーションで使用する画像の種類
+			0,					// 最小の左上基準の画像番号
+			5,					// 最大の左上基準の画像番号
+			0.01f,				// 何秒間で次の画像に変わるか
+			true				// アニメーションをループさせるか？
+			));
+
 		// ゲームオブジェクトを追加
 		GameObjectManager::addGameObject(player);
 	}

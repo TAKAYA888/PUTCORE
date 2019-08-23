@@ -33,17 +33,21 @@ void setCoreScript::update()
 		CoreBullet::create(Postion, initVelocity2);
 		CoreBullet::create(Postion, initVelocity3);
 
-		coolTime += 0.2f;
+		coolTime += 0.5f;
 	}
 	else
 	{
 		coolTime -= TktkTime::deltaTime();
 	}
 
-	if (counter >= 10)
+	if (counter >= 5)
 	{
 		getComponent<CoreScript>().lock()->setActive(true);
 		counter = 0;
+	}
+	else
+	{
+		getComponent<AnimatedSprite2d>().lock()->setAnimSpeedRate(-2);
 	}
 }
 

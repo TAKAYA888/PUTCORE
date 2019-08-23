@@ -44,8 +44,11 @@ struct Core
 			0,					// 最小の左上基準の画像番号
 			5,					// 最大の左上基準の画像番号
 			2.0f,				// 何秒間で次の画像に変わるか
-			false				// アニメーションをループさせるか？
+			true				// アニメーションをループさせるか？		
 			));
+
+
+		
 
 		// ２次元画像の描画
 		core->addComponent(std::make_shared<Sprite2dDrawer>(

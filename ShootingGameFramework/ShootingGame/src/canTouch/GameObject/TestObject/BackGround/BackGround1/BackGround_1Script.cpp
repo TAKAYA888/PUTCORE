@@ -10,7 +10,7 @@ void BackGround_1Script::update()
 
 void BackGround_1Script::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
-	if (eventMessageType == DIE_TITLE_OBJECT)
+	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
 	{
 		getGameObject().lock()->destroy();
 	}

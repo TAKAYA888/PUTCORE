@@ -4,9 +4,10 @@
 4,res/image/result.png
 6,res/image/pause.png
 10,res/image/titleCursor.png
+11,res/image/push_space.png
 20,res/image/gameStartItem.png
 50,res/image/background1.png
-101,res/image/player.png
+101,res/image/player.png,1,6
 102,res/image/core.png,1,6
 110,res/image/enemy.png
 112,res/image/zako_virus2.png,1,5

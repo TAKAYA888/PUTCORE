@@ -17,8 +17,9 @@ PlayerScript::PlayerScript(float moveSpeed)
 void PlayerScript::update()
 {
 	//点滅処理
-	if (flashTime <= 0.0f && invincibleTime>0)
+	if (flashTime <= 0.0f && invincibleTime > 0)
 	{
+		//現在ついているか消えているか。
 		if (getComponent<Sprite2dDrawer>().lock()->isActive())
 		{
 			getComponent<Sprite2dDrawer>().lock()->setActive(false);
@@ -29,7 +30,7 @@ void PlayerScript::update()
 		}
 		flashTime = 0.12f;
 	}
-	else if(flashTime > 0.0f&& invincibleTime > 0)
+	else if (flashTime > 0.0f&& invincibleTime > 0)
 	{
 		// タイマーカウントダウン
 		flashTime -= TktkTime::deltaTime();
@@ -38,7 +39,7 @@ void PlayerScript::update()
 
 	//std::cout << flashTime << std::endl;
 	//// タイマーカウントダウン
-	invincibleTime-= TktkTime::deltaTime();
+	invincibleTime -= TktkTime::deltaTime();
 	//std::cout << invincibleTime << std::endl;
 	//無敵時間を0以下にしない
 	if (invincibleTime < 0)
@@ -122,6 +123,7 @@ void PlayerScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::w
 	{
 		getGameObject().lock()->destroy();
 	}
+
 }
 
 // 最大の体力を取得
@@ -172,7 +174,11 @@ void PlayerScript::inputToMove()
 	Vector2 a = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	//プレイヤーの座標に速度を＋
-	Vector2 movePostion = a + moveVelocity * 3;
+
+	//144Hz
+	//Vector2 movePostion = a + moveVelocity * 3 * 60 / 144;
+	//60Hz
+	Vector2 movePostion = a + moveVelocity * 9;
 
 	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
 
