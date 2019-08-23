@@ -232,10 +232,6 @@
     <ClInclude Include="src\dontTouch\ProjectIncludePaths\ProjectIncludePaths.h" />
     <ClInclude Include="src\canTouch\Utility\SceneTypeSetter.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\..\Desktop\ゲームプログラマーサークル\３班-20190820T045706Z-001\３班\res\image\zako\zako_virus1.png" />
-    <Image Include="..\..\..\..\Desktop\ゲームプログラマーサークル\３班-20190820T045706Z-001\３班\res\image\zako\zako_virus2.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
