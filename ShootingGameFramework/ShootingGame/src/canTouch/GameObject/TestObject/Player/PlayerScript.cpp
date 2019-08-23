@@ -19,6 +19,7 @@ void PlayerScript::update()
 	//“_–Åˆ—
 	if (flashTime <= 0.0f && invincibleTime > 0)
 	{
+		//Œ»İ‚Â‚¢‚Ä‚¢‚é‚©Á‚¦‚Ä‚¢‚é‚©B
 		if (getComponent<Sprite2dDrawer>().lock()->isActive())
 		{
 			getComponent<Sprite2dDrawer>().lock()->setActive(false);

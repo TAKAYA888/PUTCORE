@@ -49,4 +49,7 @@ private:
 
 	// 弾を発射するタイマー
 	float m_shotTimer{ 0.0f };
+
+
+	
 };
