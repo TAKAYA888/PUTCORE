@@ -79,6 +79,7 @@ void NormalEnemyScript::move()
 	// ˆÚ“®‘¬“x{•ûŒü
 	auto velocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 20.0f;
 
+
 	// ˆÚ“®‚·‚é
 	getComponent<InertialMovement2D>().lock()->addForce(velocity);
 }

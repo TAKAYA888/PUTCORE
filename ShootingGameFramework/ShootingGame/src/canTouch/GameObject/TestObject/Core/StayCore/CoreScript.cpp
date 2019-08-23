@@ -13,7 +13,7 @@ void CoreScript::update()
 	Vector2 playerPostion = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
 	Vector2 setPosition;
 	setPosition.x = playerPostion.x;
-	setPosition.y = playerPostion.y + 68;
+	setPosition.y = playerPostion.y + 40;
 	getComponent<Transform2D>().lock()->setLocalPosition(setPosition);
 
 
