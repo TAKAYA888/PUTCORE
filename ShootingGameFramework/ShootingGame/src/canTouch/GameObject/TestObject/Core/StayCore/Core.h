@@ -36,7 +36,7 @@ struct Core
 		// 2次元の座標のクランパー
 		core->addComponent(std::make_shared<PositionClamper>(
 			Vector2::zero,			// 最小座標
-			SCREEN_SIZE				// 最大座標
+			Vector2(1400.0f, 720.0f)// 最大座標		// 最大座標
 			));
 
 		core->addComponent(std::make_shared<AnimatedSprite2d>(
@@ -48,7 +48,18 @@ struct Core
 			));
 
 
-		
+		// 長方形の当たり判定
+		core->addComponent(std::make_shared<RectCollider>(
+			COLLISION_GROUP_CORE,	// 衝突判定のグループ
+			Vector2(50.0f, 20.0f)	// 衝突判定の大きさ
+			));
+
+
+		// 長方形の当たり判定の範囲の描画
+		core->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
+			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// 描画するレイヤー
+			Color::red				// 当たり判定の範囲の色
+			));
 
 		// ２次元画像の描画
 		core->addComponent(std::make_shared<Sprite2dDrawer>(

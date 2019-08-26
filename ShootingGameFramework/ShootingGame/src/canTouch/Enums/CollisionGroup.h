@@ -15,6 +15,9 @@ enum CollisionGroup
 	// プレイヤーの衝突判定
 	COLLISION_GROUP_PLAYER,
 
+	//コアの衝突判定
+	COLLISION_GROUP_CORE,
+
 	// 敵の衝突判定
 	COLLISION_GROUP_ENEMY,
 

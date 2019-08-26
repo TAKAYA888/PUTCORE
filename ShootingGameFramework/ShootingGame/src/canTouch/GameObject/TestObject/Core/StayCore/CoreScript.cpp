@@ -16,6 +16,10 @@ void CoreScript::update()
 	setPosition.y = playerPostion.y + 40;
 	getComponent<Transform2D>().lock()->setLocalPosition(setPosition);
 
+	//“–‚½‚è”»’è‚ğÁ‚·
+	getComponent<RectCollider>().lock()->setActive(false);
+	//“–‚½‚è”»’è‚ğ•`‰æ•t‚¯‚é
+	getComponent<RectColliderWireFrameDrawer>().lock()->setActive(false);
 
 	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_X) && CoreCoolTime < 0)
 	{
