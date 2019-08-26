@@ -2,6 +2,7 @@
 
 #include "../GameObject/TestObject/Push_Space/Push_Space.h"
 #include "../GameObject/GameOverObject/GameOverLogo/GameOverLogo.h"
+#include"../GameObject//GameOverObject/GameOverLogo/GameOverBGM.h"
 
 GameOverScene::GameOverScene()
 {
@@ -11,6 +12,8 @@ void GameOverScene::start()
 {
 	GameOverLogo::create();
 	Push_Space::create(Vector2(1280.0f / 2, 720.0f * 2 / 3));
+	//BGMçƒê∂ã@Çí«â¡
+	GameOverBGM::create();
 }
 
 void GameOverScene::update()

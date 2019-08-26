@@ -170,10 +170,12 @@
     <ClInclude Include="src\canTouch\Enums\ImageId.h" />
     <ClInclude Include="src\canTouch\Enums\SceneType.h" />
     <ClInclude Include="src\canTouch\Enums\SeId.h" />
+    <ClInclude Include="src\canTouch\GameObject\GameClearObject\GameClearLogo\GameClearBGM.h" />
     <ClInclude Include="src\canTouch\GameObject\GameClearObject\GameClearLogo\GameClearLogo.h" />
     <ClInclude Include="src\canTouch\GameObject\GameClearObject\GameClearLogo\GameClearLogoScript.h" />
     <ClInclude Include="src\canTouch\GameObject\GameOverObject\GameOverLogo\GameOverLogo.h" />
     <ClInclude Include="src\canTouch\GameObject\GameOverObject\GameOverLogo\GameOverLogoScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\GameOverObject\GameOverLogo\GameOverBGM.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\BgmLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\ImageLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\SeLoadObject.h" />
