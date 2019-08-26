@@ -12,13 +12,14 @@ void ClearScene::start()
 {
 	GameClearLogo::create();
 	Push_Space::create(Vector2(1280.0f / 2, 720.0f * 2 / 3));
-	GameClearBGM::create;
+	GameClearBGM::create();
 }
 
 void ClearScene::update()
 {
 	if (Keyboard::getState(InputType::INPUT_ENDED, KeyboardKeyType::KEYBOARD_SPACE))
 	{
+
 		changeScene(RESULT_SCENE);
 	}
 }

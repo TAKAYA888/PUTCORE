@@ -21,8 +21,12 @@ void GameStartItemScript::onCollisionStay(GameObjectPtr other)
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_CURSOR
 		&& Mouse::getState(InputType::INPUT_BEGIN, MouseButtonType::MOUSE_LEFT_BUTTON))
 	{
+		getComponent<SePlayer>().lock()->playSe();
+
 		// ƒƒCƒ“ƒV[ƒ“‚É‘JˆÚ‚·‚é
 		SceneManager::changeScene(MAIN_SCENE);
+
+		
 	}
 }
 

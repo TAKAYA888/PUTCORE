@@ -45,6 +45,11 @@ struct GameStartItem
 			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
 			));
 
+		//Pushサウンド
+		gameStartItem->addComponent(std::make_shared<SePlayer>(
+			INPUT_SE
+			));
+
 		// ゲーム開始のメニュー項目のスクリプト
 		gameStartItem->addComponent(std::make_shared<GameStartItemScript>());
 
