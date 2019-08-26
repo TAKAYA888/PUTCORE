@@ -22,6 +22,12 @@ void Push_SpaceScript::update()
 	{
 		counter -= TktkTime::deltaTime();
 	}
+
+	//SPACEƒL[‚ğ‰Ÿ‚·‚ÆSE‚ª—¬‚ê‚é
+	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
+	{
+		getComponent<SePlayer>().lock()->playSe();
+	}
 }
 
 void Push_SpaceScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)

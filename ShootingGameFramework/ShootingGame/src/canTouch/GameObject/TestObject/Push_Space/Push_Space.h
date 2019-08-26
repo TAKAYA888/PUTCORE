@@ -30,6 +30,11 @@ struct Push_Space
 			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
 			));
 
+		// サウンドを再生するコンポーネント
+		push_space->addComponent(std::make_shared<SePlayer>(
+			INPUT_SE 	// サウンドの名前
+			));
+
 		// プッシュスペースのスクリプト
 		push_space->addComponent(std::make_shared<Push_SpaceScript>());
 
