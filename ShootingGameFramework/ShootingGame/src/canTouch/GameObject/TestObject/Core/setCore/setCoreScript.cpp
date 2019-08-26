@@ -36,7 +36,7 @@ void setCoreScript::update()
 	{
 		//ˆÚ“®‚·‚éˆ—	
 		// ˆÚ“®‘¬“x{•ûŒü
-		auto velocity = Vector2(MathHelper::sin(90), MathHelper::cos(90)) * 50.0f;
+		auto velocity = Vector2(MathHelper::sin(90), MathHelper::cos(90)) * 100.0f;
 
 		// ˆÚ“®‚·‚é
 		getComponent<InertialMovement2D>().lock()->addForce(velocity);
