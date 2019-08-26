@@ -16,7 +16,7 @@ struct VirusEnemy1_1
 		auto virusenemy1_1 = std::make_shared<GameObject>();
 
 		// ƒ^ƒO‚ğİ’è
-		virusenemy1_1->setTag(GameObjectTag::GAME_OBJECT_TAG_VIRYS_ENEMY1);
+		virusenemy1_1->setTag(GameObjectTag::GAME_OBJECT_TAG_ENEMY);
 
 		// ‚QŸŒ³À•W
 		virusenemy1_1->addComponent(std::make_shared<Transform2D>(
