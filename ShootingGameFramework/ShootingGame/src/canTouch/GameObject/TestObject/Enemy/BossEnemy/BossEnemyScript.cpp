@@ -1,7 +1,7 @@
 #include "BossEnemyScript.h"
 
 #include "../../EnemyBullet/EnemyNormalBullet/EnemyNormalBullet.h"
-#include "../../Explosion/Explosion.h"
+#include "../../Explosion_Enemy/Explosion_Enemy.h"
 
 BossEnemyScript::BossEnemyScript()
 {
@@ -33,7 +33,7 @@ void BossEnemyScript::onCollisionEnter(GameObjectPtr other)
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER_BULLET)
 	{
 		// ”š”­‚ð¶¬‚·‚é
-		Explosion::create(
+		Explosion_Enemy::create(
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 

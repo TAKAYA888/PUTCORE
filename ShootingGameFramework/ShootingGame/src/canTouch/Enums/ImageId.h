@@ -52,6 +52,9 @@ enum ImageId
 	// 爆発の画像
 	IMAGE_EXPLOSION = 140,
 
+	//エネミー用の爆発の画像
+	IMAGE_EXPLOSION_ENEMY = 141,
+
 	// プレイヤーの体力ゲージの画像
 	IMAGE_PLAYER_HP_GAUGE = 200,
 

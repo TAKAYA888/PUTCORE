@@ -1,6 +1,6 @@
 #include "VirusEnemyScript1-1.h"
 
-#include "../../Explosion/Explosion.h"
+#include "../../Explosion_Enemy/Explosion_Enemy.h"
 #include "VirusEnemy1-1.h"
 
 VirusEnemyScript1_1::VirusEnemyScript1_1()
@@ -30,7 +30,7 @@ void VirusEnemyScript1_1::onCollisionEnter(GameObjectPtr other)
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER_BULLET || other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
 	{
 		// ”š”­‚ð¶¬‚·‚é
-		Explosion::create(
+		Explosion_Enemy::create(
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 
@@ -46,7 +46,7 @@ void VirusEnemyScript1_1::onCollisionStay(GameObjectPtr other)
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER || other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
 	{
 		// ”š”­‚ð¶¬‚·‚é
-		Explosion::create(
+		Explosion_Enemy::create(
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 

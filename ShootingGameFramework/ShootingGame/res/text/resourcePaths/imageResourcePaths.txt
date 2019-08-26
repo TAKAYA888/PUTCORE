@@ -14,5 +14,6 @@
 120,res/image/enemyBoss.png
 130,res/image/playerBullet.png
 140,res/image/explosion.png,1,4
+141,res/image/zako_dead.png,1,10
 200,res/image/playerHpGauge.png
 1000,res/image/animSample.png,1,4
