@@ -139,11 +139,13 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Core\setCore\setCoreScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Core\StayCore\CoreScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyBullet\EnemyNormalBullet\EnemyNormalBulletScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyBullet\VirusEnemyBullet\VirusEnemyBulletScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyGenerator\EnemyGeneratorScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemyScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\NormalEnemy\NormalEnemyScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-1\VirusEnemyScript1-1.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-2\VirusEnemyScript1_2.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy2\VirusEnemyScript2.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Explosion\ExplosionScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Explosion_Enemy\Explosion_EnemyScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\GameEndChecker\GameEndCheckerScript.cpp" />
@@ -195,6 +197,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Core\StayCore\CoreScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyBullet\EnemyNormalBullet\EnemyNormalBullet.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyBullet\EnemyNormalBullet\EnemyNormalBulletScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyBullet\VirusEnemyBullet\VirusEnemyBullet.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyBullet\VirusEnemyBullet\VirusEnemyBulletScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyGenerator\EnemyGenerator.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyGenerator\EnemyGeneratorScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemy.h" />
@@ -205,6 +209,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-1\VirusEnemyScript1-1.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-2\VirusEnemy1-2.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-2\VirusEnemyScript1-2.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy2\VirusEnemy2.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy2\VirusEnemyScript2.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion\Explosion.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion\ExplosionScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion_Enemy\Explosion_Enemy.h" />

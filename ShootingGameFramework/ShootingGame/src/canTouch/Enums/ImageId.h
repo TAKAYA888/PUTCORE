@@ -40,6 +40,9 @@ enum ImageId
 	// エネミーの画像
 	IMAGE_ENEMY = 110,
 
+	//ウイルスエネミー1の画像
+	IMAGE_VIRUS_ENEMY_ONE = 111,
+
 	//ウイルスエネミー2の画像
 	IMAGE_VIRUS_ENEMY_TWO = 112,
 
@@ -48,6 +51,9 @@ enum ImageId
 
 	// プレイヤーの弾の画像
 	IMAGE_PLAYER_BULLET = 130,
+
+	//ウイルスエネミーの弾の画像
+	IMAGE_VIRUS_ENEMY_BULLET = 131,
 
 	// 爆発の画像
 	IMAGE_EXPLOSION = 140,

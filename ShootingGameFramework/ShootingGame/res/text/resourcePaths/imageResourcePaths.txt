@@ -10,9 +10,11 @@
 101,res/image/player.png,1,6
 102,res/image/core.png,1,6
 110,res/image/enemy.png
+111,res/image/zako_virus1.png,1,5
 112,res/image/zako_virus2.png,1,5
 120,res/image/enemyBoss.png
 130,res/image/playerBullet.png
+131,res/image/enemy_bullet.png
 140,res/image/explosion.png,1,4
 141,res/image/zako_dead.png,1,10
 200,res/image/playerHpGauge.png

@@ -4,6 +4,7 @@
 #include "../Enemy/NormalEnemy/NormalEnemy.h"
 #include "../Enemy/VirusEnemy1-1/VirusEnemy1-1.h"
 #include "../Enemy/VirusEnemy1-2/VirusEnemy1-2.h"
+#include "../Enemy/VirusEnemy2/VirusEnemy2.h"
 #include "../Enemy/BossEnemy/BossEnemy.h"
 
 EnemyGeneratorScript::EnemyGeneratorScript(const std::string & stageTextPath)
@@ -82,6 +83,10 @@ void EnemyGeneratorScript::update()
 		else if ((*m_curIterator).name == "virusenemy1-2")
 		{
 			VirusEnemy1_2::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
+		}
+		else if ((*m_curIterator).name == "virusenemy2")
+		{
+			VirusEnemy2::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
 		}
 
 		// リストでの次に出現する敵の情報の場所を一つ進める
