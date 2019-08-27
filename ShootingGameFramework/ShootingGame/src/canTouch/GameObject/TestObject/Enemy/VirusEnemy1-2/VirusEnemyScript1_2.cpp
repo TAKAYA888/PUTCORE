@@ -1,15 +1,15 @@
-#include "VirusEnemyScript1-1.h"
+#include "VirusEnemyScript1-2.h"
 
 #include "../../Explosion_Enemy/Explosion_Enemy.h"
-#include "VirusEnemy1-1.h"
+#include "VirusEnemy1-2.h"
 
-VirusEnemyScript1_1::VirusEnemyScript1_1()
+VirusEnemyScript1_2::VirusEnemyScript1_2()
 {
 	timer = 0;
 }
 
-//毎フレーム呼ばれてる
-void VirusEnemyScript1_1::update()
+//毎フレーム呼ばれる
+void VirusEnemyScript1_2::update()
 {
 	timer += TktkTime::deltaTime();
 
@@ -23,8 +23,8 @@ void VirusEnemyScript1_1::update()
 	}
 }
 
-//衝撃開始で呼ばれる
-void VirusEnemyScript1_1::onCollisionEnter(GameObjectPtr other)
+//衝突開始で呼ばれる
+void VirusEnemyScript1_2::onCollisionEnter(GameObjectPtr other)
 {
 	// 衝突相手のタグが「GAME_OBJECT_TAG_PLAYER_BULLET」だったら
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER_BULLET || other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
@@ -40,7 +40,7 @@ void VirusEnemyScript1_1::onCollisionEnter(GameObjectPtr other)
 }
 
 //衝突中で呼ばれる
-void VirusEnemyScript1_1::onCollisionStay(GameObjectPtr other)
+void VirusEnemyScript1_2::onCollisionStay(GameObjectPtr other)
 {
 	// 衝突相手のタグが「GAME_OBJECT_TAG_PLAYER」だったら
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER || other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
@@ -55,21 +55,20 @@ void VirusEnemyScript1_1::onCollisionStay(GameObjectPtr other)
 	}
 }
 
-//衝突終了で呼ばれる
-void VirusEnemyScript1_1::onCollisionExit(GameObjectPtr other)
+//衝突終了で呼ばれます
+void VirusEnemyScript1_2::onCollisionExit(GameObjectPtr other)
 {
 }
 
-void VirusEnemyScript1_1::handleMessage(int  eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
+void VirusEnemyScript1_2::handleMessage(int  eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
 	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
 	{
 		getGameObject().lock()->destroy();
 	}
 }
-
 //移動
-void VirusEnemyScript1_1::move()
+void VirusEnemyScript1_2::move()
 {
 	// 自身の回転角度
 	float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
@@ -84,7 +83,7 @@ void VirusEnemyScript1_1::move()
 	}
 	else if (timer < 5.5f)
 	{
-		auto velocity = Vector2(MathHelper::sin(420), MathHelper::cos(420)) * 15.0f;
+		auto velocity = Vector2(MathHelper::sin(125), MathHelper::cos(125)) * 15.0f;
 
 		// 移動する
 		getComponent<InertialMovement2D>().lock()->addForce(velocity);
