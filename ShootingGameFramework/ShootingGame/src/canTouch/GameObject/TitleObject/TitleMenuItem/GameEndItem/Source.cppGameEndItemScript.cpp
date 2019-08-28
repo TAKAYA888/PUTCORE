@@ -68,16 +68,16 @@ void GameEndItemScript::onCollisionStay(GameObjectPtr other)
 {
 
 	// 衝突相手のタグが「GAME_OBJECT_TAG_CURSOR」でクリック開始時だったら
-	if (other.lock()->getTag() == GAME_OBJECT_TAG_CURSOR
-		&& Mouse::getState(InputType::INPUT_BEGIN, MouseButtonType::MOUSE_LEFT_BUTTON))
-	{
+//	if (other.lock()->getTag() == GAME_OBJECT_TAG_CURSOR
+	//	&& Mouse::getState(InputType::INPUT_BEGIN, MouseButtonType::MOUSE_LEFT_BUTTON))
+	//{
 
 
-		getComponent<SePlayer>().lock()->playSe();
+		//getComponent<SePlayer>().lock()->playSe();
 
 		// メインシーンに遷移する
-		SceneManager::changeScene(MAIN_SCENE);
-	}
+		//SceneManager::changeScene(MAIN_SCENE);
+	//}
 
 }
 
