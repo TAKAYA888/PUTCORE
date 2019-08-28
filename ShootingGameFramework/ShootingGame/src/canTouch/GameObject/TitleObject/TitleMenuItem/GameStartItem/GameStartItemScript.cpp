@@ -89,24 +89,28 @@ void GameStartItemScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr
 //’Ç‰Á
 void GameStartItemScript::Move()
 {
-	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP))
+	if (select == 1 || select == 2 ||select == 0)
 	{
-		select = 1;
-	}
-	else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN))
-	{
-		select = 2;
-		getComponent<Sprite2dDrawer>().lock()->setActive(true);
+		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP))
+		{
+			select = 1;
+		}
+		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN))
+		{
+			select = 2;
+			getComponent<Sprite2dDrawer>().lock()->setActive(true);
+		}
 	}
 
-	if (select == 1 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
-	{
-		getComponent<SePlayer>().lock()->playSe();
-		counter = 0;
-		select = 3;
+		if (select == 1 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
+		{
+			getComponent<SePlayer>().lock()->playSe();
+			counter = 0;
+			select = 3;
 
 
-	}
+		}
+	
 
 	else if (counter == 120 && select == 3)
 	{
