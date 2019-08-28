@@ -117,6 +117,9 @@ void VirusEnemyScript2::shot()
 		// 敵の通常弾を出現
 		VirusEnemyBullet::create(spawnPos, initVelocity);
 
+		//弾発射のSE
+		getComponent<SePlayer>().lock()->playSe();
+
 		// 弾発射タイマーを初期化
 		m_shotTimer = 0.0f;
 	}

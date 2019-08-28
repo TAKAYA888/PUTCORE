@@ -6,4 +6,5 @@ enum SeId
 	enemy_damage = 2,
 	enemy_dead = 3,
 	INPUT_SE = 4,
+	enemy_bullet = 5,
 };

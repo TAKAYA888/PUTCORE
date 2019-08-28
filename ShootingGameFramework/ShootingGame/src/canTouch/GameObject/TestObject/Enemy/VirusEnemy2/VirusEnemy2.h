@@ -62,6 +62,12 @@ struct VirusEnemy2
 			0.1f,
 			true
 			));
+
+		// サウンドを再生するコンポーネント
+		virusenemy2->addComponent(std::make_shared<SePlayer>(
+			enemy_bullet 	// サウンドの名前
+			));
+
 		// エネミーのスクリプト
 		virusenemy2->addComponent(std::make_shared<VirusEnemyScript2>());
 
