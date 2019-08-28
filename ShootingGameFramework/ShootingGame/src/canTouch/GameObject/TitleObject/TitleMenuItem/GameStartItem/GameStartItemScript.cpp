@@ -12,6 +12,18 @@ void GameStartItemScript::update()
 	//’Ç‰Á
 	Move();
 	counter++;
+
+	if (Stealth == 1)
+	{
+		m_curAlpha += m_increaseAlphaPerSec * TktkTime::deltaTime();
+
+		if (m_curAlpha > 1.0f) m_curAlpha = 1.0f;
+
+		getComponent<Sprite2dDrawer>().lock()->setBlendParam(m_curAlpha);
+
+	}
+
+
 	if (select == 1)
 	{
 
@@ -89,7 +101,7 @@ void GameStartItemScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr
 //’Ç‰Á
 void GameStartItemScript::Move()
 {
-	if (select == 1 || select == 2 ||select == 0)
+	if (select == 1 || select == 2 || select == 0)
 	{
 		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP))
 		{
@@ -102,15 +114,15 @@ void GameStartItemScript::Move()
 		}
 	}
 
-		if (select == 1 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
-		{
-			getComponent<SePlayer>().lock()->playSe();
-			counter = 0;
-			select = 3;
+	if (select == 1 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
+	{
+		getComponent<SePlayer>().lock()->playSe();
+		counter = 0;
+		select = 3;
 
 
-		}
-	
+	}
+
 
 	else if (counter == 120 && select == 3)
 	{
@@ -121,9 +133,9 @@ void GameStartItemScript::Move()
 
 
 
-	if (counter >= 60)
+	if (counter >= 130)
 	{
-
+		Stealth = 1;
 
 		Vector2 selfPos = getComponent<Transform2D>().lock()->getWorldPosition();
 

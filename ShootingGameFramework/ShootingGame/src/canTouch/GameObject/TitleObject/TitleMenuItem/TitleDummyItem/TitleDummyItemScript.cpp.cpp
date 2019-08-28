@@ -6,7 +6,21 @@
 // –ˆƒtƒŒ[ƒ€ŒÄ‚Î‚ê‚é
 void TitleDummyItemScript::update()
 {
+	counter++;
 
+	if (Stealth == 1)
+	{
+		m_curAlpha += m_increaseAlphaPerSec * TktkTime::deltaTime();
+
+		if (m_curAlpha > 1.0f) m_curAlpha = 1.0f;
+
+		getComponent<Sprite2dDrawer>().lock()->setBlendParam(m_curAlpha);
+	}
+
+	if (counter == 120)
+	{
+		Stealth = 1;
+	}
 
 }
 

@@ -44,7 +44,8 @@ struct GameEndItem
 		gameEndItem->addComponent(std::make_shared<Sprite2dDrawer>(
 			DrawPriority::DRAW_PRIORITY_UI - 0.1f,	// 描画するレイヤー
 			IMAGE_TITLE_MENU_GAMEEND,		// 描画する画像のID
-			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
+			Vector2(0.5f, 0.5f),		// 画像の中心（割合）
+			0.0
 			));
 
 		// サウンドを再生するコンポーネント

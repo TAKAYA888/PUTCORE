@@ -11,6 +11,16 @@ void GameEndItemScript::update()
 	Move();
 	counter++;
 
+	if (Stealth == 1)
+	{
+		m_curAlpha += m_increaseAlphaPerSec * TktkTime::deltaTime();
+
+		if (m_curAlpha > 1.0f) m_curAlpha = 1.0f;
+
+		getComponent<Sprite2dDrawer>().lock()->setBlendParam(m_curAlpha);
+
+	}
+
 	if (select == 2)
 	{
 
@@ -101,25 +111,25 @@ void GameEndItemScript::Move()
 			select = 2;
 		}
 	}
-		if (select == 2 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
-		{
-			getComponent<SePlayer>().lock()->playSe();
-			counter = 0;
-			select = 4;
-
-
-		}
-	
-
-    if (counter == 120 && select == 4)
+	if (select == 2 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
 	{
-		// ÉÅÉCÉìÉVÅ[ÉìÇ…ëJà⁄Ç∑ÇÈ
-		SceneManager::changeScene(MAIN_SCENE);
+		getComponent<SePlayer>().lock()->playSe();
+		counter = 0;
+		select = 4;
+
+
 	}
 
-	if (counter >= 90)
+
+	if (counter == 120 && select == 4)
 	{
 
+		GameLoop::exitGame();
+	}
+
+	if (counter >= 150)
+	{
+		Stealth = 1;
 		Vector2 selfPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 		Vector2 moveVelocity = Vector2::zero;

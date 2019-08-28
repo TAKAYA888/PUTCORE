@@ -34,8 +34,15 @@ public:
 	// メッセージ受信時に呼ばれる
 	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
 
+	int Stealth = 0;
+
+	int counter = 0;
 
 
+private:
+
+	float m_curAlpha = 0.0f;
+	const float m_increaseAlphaPerSec = 1.0f;
 
 
 
