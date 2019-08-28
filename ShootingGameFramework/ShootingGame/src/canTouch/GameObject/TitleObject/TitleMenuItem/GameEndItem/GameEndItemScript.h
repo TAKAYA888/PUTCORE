@@ -1,5 +1,4 @@
 #pragma once
-
 #include <TktkIncludePaths.h>
 #include "ProjectIncludePaths.h"
 #ifndef _MBCS
@@ -7,19 +6,17 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
-class GameStartItemScript
+class GameEndItemScript
 	: public ComponentBase
 {
 public:
-
-	GameStartItemScript(float moveSpeed);
+	//追加　float moveSpeed
+	GameEndItemScript(float moveSpeed);
 
 public:
 
 	// 毎フレーム呼ばれる
 	void update();
-
-
 
 	// 衝突開始で呼ばれる
 	void onCollisionEnter(GameObjectPtr other);
@@ -33,8 +30,6 @@ public:
 	// メッセージ受信時に呼ばれる
 	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
 
-
-
 	//追加
 	void Move();
 
@@ -44,4 +39,6 @@ public:
 	int counter = 0;
 
 	int select = 0;
+
+
 };

@@ -1,3 +1,5 @@
 1,res/sound/bgm/kendo.wav
 2,res/sound/bgm/gameoverBGM.mp3
 3,res/sound/bgm/clear_bgm.mp3
+4,res/sound/bgm/kendo.wav
+5,res/sound/bgm/title_loop.mp3

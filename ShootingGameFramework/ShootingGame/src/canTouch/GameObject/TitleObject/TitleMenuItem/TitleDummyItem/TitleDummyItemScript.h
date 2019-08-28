@@ -7,14 +7,15 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
-class GameStartItemScript
+class TitleDummyItemScript
 	: public ComponentBase
 {
 public:
 
-	GameStartItemScript(float moveSpeed);
 
 public:
+
+
 
 	// 毎フレーム呼ばれる
 	void update();
@@ -35,13 +36,8 @@ public:
 
 
 
-	//追加
-	void Move();
 
-	// 移動速度
-	float m_moveSpeed;
 
-	int counter = 0;
 
-	int select = 0;
+
 };

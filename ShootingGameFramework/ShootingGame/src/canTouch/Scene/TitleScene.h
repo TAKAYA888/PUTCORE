@@ -22,4 +22,7 @@ public:
 
 	// ƒV[ƒ“‚ÌI—¹‚ÉŒÄ‚Î‚ê‚é
 	void end() override;
+
+	int counter = 0;
+
 };

@@ -1,11 +1,13 @@
-1,res/image/titleLogo.png
+1,res/image/title_bg.png
 2,res/image/clear_logo.png
 3,res/image/gameover.png
 4,res/image/result.png
 6,res/image/pause.png
 10,res/image/titleCursor.png
 11,res/image/push_space.png
-20,res/image/gameStartItem.png
+19,res/image/dame.jpg
+20,res/image/game_start_button.png
+30,res/image/game_out_button.png
 50,res/image/background1.png
 101,res/image/player.png,1,6
 102,res/image/core.png,1,6

@@ -25,8 +25,13 @@ enum ImageId
 	//スペースを押せという画像
 	IMAGE_PUSH_SPACE = 11,
 
+	//面倒くさがった為に出来た産物
+	IMAGE_TITLE_MENU_DUMMY = 19,
+
 	// タイトルメニューのゲームスタートの項目の画像
 	IMAGE_TITLE_MENU_GAMESTART = 20,
+
+	IMAGE_TITLE_MENU_GAMEEND = 30,
 
 	//ゲームプレイ画面の背景の画像
 	IMAGE_PLAY_BG = 50,

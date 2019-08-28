@@ -6,5 +6,7 @@ enum BgmId
 
 	GAMEOVER_BGM = 2,
 
-	GAMECLEAR_BGM = 3
+	GAMECLEAR_BGM = 3,
+
+	TITLE_BGM = 5
 };
