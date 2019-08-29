@@ -39,7 +39,7 @@ private:
 private:
 
 	// ‘Ì—Í
-	int m_hp{ 5 };
+	int m_hp{ 2 };
 
 	// ˆÚ“®‘¬“x
 	float m_moveSpeed;

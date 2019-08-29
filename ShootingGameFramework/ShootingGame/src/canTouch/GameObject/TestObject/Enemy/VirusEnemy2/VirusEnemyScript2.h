@@ -42,7 +42,7 @@ private:
 private:
 
 	// ‘Ì—Í
-	int m_hp{ 5 };
+	int m_hp{ 1 };
 
 	// ’e‚ð”­ŽË‚·‚éŠÔŠu
 	const float m_shotInterval{ 1.0f };
