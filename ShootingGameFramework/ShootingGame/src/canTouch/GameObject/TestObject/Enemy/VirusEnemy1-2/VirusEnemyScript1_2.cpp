@@ -81,7 +81,7 @@ void VirusEnemyScript1_2::move()
 		// ˆÚ“®‚·‚é
 		getComponent<InertialMovement2D>().lock()->addForce(velocity);
 	}
-	else if (timer < 5.5f)
+	else if (timer < 5.3f)
 	{
 		auto velocity = Vector2(MathHelper::sin(125), MathHelper::cos(125)) * 15.0f;
 
