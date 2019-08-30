@@ -11,14 +11,14 @@
 
 struct BackGround_1
 {
-	static void create()
+	static void create(const Vector2& position)
 	{
 		// ゲームオブジェクトを作成
 		auto background_1 = std::make_shared<GameObject>();
 
 		// ２次元座標
 		background_1->addComponent(std::make_shared<Transform2D>(
-			SCREEN_SIZE / 2.0f,		// 座標（引数から受け取る）
+			position,		// 座標（引数から受け取る）
 			Vector2(1.0f, 1.0f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));

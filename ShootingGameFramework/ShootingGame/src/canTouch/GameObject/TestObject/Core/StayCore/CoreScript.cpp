@@ -25,7 +25,7 @@ void CoreScript::update()
 	{
 		getComponent<setCoreScript>().lock()->setActive(true);
 		getComponent<CoreScript>().lock()->setActive(false);
-		CoreCoolTime = 10;
+		CoreCoolTime = 10.5f;
 		DrawTime = 0;
 	}
 	else

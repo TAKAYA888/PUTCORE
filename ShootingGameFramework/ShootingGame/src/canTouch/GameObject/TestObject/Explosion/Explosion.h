@@ -35,7 +35,7 @@ struct Explosion
 		explosion->addComponent(std::make_shared<AnimatedSprite2d>(
 			IMAGE_EXPLOSION,	// アニメーションで使用する画像の種類
 			0,					// 最小の左上基準の画像番号
-			3,					// 最大の左上基準の画像番号
+			9,					// 最大の左上基準の画像番号
 			0.1f,				// 何秒間で次の画像に変わるか
 			false				// アニメーションをループさせるか？
 			));

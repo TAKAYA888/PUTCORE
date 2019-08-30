@@ -34,8 +34,8 @@ struct Player
 
 		// 2次元の座標のクランパー
 		player->addComponent(std::make_shared<PositionClamper>(
-			Vector2::zero,			// 最小座標
-			SCREEN_SIZE				// 最大座標
+			Vector2(64,32),			// 最小座標
+			Vector2(1280.0f-64.0f, 720.0f-64.0f)				// 最大座標
 			));
 
 
@@ -59,11 +59,6 @@ struct Player
 			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
 			));
 
-		// プレイヤーのスクリプト
-		player->addComponent(std::make_shared<PlayerScript>(
-			50.0f	// 移動速度
-			));
-
 		player->addComponent(std::make_shared<AnimatedSprite2d>(
 			IMAGE_PLAYER,	// アニメーションで使用する画像の種類
 			0,					// 最小の左上基準の画像番号
@@ -71,6 +66,13 @@ struct Player
 			0.01f,				// 何秒間で次の画像に変わるか
 			true				// アニメーションをループさせるか？
 			));
+
+		// プレイヤーのスクリプト
+		player->addComponent(std::make_shared<PlayerScript>(
+			50.0f	// 移動速度
+			));
+
+		
 
 		// ゲームオブジェクトを追加
 		GameObjectManager::addGameObject(player);

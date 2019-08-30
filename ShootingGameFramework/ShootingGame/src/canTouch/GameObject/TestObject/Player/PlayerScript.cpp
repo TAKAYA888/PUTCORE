@@ -123,7 +123,6 @@ void PlayerScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::w
 	{
 		getGameObject().lock()->destroy();
 	}
-
 }
 
 // Å‘å‚Ì‘Ì—Í‚ğæ“¾
