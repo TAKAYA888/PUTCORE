@@ -44,9 +44,9 @@ virusenemy3-1, 39.6,1280,520, -90
 virusenemy3-1, 42.6,1280,200, -90
 virusenemy3-1, 42.6,1280,360, -90
 virusenemy3-1, 42.6,1280,520, -90
-virusenemy2, 45.6,1280,10, -90
-virusenemy2, 46.6,1280,10, -90
-virusenemy2, 47.6,1280,10, -90
+virusenemy2, 45.6,1280,100, -90
+virusenemy2, 46.6,1280,100, -90
+virusenemy2, 47.6,1280,100, -90
 virusenemy3-1, 50.6,1280,300, -90
 virusenemy3-1, 50.6,1280,420, -90
 virusenemy2, 53.6,1280,710, -90
