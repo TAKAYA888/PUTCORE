@@ -20,6 +20,7 @@ void VirusEnemyScript2::update()
 	//‘Ì—Í‚ª0ˆÈ‰º‚É‚È‚Á‚½‚ç
 	if (m_hp <= 0)
 	{
+		GameObjectManager::sendMessage(DIE_Enemy2);
 		getGameObject().lock()->destroy();
 	}
 }

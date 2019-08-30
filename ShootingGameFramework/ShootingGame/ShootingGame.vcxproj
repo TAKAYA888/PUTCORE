@@ -154,6 +154,7 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\PlayerHpUi\PlayerHpUiScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Player\PlayerScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Push_Space\Push_SpaceScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleCursor\TitleCursorScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleLogo\TitleLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\Source.cppGameEndItemScript.cpp" />
@@ -231,6 +232,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Player\PlayerScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Push_Space\Push_Space.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Push_Space\Push_SpaceScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score\Score.h" />
+    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleCursor\TitleCursor.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleCursor\TitleCursorScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleLogo\TitleLogo.h" />

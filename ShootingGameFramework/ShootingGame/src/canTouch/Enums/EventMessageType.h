@@ -17,4 +17,16 @@ enum EventMessageType
 
 	// エネミーボスが死んだ
 	ENEMY_BOSS_DEAD,
+
+	//エネミー1-1死亡
+	DIE_Enemy1_1,
+
+	//エネミー1-2死亡
+	DIE_Enemy1_2,
+
+	//エネミー1-3死亡
+	DIE_Enemy2,
+
+	//エネミー3-1死亡
+	DIE_Enemy3_1,
 };
