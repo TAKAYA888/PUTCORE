@@ -3,6 +3,7 @@
 ScoreScript::ScoreScript()
 {
 	//score‚Ì0“ü‚ê
+	score = 0;
 }
 
 void ScoreScript::update()

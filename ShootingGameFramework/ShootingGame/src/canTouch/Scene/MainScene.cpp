@@ -9,6 +9,8 @@
 
 #include "../GameObject/TestObject/AnimSample/AnimSample.h"
 #include "../GameObject/TestObject/GamePlayBgmPlayer/GamePlayBgmPlayer.h"
+#include "../GameObject/ResultObject/Score/Score.h"
+
 
 MainScene::MainScene()
 {
@@ -42,6 +44,9 @@ void MainScene::start()
 
 	// ゲームプレイ用のBGMプレイヤーを生成
 	GamePlayBgmPlayer::create();
+
+	// スコアを生成
+	Score::create();
 }
 
 // 毎フレーム呼ばれる
