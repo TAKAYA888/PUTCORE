@@ -7,12 +7,12 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
-class PauseLogoScript
+class RestartButtonScript
 	: public ComponentBase
 {
 public:
 
-	PauseLogoScript();
+	RestartButtonScript();
 
 public:
 
@@ -22,6 +22,13 @@ public:
 	// メッセージ受信時に呼ばれる
 	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
 
-	int count = 0;
-};
+	void Move();
 
+	int counter = 0;
+
+	int count = 0;
+
+	int select = 0;
+
+
+};

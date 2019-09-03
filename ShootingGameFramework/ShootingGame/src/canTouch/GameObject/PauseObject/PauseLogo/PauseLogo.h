@@ -25,7 +25,7 @@ struct PauseLogo
 
 		// ２次元画像の描画
 		PauseLogo->addComponent(std::make_shared<Sprite2dDrawer>(
-			DrawPriority::DRAW_PRIORITY_BACK_GROUND,	// 描画するレイヤー
+			DrawPriority::DRAW_PRIORITY_UI,	// 描画するレイヤー
 			IMAGE_PAUSE_LOGO,		// 描画する画像のID
 			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
 			));

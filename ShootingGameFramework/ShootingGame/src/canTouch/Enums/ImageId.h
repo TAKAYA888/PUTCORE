@@ -15,10 +15,6 @@ enum ImageId
 	// リザルトのロゴの画像
 	IMAGE_RESULT_LOGO = 4,
 
-
-	//ポーズのロゴの画像
-	IMAGE_PAUSE_LOGO = 6,
-
 	// タイトルカーソルの画像
 	IMAGE_TITLE_CURSOR = 10,
 
@@ -68,6 +64,12 @@ enum ImageId
 
 	// プレイヤーの体力ゲージの画像
 	IMAGE_PLAYER_HP_GAUGE = 200,
+
+	//ポーズのロゴの画像
+	IMAGE_PAUSE_LOGO = 300,
+
+	//タイトルバック
+	IMAGE_PAUSE_BACK = 302,
 
 	// アニメーションのテスト画像
 	IMAGE_ANIM_SAMPLE = 1000,

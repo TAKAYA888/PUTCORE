@@ -2,6 +2,8 @@
 
 #include "../GameObject/TestObject/Core/StayCore/Core.h"
 #include "../GameObject/TestObject/BackGround/BackGround1/BackGround_1.h"
+#include "../GameObject/PauseObject/PauseLogo/PauseLogo.h"
+#include "../GameObject/PauseObject/RestartButton/RestartButton.h"
 #include "../GameObject/TestObject/Player/Player.h"
 #include "../GameObject/TestObject/EnemyGenerator/EnemyGenerator.h"
 #include "../GameObject/TestObject/PlayerHpUi/PlayerHpUi.h"
@@ -23,6 +25,9 @@ void MainScene::start()
 	BackGround_1::create(SCREEN_SIZE/2);
 	BackGround_1::create(Vector2(1920, 360));
 
+	RestartButton::create(SCREEN_SIZE.x / 1);
+
+	PauseLogo::create();
 
 	// ÉvÉåÉCÉÑÅ[Çê∂ê¨Ç∑ÇÈ
 	Player::create(SCREEN_SIZE / 2);

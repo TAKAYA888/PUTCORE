@@ -132,6 +132,9 @@
     <ClCompile Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButtonScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dontTouch\MyGame\MyGame.h">
@@ -390,6 +393,12 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButton.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButtonScript.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
