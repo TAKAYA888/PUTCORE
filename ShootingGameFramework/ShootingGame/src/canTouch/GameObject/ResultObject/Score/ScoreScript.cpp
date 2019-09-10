@@ -43,6 +43,6 @@ void ScoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::we
 
 	if (eventMessageType == ENEMY_BOSS_DEAD)
 	{
-		score += 100;
+		score += 2000;
 	}
 }
