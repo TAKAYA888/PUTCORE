@@ -25,10 +25,6 @@ void MainScene::start()
 	BackGround_1::create(SCREEN_SIZE/2);
 	BackGround_1::create(Vector2(1920, 360));
 
-	RestartButton::create(SCREEN_SIZE.x / 1);
-
-	PauseLogo::create();
-
 	// プレイヤーを生成する
 	Player::create(SCREEN_SIZE / 2);
 
@@ -61,20 +57,31 @@ void MainScene::update()
 	{
 		float TimeScale = 0.0f;
 		TimeScale = TktkTime::getTimeScale();
-		if (TimeScale >= 0.9f) {
+		if (TimeScale >= 0.9f) 
+		{
+			//GameObjectManager::findGameObjectWithTag(AKITA_BANZAI).lock()->getComponent<BackGround_1Script>().lock()->setActive(false);
 			// 時間の経過速度を0にする
 			TktkTime::setTimeScale(0.0f);
 			// PlayerScriptを無効化
 			GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<PlayerScript>().lock()->setActive(false);
+			
+
+			//ポーズ画面をクリエイトする
+			RestartButton::create(SCREEN_SIZE.x / 1);
+			PauseLogo::create();
 		}
-		else {
+		else 
+		{
+			//ポーズ終了のアナウンス
+			GameObjectManager::sendMessage(PAUSE_END);
 			// 時間の経過速度を1にする
 			GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<PlayerScript>().lock()->setActive(true);
 			// PlayerScriptを有効化
 			TktkTime::setTimeScale(1.0f);
+			//BGよ！動け！
+			//GameObjectManager::findGameObjectWithTag(AKITA_BANZAI).lock()->getComponent<BackGround_1Script>().lock()->setActive(true);
 		}
 	}
-
 }
 
 // シーンの終了時に呼ばれる

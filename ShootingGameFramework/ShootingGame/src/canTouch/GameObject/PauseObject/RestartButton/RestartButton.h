@@ -33,13 +33,12 @@ struct RestartButton
 		// 2次元の座標のクランパー(追加)
 		restartbutton->addComponent(std::make_shared<PositionClamper>(
 			Vector2(SCREEN_SIZE.x / 2, 000.0f),			// 最小座標
-			Vector2(SCREEN_SIZE.x / 2, 500.0f)			// 最大座標
+			Vector2(SCREEN_SIZE.x / 2, 650.0f)			// 最大座標
 			));
-
 
 		// タイトルロゴのスクリプト
 		restartbutton->addComponent(std::make_shared<RestartButtonScript>());
-
+	
 		// ゲームオブジェクトを追加
 		GameObjectManager::addGameObject(restartbutton);
 	}

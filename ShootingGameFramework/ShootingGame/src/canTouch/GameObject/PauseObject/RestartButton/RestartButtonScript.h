@@ -23,12 +23,4 @@ public:
 	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
 
 	void Move();
-
-	int counter = 0;
-
-	int count = 0;
-
-	int select = 0;
-
-
 };

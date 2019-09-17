@@ -16,6 +16,9 @@ struct BackGround_1
 		// ゲームオブジェクトを作成
 		auto background_1 = std::make_shared<GameObject>();
 
+		// タグを設定
+		background_1->setTag(AKITA_BANZAI);
+
 		// ２次元座標
 		background_1->addComponent(std::make_shared<Transform2D>(
 			position,		// 座標（引数から受け取る）

@@ -21,4 +21,8 @@ void Explosion_EnemyScript::update()
 
 void Explosion_EnemyScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
+	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
+	{
+		getGameObject().lock()->destroy();
+	}
 }

@@ -32,4 +32,7 @@ enum GameObjectTag
 
 	// “G‚Ì’e
 	GAME_OBJECT_TAG_ENEMY_BULLET,
+
+	//BG
+	AKITA_BANZAI,
 };
