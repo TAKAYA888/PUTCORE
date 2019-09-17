@@ -50,6 +50,12 @@ enum ImageId
 	// エネミーボスの画像
 	IMAGE_ENEMY_BOSS = 120,
 
+	//ボスの画像
+	IMAGE_ENEMY_BOSS_1 = 121,
+
+	//ボスの気絶時の画像
+	IMAGE_ENEMY_BOSS_FAINT = 122,
+
 	// プレイヤーの弾の画像
 	IMAGE_PLAYER_BULLET = 130,
 
