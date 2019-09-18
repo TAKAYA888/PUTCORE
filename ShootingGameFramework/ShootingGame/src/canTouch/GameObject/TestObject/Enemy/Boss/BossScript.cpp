@@ -2,6 +2,7 @@
 
 #include "../../EnemyBullet/EnemyNormalBullet/EnemyNormalBullet.h"
 #include "../../Explosion_Enemy/Explosion_Enemy.h"
+#include "BossTeleportation/BossTeleportation.h"
 
 BossScript::BossScript()
 {
@@ -17,13 +18,20 @@ void BossScript::update()
 	if (m_curState == State::normal)
 	{		
 		//発射と移動の処理そしてタイマーのリセット
-		if (timer > 2)
+		if (timer > 1.94f && counter == 0)
+		{
+			BossTeleportation::create(getComponent<Transform2D>().lock()->getWorldPosition());
+			counter += 1;
+		}
+		else if (timer > 2)
 		{
 			Shot();
 
 			move();
 
 			timer = 0;
+
+			counter = 0;
 		}
 
 		//もしHPが50を下回ったら
@@ -35,6 +43,7 @@ void BossScript::update()
 			getComponent<Sprite2dDrawer>().lock()->setSpriteId(IMAGE_ENEMY_BOSS_FAINT);
 			//タイマーをリセットする
 			timer = 0;
+			counter = 0;
 			//ステータスを昏倒じょうたいにする
 			changeState(faint);
 		}

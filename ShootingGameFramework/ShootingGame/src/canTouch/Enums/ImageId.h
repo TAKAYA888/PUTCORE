@@ -68,6 +68,9 @@ enum ImageId
 	//エネミー用の爆発の画像
 	IMAGE_EXPLOSION_ENEMY = 141,
 
+	//ボス１用の移動時のエフェクト
+	IMAGE_BOSS_TELEPORTATION = 142,
+
 	// プレイヤーの体力ゲージの画像
 	IMAGE_PLAYER_HP_GAUGE = 200,
 
