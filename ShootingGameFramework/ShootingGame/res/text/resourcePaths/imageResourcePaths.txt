@@ -26,3 +26,4 @@
 300,res/image/pause.png
 302,res/image/title_back_button.png
 1000,res/image/animSample.png,1,4
+2000,res/image/score_number.png,1,10

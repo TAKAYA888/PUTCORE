@@ -24,4 +24,8 @@ public:
 
 	//Scoreのカウント
 	int score;
+
+	////Scoreの掃き出し
+	//static int Score_Screen_Number(int Number);
+	//static int Score_Number;
 };

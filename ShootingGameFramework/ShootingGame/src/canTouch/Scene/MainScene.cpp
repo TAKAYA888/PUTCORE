@@ -12,6 +12,7 @@
 #include "../GameObject/TestObject/AnimSample/AnimSample.h"
 #include "../GameObject/TestObject/GamePlayBgmPlayer/GamePlayBgmPlayer.h"
 #include "../GameObject/ResultObject/Score/Score.h"
+#include "../GameObject/MainObject/Score_screen.h"
 
 
 MainScene::MainScene()
@@ -32,7 +33,7 @@ void MainScene::start()
 	Core::create(SCREEN_SIZE / 2);
 
 	// プレイヤーのHPゲージを生成する
-	PlayerHpUi::create(Vector2(10.0f, 10.0f));
+	PlayerHpUi::create(Vector2(10.0f, SCREEN_SIZE_Y - 20.0f));
 
 	// エネミージェネレーターを生成する
 	EnemyGenerator::create();
@@ -48,6 +49,32 @@ void MainScene::start()
 
 	// スコアを生成
 	Score::create();
+
+
+	// スコア表示部を生成
+	float Complement = 2.0f; // 数字間の隙間
+
+	float x = 0.0f;
+	float Crack = 128.0f / 10.0f + Complement;
+	
+	// 左から1（だれかここをforに変えてください笑）
+	Score_Screen_1::create(Vector2(x, 0.0f));
+	x += Crack;
+	//Score_Screen_2::create(Vector2(x, 0.0f));
+	//x += Crack;
+	//Score_Screen_3::create(Vector2(x, 0.0f));
+	//x += Crack;
+	//Score_Screen_4::create(Vector2(x, 0.0f));
+	//x += Crack;
+	//Score_Screen_5::create(Vector2(x, 0.0f));
+	//x += Crack;
+	//Score_Screen_6::create(Vector2(x, 0.0f));
+	//x += Crack;
+	//Score_Screen_7::create(Vector2(x, 0.0f));
+	//x += Crack;
+	//Score_Screen_8::create(Vector2(x, 0.0f));
+	//x += Crack;
+	//Score_Screen_9::create(Vector2(x, 0.0f));
 }
 
 // 毎フレーム呼ばれる

@@ -190,6 +190,7 @@
     <ClInclude Include="src\canTouch\GameObject\LoadObject\BgmLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\ImageLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\SeLoadObject.h" />
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen.h" />
     <ClInclude Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogo.h" />
     <ClInclude Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogoScript.h" />
     <ClInclude Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButton.h" />

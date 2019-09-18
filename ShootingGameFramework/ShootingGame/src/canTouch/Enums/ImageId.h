@@ -82,4 +82,7 @@ enum ImageId
 
 	// アニメーションのテスト画像
 	IMAGE_ANIM_SAMPLE = 1000,
+
+	//スコアの数字
+	SCORE_NUMBER = 2000,
 };

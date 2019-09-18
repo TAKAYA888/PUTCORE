@@ -419,5 +419,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossTeleportation\BossTeleportation.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
