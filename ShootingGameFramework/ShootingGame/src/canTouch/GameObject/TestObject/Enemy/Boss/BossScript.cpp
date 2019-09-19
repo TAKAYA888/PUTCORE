@@ -3,11 +3,13 @@
 #include "../../EnemyBullet/EnemyNormalBullet/EnemyNormalBullet.h"
 #include "../../Explosion_Enemy/Explosion_Enemy.h"
 #include "BossTeleportation/BossTeleportation.h"
+#include "BossDead/BossDead.h"
 
 BossScript::BossScript()
 {
 	timer = 0;
 	counter = 0;
+	teleportionCounter = true;
 }
 
 void BossScript::update()
@@ -16,12 +18,12 @@ void BossScript::update()
 	timer += TktkTime::deltaTime();
 	//もしステータスが普通なら
 	if (m_curState == State::normal)
-	{		
+	{
 		//発射と移動の処理そしてタイマーのリセット
-		if (timer > 1.94f && counter == 0)
+		if (timer > 1.94f && teleportionCounter)
 		{
 			BossTeleportation::create(getComponent<Transform2D>().lock()->getWorldPosition());
-			counter += 1;
+			teleportionCounter = false;
 		}
 		else if (timer > 2)
 		{
@@ -31,7 +33,7 @@ void BossScript::update()
 
 			timer = 0;
 
-			counter = 0;
+			teleportionCounter = true;
 		}
 
 		//もしHPが50を下回ったら
@@ -63,11 +65,16 @@ void BossScript::update()
 		}
 	}
 	else if (m_curState == State::angry)
-	{		
+	{
 		//もしカウンターが3以下なら
 		if (counter < 3)
 		{
 			//もしタイマーが一秒以上なら
+			if (timer > 0.96f && teleportionCounter)
+			{
+				BossTeleportation::create(getComponent<Transform2D>().lock()->getWorldPosition());
+				teleportionCounter = false;
+			}
 			if (timer > 1)
 			{
 				Shot();
@@ -77,13 +84,20 @@ void BossScript::update()
 				timer = 0;
 				//カウントアップ
 				counter += 1;
+
+				teleportionCounter = true;
 			}
 
 		}
 		//3以上なら
 		else
 		{
-			if (timer > 3)
+			if (timer > 2.96f && teleportionCounter)
+			{
+				BossTeleportation::create(getComponent<Transform2D>().lock()->getWorldPosition());
+				teleportionCounter = false;
+			}
+			else if (timer > 3)
 			{
 				Shot();
 
@@ -92,14 +106,16 @@ void BossScript::update()
 				timer = 0;
 				//カウンターリセット
 				counter = 0;
+				teleportionCounter = true;
 			}
 		}
 	}
 
 	if (m_hp <= 0)
 	{
-		//ゲームクリアシーンに移行する
-		SceneManager::changeScene(CLEAR_SCENE);
+		////ゲームクリアシーンに移行する
+		//SceneManager::changeScene(CLEAR_SCENE);
+		BossDead::create(getComponent<Transform2D>().lock()->getWorldPosition());
 		changeState(dying);
 		// 自分を殺す
 		getGameObject().lock()->destroy();
@@ -146,7 +162,7 @@ void BossScript::onCollisionEnter(GameObjectPtr other)
 }
 
 void BossScript::onCollisionStay(GameObjectPtr other)
-{		
+{
 }
 
 void BossScript::onCollisionExit(GameObjectPtr other)
@@ -165,7 +181,7 @@ void BossScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::wea
 
 void BossScript::onDestroy()
 {
-	GameObjectManager::sendMessage(ENEMY_BOSS_DEAD);
+	GameObjectManager::sendMessage(DIE_BOSS1_DEAD);
 }
 
 //ステータスの変更を行う
@@ -177,9 +193,9 @@ void BossScript::changeState(State nextState)
 void BossScript::move()
 {
 	//xを500、1100の間でランダムに移動する
-	float x = Random::getRandI(500, 1100);
+	int x = Random::getRandI(500, 1100);
 	//yを128、600の間でランダムに移動する
-	float y = Random::getRandI(128, 600);
+	int y = Random::getRandI(128, 600);
 
 	getComponent<Transform2D>().lock()->setLocalPosition(Vector2(x, y));
 }

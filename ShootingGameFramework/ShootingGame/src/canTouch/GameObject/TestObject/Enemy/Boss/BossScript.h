@@ -61,7 +61,7 @@ private:
 private:
 
 	// ‘Ì—Í
-	int m_hp{ 100 };
+	int m_hp{ 10 };
 
 	float timer;
 
@@ -73,5 +73,7 @@ private:
 
 	State m_curState = State::normal;
 
-	float counter;
+	int counter;
+
+	bool teleportionCounter;
 };
