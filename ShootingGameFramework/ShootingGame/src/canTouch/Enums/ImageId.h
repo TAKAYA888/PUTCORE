@@ -83,6 +83,9 @@ enum ImageId
 	// アニメーションのテスト画像
 	IMAGE_ANIM_SAMPLE = 1000,
 
+	//Boss１の死亡時のアニメーション
+	IMAGE_BOSS_DEAD = 1001,
+
 	//スコアの数字
 	SCORE_NUMBER = 2000,
 };

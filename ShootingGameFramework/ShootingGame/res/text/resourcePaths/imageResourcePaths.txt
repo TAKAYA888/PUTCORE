@@ -26,4 +26,5 @@
 300,res/image/pause.png
 302,res/image/title_back_button.png
 1000,res/image/animSample.png,1,4
+1001,res/image/boss_dead.png,1,5
 2000,res/image/score_number.png,1,10

@@ -143,6 +143,7 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyBullet\VirusEnemyBullet\VirusEnemyBulletScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyGenerator\EnemyGeneratorScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemyScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDeadScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossTeleportation\BossTeleportationScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\NormalEnemy\NormalEnemyScript.cpp" />
@@ -214,6 +215,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemy.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemyScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\Boss.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDead.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDeadScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossTeleportation\BossTeleportation.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossTeleportation\BossTeleportationScript.h" />
