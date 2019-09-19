@@ -10,6 +10,8 @@ void ScoreScript::update()
 {
 }
 
+int ScoreScript::score;
+
 void ScoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
 	//タイトルが死ぬとスコアがリセットされます
@@ -28,12 +30,12 @@ void ScoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::we
 
 	if (eventMessageType == DIE_Enemy1_2)
 	{
-		score += 100;
+		score += 1000;
 	}
 
 	if (eventMessageType == DIE_Enemy2)
 	{
-		score += 100;
+		score += 10000;
 	}
 
 	if (eventMessageType == DIE_Enemy3_1)
@@ -47,20 +49,31 @@ void ScoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::we
 	}
 }
 
-////スコアの一桁を返します（引数Numberにほしい桁の位をいれます　左から1です）
-//int ScoreScript::Score_Screen_Number(int Number)
-//{
-//	if (Number == 1)Score_Number = 100000000;
-//	if (Number == 2)Score_Number = 10000000;
-//	if (Number == 3)Score_Number = 1000000;
-//	if (Number == 4)Score_Number = 100000;
-//	if (Number == 5)Score_Number = 10000;
-//	if (Number == 6)Score_Number = 1000;
-//	if (Number == 7)Score_Number = 100;
-//	if (Number == 8)Score_Number = 10;
-//	if (Number == 9)Score_Number = 1;
-//
-//	Score_Number = score / Score_Number;
-//
-//	return Score_Number;
-//}
+int ScoreScript::Score_arrey[10];
+int ScoreScript::Score_tmp;
+
+//スコアの一桁を返します（引数Numberにほしい桁の位をいれます　左から1です）
+int ScoreScript::Score_Screen_Number(int Number)
+{
+	Score_tmp = 0;
+	Score_tmp = score;
+	Score_arrey[1] = Score_tmp / 100000000;
+	Score_tmp %= 100000000;
+	Score_arrey[2] = Score_tmp / 10000000;
+	Score_tmp %= 10000000;
+	Score_arrey[3] = Score_tmp / 1000000;
+	Score_tmp %= 1000000;
+	Score_arrey[4] = Score_tmp / 100000;
+	Score_tmp %= 100000;
+	Score_arrey[5] = Score_tmp / 10000;
+	Score_tmp %= 10000;
+	Score_arrey[6] = Score_tmp / 1000;
+	Score_tmp %= 1000;
+	Score_arrey[7] = Score_tmp / 100;
+	Score_tmp %= 100;
+	Score_arrey[8] = Score_tmp / 10;
+	Score_tmp %= 10;
+	Score_arrey[9] = Score_tmp / 1;
+
+	return Score_arrey[Number];
+}

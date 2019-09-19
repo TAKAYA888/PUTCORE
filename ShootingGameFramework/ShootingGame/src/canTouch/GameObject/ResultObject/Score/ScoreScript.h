@@ -23,9 +23,10 @@ public:
 	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
 
 	//Scoreのカウント
-	int score;
+	static int score;
 
 	////Scoreの掃き出し
-	//static int Score_Screen_Number(int Number);
-	//static int Score_Number;
+	static int Score_Screen_Number(int Number);
+	static int Score_arrey[10];
+	static int Score_tmp;
 };

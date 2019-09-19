@@ -141,6 +141,9 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossTeleportation\BossTeleportationScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dontTouch\MyGame\MyGame.h">
@@ -420,6 +423,9 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
