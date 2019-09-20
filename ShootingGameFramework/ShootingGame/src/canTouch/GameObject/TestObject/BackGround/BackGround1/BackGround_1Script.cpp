@@ -15,7 +15,7 @@ void BackGround_1Script::update()
 	}
 	else
 	{
-		getComponent<Transform2D>().lock()->setLocalPosition(Vector2(1920, 360));
+		getComponent<Transform2D>().lock()->setLocalPosition(Vector2(1910, 360));
 	}	
 }
 

@@ -24,6 +24,7 @@ void MainScene::start()
 {
 	//”wŒi‚P‚ğ¶¬‚·‚é
 	BackGround_1::create(SCREEN_SIZE/2);
+	BackGround_1::create(Vector2(1280.0f, 360));
 	BackGround_1::create(Vector2(1920, 360));
 
 	// ƒvƒŒƒCƒ„[‚ğ¶¬‚·‚é
