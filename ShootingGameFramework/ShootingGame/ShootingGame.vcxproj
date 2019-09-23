@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClCompile Include="src\canTouch\GameObject\GameClearObject\GameClearLogo\GameClearLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\GameOverObject\GameOverLogo\GameOverLogoScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\MainObject\Item\Item.cpp" />
     <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.cpp" />
     <ClCompile Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButtonScript.cpp" />
@@ -193,6 +194,8 @@
     <ClInclude Include="src\canTouch\GameObject\LoadObject\BgmLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\ImageLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\SeLoadObject.h" />
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Item\Item.h" />
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Item\ITemScript.h" />
     <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen.h" />
     <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.h" />
     <ClInclude Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogo.h" />
