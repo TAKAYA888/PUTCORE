@@ -42,16 +42,17 @@ void PlayerScript::update()
 	invincibleTime -= TktkTime::deltaTime();
 	//std::cout << invincibleTime << std::endl;
 	//–³“GŽžŠÔ‚ð0ˆÈ‰º‚É‚µ‚È‚¢
-	if (invincibleTime < 0)
+	if (invincibleTime < 0.0f)
 	{
-		invincibleTime = 0;
+		invincibleTime = 0.0f;
 	}
 	//–³“GŽžŠÔ‚Ìˆ—
-	if (invincibleTime > 0)
+	if (invincibleTime > 0.0f)
 	{
 		getComponent<RectCollider>().lock()->setActive(false);
+		getComponent<Sprite2dDrawer>().lock()->setActive(false);
 	}
-	else if (invincibleTime <= 0)
+	else if (invincibleTime <= 0.0f)
 	{
 		getComponent<RectCollider>().lock()->setActive(true);
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
