@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClCompile Include="src\canTouch\GameObject\GameClearObject\GameClearLogo\GameClearLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\GameOverObject\GameOverLogo\GameOverLogoScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\MainObject\Item\Item.cpp" />
     <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.cpp" />
     <ClCompile Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButtonScript.cpp" />
@@ -152,6 +153,7 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy1-2\VirusEnemyScript1_2.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy2\VirusEnemyScript2.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy3-1\VirusEnemyScript3-1.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemyScript4.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Explosion\ExplosionScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Explosion_Enemy\Explosion_EnemyScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\GameEndChecker\GameEndCheckerScript.cpp" />
@@ -192,6 +194,8 @@
     <ClInclude Include="src\canTouch\GameObject\LoadObject\BgmLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\ImageLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\SeLoadObject.h" />
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Item\Item.h" />
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Item\ITemScript.h" />
     <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen.h" />
     <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.h" />
     <ClInclude Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogo.h" />
@@ -232,6 +236,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy2\VirusEnemyScript2.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy3-1\VirusEnemy3-1.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy3-1\VirusEnemyScript3-1.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemy4.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemyScript4.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion\Explosion.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion\ExplosionScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion_Enemy\Explosion_Enemy.h" />

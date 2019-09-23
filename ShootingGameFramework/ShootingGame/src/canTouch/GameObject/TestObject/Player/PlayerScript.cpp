@@ -111,6 +111,12 @@ void PlayerScript::onCollisionStay(GameObjectPtr other)
 		// ‘Ì—Í‚ð-1‚·‚é
 		m_curHp--;
 	}
+	if (other.lock()->getTag() == GAME_OBJECT_TAG_ITEM)
+	{
+
+		// ‘Ì—Í‚ð-1‚·‚é
+		m_curHp++;
+	}
 }
 
 // Õ“ËI—¹‚ÅŒÄ‚Î‚ê‚é
