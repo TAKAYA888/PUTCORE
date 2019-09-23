@@ -1,4 +1,5 @@
 #include "BossDeadScript.h"
+#include "../BossTeleportation/BossTeleportation.h"
 
 BossDeadScript::BossDeadScript()
 {
@@ -7,11 +8,21 @@ BossDeadScript::BossDeadScript()
 
 void BossDeadScript::update()
 {
+	Vector2 Pos = getComponent<Transform2D>().lock()->getWorldPosition();
+	int randomX = Random::getRandI(-200, 200);
+	int randomY = Random::getRandI(-200, 200);
+	Vector2 spawnPos;
+	spawnPos.x = Pos.x + randomX;
+	spawnPos.y = Pos.y + randomY;
 	timer += TktkTime::deltaTime();
-	if (timer > 2.6f)
+	if (timer > 3)
 	{
 		// Ž©•ª‚ðŽE‚·
 		getGameObject().lock()->destroy();
+	}
+	else
+	{
+		BossTeleportation::create(spawnPos);
 	}
 }
 
