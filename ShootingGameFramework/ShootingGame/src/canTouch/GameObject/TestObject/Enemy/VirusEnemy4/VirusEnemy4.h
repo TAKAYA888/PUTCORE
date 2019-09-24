@@ -15,6 +15,9 @@ struct  VirueEnemy4
 	{
 		auto virusenemy4 = std::make_shared<GameObject>();
 
+		//タグを設定
+		virusenemy4->setTag(GameObjectTag::GAME_OBJECT_TAG_ENEMY);
+
 		// ２次元座標
 		virusenemy4->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
