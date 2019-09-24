@@ -144,6 +144,11 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyBullet\EnemyNormalBullet\EnemyNormalBulletScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyBullet\VirusEnemyBullet\VirusEnemyBulletScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyGenerator\EnemyGeneratorScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\Boss2Script.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCoreDeadScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCoreScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2DeadScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2Script.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemyScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDeadScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossScript.cpp" />
@@ -218,6 +223,14 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyBullet\VirusEnemyBullet\VirusEnemyBulletScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyGenerator\EnemyGenerator.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyGenerator\EnemyGeneratorScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\Boss2.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\Boss2Script.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCore1.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCoreDeadScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCoreScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2DeadScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2Script.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemy.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemyScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\Boss.h" />

@@ -36,4 +36,7 @@ enum EventMessageType
 	//Boss1‚ªŽ€‚ñ‚¾
 	DIE_BOSS1_DEAD,
 
+	//Boss2‚ªŽ€‚ñ‚¾
+	DIE_BOSS2_DEAD,
+
 };
