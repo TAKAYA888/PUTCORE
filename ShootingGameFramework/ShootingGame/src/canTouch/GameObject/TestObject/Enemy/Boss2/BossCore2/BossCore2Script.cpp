@@ -58,7 +58,7 @@ void BossCore2Script::update()
 		//角度を変える
 		angle += TktkTime::deltaTime() * 10;
 	}
-	else if (timer < 16)
+	else if (timer < 20.5f)
 	{
 		//ショットフラグをfalseにする
 		shotfrag = false;

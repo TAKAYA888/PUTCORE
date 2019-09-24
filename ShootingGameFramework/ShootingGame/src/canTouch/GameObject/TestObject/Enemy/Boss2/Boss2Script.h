@@ -42,7 +42,7 @@ private:
 private:
 
 	// ‘Ì—Í
-	int m_hp{ 100 };
+	int m_hp{ 500 };
 
 	float timer;
 

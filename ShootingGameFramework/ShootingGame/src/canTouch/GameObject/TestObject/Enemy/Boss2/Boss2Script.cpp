@@ -3,6 +3,7 @@
 #include "../../Explosion_Enemy/Explosion_Enemy.h"
 #include "BossCore2/BossCore2.h"
 #include "../../EnemyBullet/EnemyNormalBullet/EnemyNormalBullet.h"
+#include "../Boss/BossDead/BossDead.h"
 
 Boss2Script::Boss2Script()
 {
@@ -37,6 +38,7 @@ void Boss2Script::update()
 	//‚à‚µHp‚ª0ˆÈ‰º‚É‚È‚Á‚½‚ç
 	if (m_hp <= 0)
 	{
+		BossDead::create(getComponent<Transform2D>().lock()->getWorldPosition());
 		// Ž©•ª‚ðŽE‚·
 		getGameObject().lock()->destroy();
 	}
