@@ -16,36 +16,51 @@ BossCore2Script::BossCore2Script()
 
 void BossCore2Script::update()
 {
+	//このスクリプトのActiveフラグを受け取る
 	bool ActiveFrag = getComponent<BossCore2Script>().lock()->isActive();
+	//もしActiveフラグがtrueなら
 	if (ActiveFrag)
 	{
+		//下記のコンポーネントをfalseにする
 		getComponent<BossCore2DeadScript>().lock()->setActive(false);
 	}
 
+	//もしHpが0以下なら
 	if (m_hp < 0)
 	{
+		//下記のコンポーネントをtrueにする
 		getComponent<BossCore2DeadScript>().lock()->setActive(true);
+		//下記のコンポーネントをfalseにする
 		getComponent<BossCore2Script>().lock()->setActive(false);
+		//Hpを15にする
 		m_hp = 15;
 	}
 
+	//シュートタイマーをカウントダウンする
 	m_shotTimer -= TktkTime::deltaTime();
+	//シュートタイマーを-10以下にならないようにする
 	if (m_shotTimer < -10.0f)
 	{
 		m_shotTimer = 0.0f;
 	}
+	//タイマーをカウントアップする
 	timer += TktkTime::deltaTime();
+	//現在の座標を受け取る
 	Vector2 nowPos = getComponent<Transform2D>().lock()->getLocalPosition();
+	//タイマーが5秒以上になったら
 	if (timer < 5.0f)
 	{
+		//角度を変える
 		angle -= TktkTime::deltaTime() * 10;
 	}
 	else if (timer < 15.0f)
 	{
+		//角度を変える
 		angle += TktkTime::deltaTime() * 10;
 	}
 	else if (timer < 16)
 	{
+		//ショットフラグをfalseにする
 		shotfrag = false;
 	}
 	else
@@ -55,9 +70,11 @@ void BossCore2Script::update()
 		shotfrag = true;
 	}
 
+	//速度と角度を設定する
 	auto initVelocity1 = Vector2(MathHelper::sin(250.0f + angle), MathHelper::cos(250.0f + angle)) * 512.0f;
 	auto initVelocity2 = Vector2(MathHelper::sin(280.0f + angle), MathHelper::cos(280.0f + angle)) * 512.0f;
 
+	//弾を撃つ
 	if (m_shotTimer < 0.0f && shotfrag)
 	{
 		EnemyNormalBullet::create(nowPos, initVelocity1);

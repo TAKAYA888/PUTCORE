@@ -7,25 +7,35 @@
 Boss2Script::Boss2Script()
 {
 	timer = 0;
+	//bossコア１の生成
 	BossCore1::create(Vector2(900, 200), 0);
+	//bossコア２の生成
 	BossCore2::create(Vector2(900, 550), 0);
 }
 
 void Boss2Script::update()
 {
+	//タイマーのカウントアップ
 	timer += TktkTime::deltaTime();
+	//現在の座標を受け取る
 	Vector2 nowPos = getComponent<Transform2D>().lock()->getLocalPosition();
+	//もし15.5秒以上経過したら
 	if (timer > 15.5f)
 	{
+		//5回弾を生成する
 		for (float i = 0; i <= 60; i += 15)
 		{
+			//向きと速度の設定
 			auto initVelocity1 = Vector2(MathHelper::sin(240.0f + i), MathHelper::cos(240.0f + i)) * 512.0f;
+			//弾の生成
 			EnemyNormalBullet::create(nowPos, initVelocity1);
 		}
+		//タイマーのリセット
 		timer = 0;
 	}
 
-	if (m_hp < 0)
+	//もしHpが0以下になったら
+	if (m_hp <= 0)
 	{
 		// 自分を殺す
 		getGameObject().lock()->destroy();
@@ -91,6 +101,7 @@ void Boss2Script::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::we
 
 void Boss2Script::onDestroy()
 {
+	//死んだときにこのメッセージを飛ばす
 	GameObjectManager::sendMessage(DIE_BOSS2_DEAD);
 }
 
