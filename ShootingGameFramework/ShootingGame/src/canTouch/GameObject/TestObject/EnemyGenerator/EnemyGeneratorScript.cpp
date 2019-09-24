@@ -7,6 +7,7 @@
 #include "../Enemy/VirusEnemy2/VirusEnemy2.h"
 #include "../Enemy/VirusEnemy3-1/VirusEnemy3-1.h"
 #include "../Enemy/VirusEnemy4/VirusEnemy4.h"
+#include "../Enemy/VirusEnemy5/VirusEnemy5.h"
 #include "../Enemy/BossEnemy/BossEnemy.h"
 #include "../Enemy/Boss/Boss.h"
 #include "../Enemy/Boss2/Boss2.h"
@@ -99,6 +100,10 @@ void EnemyGeneratorScript::update()
 		else if((*m_curIterator).name == "virusenemy4")
 		{
 			VirueEnemy4::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
+		}
+		else if ((*m_curIterator).name == "virusenemy5")
+		{
+			VirusEnemy5::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
 		}
 		else if ((*m_curIterator).name == "Boss1")
 		{

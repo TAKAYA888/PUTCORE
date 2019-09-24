@@ -27,11 +27,17 @@ enum EventMessageType
 	//エネミー1-2死亡
 	DIE_Enemy1_2,
 
-	//エネミー1-3死亡
+	//エネミー2死亡
 	DIE_Enemy2,
 
 	//エネミー3-1死亡
 	DIE_Enemy3_1,
+
+	//エネミー4死亡
+	DIE_Enemy4,
+
+	//エネミー5死亡
+	DIE_Enemy5,
 
 	//Boss1が死んだ
 	DIE_BOSS1_DEAD,
