@@ -47,6 +47,9 @@ enum ImageId
 	//ウイルスエネミー2の画像
 	IMAGE_VIRUS_ENEMY_TWO = 112,
 
+	//ザコ６の画像
+	IMAGE_ZAKO6_ENEMY = 113,
+
 	// エネミーボスの画像
 	IMAGE_ENEMY_BOSS = 120,
 

@@ -160,6 +160,8 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy3-1\VirusEnemyScript3-1.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemyScript4.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy5\VirusEnemyScript5.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Down\zako6DownScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Up\zako6UpScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Explosion\ExplosionScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Explosion_Enemy\Explosion_EnemyScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\GameEndChecker\GameEndCheckerScript.cpp" />
@@ -254,6 +256,10 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemyScript4.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy5\VirusEnemy5.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy5\VirusEnemyScript5.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Down\zako6Down.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Down\zako6DownScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Up\zako6Up.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Up\zako6UpScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion\Explosion.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion\ExplosionScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Explosion_Enemy\Explosion_Enemy.h" />

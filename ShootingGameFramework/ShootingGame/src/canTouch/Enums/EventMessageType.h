@@ -39,6 +39,9 @@ enum EventMessageType
 	//エネミー5死亡
 	DIE_Enemy5,
 
+	//ザコ６が死亡
+	DIE_Enemy6,
+
 	//Boss1が死んだ
 	DIE_BOSS1_DEAD,
 
