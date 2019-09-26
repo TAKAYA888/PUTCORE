@@ -16,8 +16,6 @@ PlayerScript::PlayerScript(float moveSpeed)
 // –ˆƒtƒŒ[ƒ€ŒÄ‚Î‚ê‚é
 void PlayerScript::update()
 {
-	DrawFrag = getComponent<Sprite2dDrawer>().lock()->isActive();
-
 	//“_–Åˆ—
 	if (flashTime <= 0.0f && invincibleTime > 0)
 	{
