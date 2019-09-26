@@ -10,12 +10,14 @@ PlayerScript::PlayerScript(float moveSpeed)
 	: m_moveSpeed(moveSpeed)
 {
 	invincibleTime = 0;
-	flashTime = 0;
+	flashTime = 0;	
 }
 
 // 毎フレーム呼ばれる
 void PlayerScript::update()
 {
+	DrawFrag = getComponent<Sprite2dDrawer>().lock()->isActive();
+
 	//点滅処理
 	if (flashTime <= 0.0f && invincibleTime > 0)
 	{
@@ -36,7 +38,8 @@ void PlayerScript::update()
 		flashTime -= TktkTime::deltaTime();
 	}
 
-
+	
+	
 	//std::cout << flashTime << std::endl;
 	//// タイマーカウントダウン
 	invincibleTime -= TktkTime::deltaTime();
@@ -50,13 +53,15 @@ void PlayerScript::update()
 	if (invincibleTime > 0.0f)
 	{
 		getComponent<RectCollider>().lock()->setActive(false);
-		getComponent<Sprite2dDrawer>().lock()->setActive(false);
+		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(false);
 	}
 	else if (invincibleTime <= 0.0f)
 	{
-		getComponent<RectCollider>().lock()->setActive(true);
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
+		getComponent<RectCollider>().lock()->setActive(true);		
+		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);		
 	}
+
 
 	// 入力による移動
 	inputToMove();
@@ -93,11 +98,7 @@ void PlayerScript::onCollisionEnter(GameObjectPtr other)
 		// 体力を-1する
 		m_curHp--;
 	}
-}
 
-// 衝突中で呼ばれる
-void PlayerScript::onCollisionStay(GameObjectPtr other)
-{
 	// 衝突相手のタグが「GAME_OBJECT_TAG_ENEMY」だったら
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_ENEMY)
 	{
@@ -111,6 +112,12 @@ void PlayerScript::onCollisionStay(GameObjectPtr other)
 		// 体力を-1する
 		m_curHp--;
 	}
+}
+
+// 衝突中で呼ばれる
+void PlayerScript::onCollisionStay(GameObjectPtr other)
+{
+	
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_ITEM)
 	{
 
