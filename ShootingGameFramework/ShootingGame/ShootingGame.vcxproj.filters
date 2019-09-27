@@ -177,6 +177,9 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Down\zako6DownScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dontTouch\MyGame\MyGame.h">
@@ -519,6 +522,12 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Down\zako6DownScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3Script.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

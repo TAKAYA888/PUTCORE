@@ -21,6 +21,9 @@ enum EventMessageType
 	//ポーズエンド
 	PAUSE_END,
 
+	//プレイヤーの死亡
+	DIE_PLAYER,
+
 	//エネミー1-1死亡
 	DIE_Enemy1_1,
 
@@ -47,5 +50,8 @@ enum EventMessageType
 
 	//Boss2が死んだ
 	DIE_BOSS2_DEAD,
+
+	//Boss3が死んだ
+	DIE_BOSS3_DEAD,
 
 };

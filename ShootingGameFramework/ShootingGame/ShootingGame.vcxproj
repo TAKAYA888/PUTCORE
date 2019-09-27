@@ -149,6 +149,7 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCoreScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2DeadScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2Script.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3Script.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemyScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDeadScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossScript.cpp" />
@@ -234,6 +235,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2DeadScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2Script.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3Script.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemy.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\BossEnemy\BossEnemyScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\Boss.h" />

@@ -57,6 +57,11 @@ void ScoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::we
 	{
 		score += 3000;
 	}
+
+	if (eventMessageType == DIE_BOSS3_DEAD)
+	{
+		score += 10000;
+	}
 }
 
 int ScoreScript::Score_arrey[10];

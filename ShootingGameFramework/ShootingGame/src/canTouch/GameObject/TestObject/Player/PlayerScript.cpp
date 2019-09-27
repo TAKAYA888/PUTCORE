@@ -74,6 +74,8 @@ void PlayerScript::update()
 	// 体力が０以下になったら
 	if (m_curHp <= 0)
 	{
+		//死んだときにこのメッセージを飛ばす
+		GameObjectManager::sendMessage(DIE_PLAYER);
 		//ゲームオーバーに移行する
 		SceneManager::changeScene(GAMEOVER_SCENE);
 		// 自分を殺す

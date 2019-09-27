@@ -9,6 +9,13 @@ zako6UpScript::zako6UpScript()
 void zako6UpScript::update()
 {
 	move();
+
+	//体力が0以下になったら
+	if (m_hp <= 0)
+	{
+		GameObjectManager::sendMessage(DIE_Enemy6);
+		getGameObject().lock()->destroy();
+	}
 }
 
 void zako6UpScript::onCollisionEnter(GameObjectPtr other)
@@ -35,6 +42,18 @@ void zako6UpScript::onCollisionEnter(GameObjectPtr other)
 		// 体力を-3する
 		m_hp -= 3;
 	}
+
+	//衝突相手のタグが「GAME_OBJECT_TAG_CORE」だったら
+	if (other.lock()->getTag() == GAME_OBJECT_TAG_CORE)
+	{
+		// 爆発を生成する
+		Explosion_Enemy::create(
+			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
+		);
+
+		// 体力を-10する
+		m_hp -= 10;
+	}
 }
 
 void zako6UpScript::onCollisionStay(GameObjectPtr other)
@@ -48,7 +67,7 @@ void zako6UpScript::onCollisionExit(GameObjectPtr other)
 void zako6UpScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
 	//もしゲームプレイオブジェクトが死ねといわれたら
-	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
+	if (eventMessageType == DIE_GAMEPLAY_OBJECT || eventMessageType == DIE_BOSS3_DEAD)
 	{
 		//このコンポーネントが死ぬ
 		getGameObject().lock()->destroy();
@@ -70,4 +89,5 @@ void zako6UpScript::move()
 	// 移動する
 	getComponent<InertialMovement2D>().lock()->addForce(velocity);
 }
+
 
