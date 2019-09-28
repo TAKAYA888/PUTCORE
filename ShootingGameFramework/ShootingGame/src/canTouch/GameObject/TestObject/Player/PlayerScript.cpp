@@ -2,6 +2,7 @@
 
 #include "../PlayerBullet/PlayerBullet.h"
 #include "../Explosion/Explosion.h"
+#include "../Core/StayCore/Core.h"
 
 #include <string>
 #include<iostream>
@@ -136,6 +137,13 @@ void PlayerScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::w
 	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
 	{
 		getGameObject().lock()->destroy();
+	}
+
+
+	if (eventMessageType == DIE_CORE)
+	{
+		//ÉRÉAÇê∂ê¨Ç∑ÇÈ
+		Core::create(SCREEN_SIZE / 2);
 	}
 }
 

@@ -24,6 +24,9 @@ enum EventMessageType
 	//プレイヤーの死亡
 	DIE_PLAYER,
 
+	//コアの死亡
+	DIE_CORE,
+
 	//エネミー1-1死亡
 	DIE_Enemy1_1,
 
