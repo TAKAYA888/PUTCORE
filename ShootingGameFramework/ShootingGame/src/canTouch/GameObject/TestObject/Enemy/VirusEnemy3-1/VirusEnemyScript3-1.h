@@ -50,4 +50,9 @@ private:
 	//result‚ð•Û‘¶‚·‚é
 	float Lasttimeresult;
 
+	Vector2 playerPos;
+
+	bool playerFrag;
+
+
 };

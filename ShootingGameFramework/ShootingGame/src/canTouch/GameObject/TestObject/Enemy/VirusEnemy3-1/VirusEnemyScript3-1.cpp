@@ -5,7 +5,12 @@
 
 VirusEnemyScript3_1::VirusEnemyScript3_1()
 {
-	timer = 0;
+	timer = 0;	
+
+	// プレイヤーの位置を取得
+	playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
+
+	playerFrag = true;
 }
 
 //毎フレーム呼ばれる
@@ -67,6 +72,11 @@ void VirusEnemyScript3_1::handleMessage(int  eventMessageType, SafetyVoidSmartPt
 	{
 		getGameObject().lock()->destroy();
 	}
+
+	if (eventMessageType == DIE_PLAYER)
+	{
+		playerFrag = false;
+	}
 }
 
 //移動
@@ -80,8 +90,11 @@ void VirusEnemyScript3_1::move()
 		// エネミーの位置を取得
 		auto enemyPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
-		// プレイヤーの位置を取得
-		Vector2 playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
+		if (playerFrag)
+		{
+			// プレイヤーの位置を取得
+			playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
+		}
 
 		// 「プレイヤー」->「エネミー」のベクトルを求める
 		auto enemyToMouse = playerPos - enemyPos;
