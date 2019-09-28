@@ -6,6 +6,10 @@
 
 VirusEnemyScript2::VirusEnemyScript2()
 {
+	// プレイヤーの位置を取得
+	playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
+
+	playerFrag = true;
 }
 
 //毎フレーム呼ばれる
@@ -68,6 +72,11 @@ void VirusEnemyScript2::handleMessage(int  eventMessageType, SafetyVoidSmartPtr<
 	{
 		getGameObject().lock()->destroy();
 	}
+
+	if (eventMessageType == DIE_PLAYER)
+	{
+		playerFrag = false;
+	}
 }
 
 //移動
@@ -95,8 +104,11 @@ void VirusEnemyScript2::shot()
 		// 弾の出現座標
 		auto spawnPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
-		// プレイヤーの位置を取得
-		Vector2 playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
+		if (playerFrag)
+		{
+			// プレイヤーの位置を取得
+		    playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
+		}
 
 		// 自身の回転角度
 		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();

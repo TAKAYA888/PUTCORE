@@ -52,4 +52,8 @@ private:
 
 	//タイマー
 	float timer;
+
+	Vector2 playerPos;
+
+	bool playerFrag;
 };
