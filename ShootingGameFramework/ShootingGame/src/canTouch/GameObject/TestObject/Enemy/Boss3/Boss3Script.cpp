@@ -9,15 +9,18 @@
 Boss3Script::Boss3Script()
 {
 	timer = 0;
+	//プレイヤーの座標を受け取る
 	Vector2 playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
-
+	//プレイヤーが生存している
 	PlayerFrag = true;
+	//射撃するかどうかの
 	ShotFrag1 = true;
 	ShotFrag2 = true;
 }
 
 void Boss3Script::update()
 {
+	//カウントアップ
 	timer += TktkTime::deltaTime();
 
 	if (ActionCounter < 4)
@@ -38,6 +41,7 @@ void Boss3Script::update()
 		{
 			ActionCounter++;
 
+			//リセット
 			ShotFrag1 = true;
 			ShotFrag2 = true;
 
@@ -122,6 +126,7 @@ void Boss3Script::update()
 		}
 		else if (timer > 13)
 		{
+			//リセット
 			ActionCounter = 0;
 			for (size_t i = 0; i < 3; i++)
 			{
@@ -193,6 +198,7 @@ void Boss3Script::onCollisionExit(GameObjectPtr other)
 
 void Boss3Script::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
+	//プレイヤーが死んだらフラグを変える
 	if (eventMessageType == DIE_PLAYER)
 	{
 		PlayerFrag = false;
@@ -270,6 +276,7 @@ void Boss3Script::Shot2()
 		// 弾の初期速度
 		auto initVelocity = Vector2(MathHelper::sin(result + shotAngle2[i] + 180), MathHelper::cos(result + shotAngle2[i] + 180)) * 512.0f;
 
+		//射出
 		EnemyNormalBullet::create(Boss3Pos, initVelocity);
 	}
 }
@@ -281,7 +288,9 @@ void Boss3Script::Move()
 	//yを128、600の間でランダムに移動する
 	float y = Random::getRandF(0, 760);
 
+	//テレポのエフェクトを生成
 	BossTeleportation::create(Vector2(x, y));
 
+	//テレポ
 	getComponent<Transform2D>().lock()->setLocalPosition(Vector2(x, y));
 }

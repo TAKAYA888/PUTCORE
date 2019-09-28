@@ -39,6 +39,7 @@ private:
 	//射撃1
 	void Shot1();
 
+	//射撃2
 	void Shot2();
 
 	//移動
@@ -49,6 +50,7 @@ private:
 	// 体力
 	int m_hp{ 800 };
 
+	//タイマー
 	float timer;
 
 	// 弾を発射する間隔
@@ -57,16 +59,22 @@ private:
 	// 弾を発射するタイマー
 	float m_shotTimer{ 0.0f };
 
+	//カウンター
 	int counter;
 
+	//プレイヤーのポジションを保存する
 	Vector2 playerPos;
 
+	//プレイヤーが死んだかどうか
 	bool PlayerFrag;
 
+	//射撃したかどうか
 	bool ShotFrag1;
 
+	//射撃したかどうか
 	bool ShotFrag2;
 
+	//エネミーを出したかどうか
 	bool EnemyFrag[3] = { true,true,true };
 
 	bool EnemyFrag2[3] = { true,true,true };
@@ -75,8 +83,10 @@ private:
 
 	bool EnemyFrag4[3] = { true,true,true };
 
+	//行動パターンの変更
 	int ActionCounter{ 0 };
 
+	//射撃の角度の配列
 	int shotAngle1[5] = { 0,15,30,345,330 };
 
 	int shotAngle2[4] = { 10,20,350,340 };
