@@ -75,9 +75,7 @@ void zako6DownScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std
 }
 
 void zako6DownScript::onDestroy()
-{
-	//死んだときにこのメッセージを飛ばす
-	GameObjectManager::sendMessage(DIE_Enemy6);
+{	
 }
 
 void zako6DownScript::move()
