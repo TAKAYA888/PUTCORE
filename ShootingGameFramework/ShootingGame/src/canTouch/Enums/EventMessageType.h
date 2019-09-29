@@ -6,6 +6,9 @@ enum EventMessageType
 	// メッセージ無し
 	NO_MESSAGE = 0,
 
+
+	// オブジェクト関連-------------------------------------
+
 	// ロードシーンのゲームオブジェクト全部死ね
 	DIE_LOAD_OBJECT,
 
@@ -15,11 +18,22 @@ enum EventMessageType
 	// ゲームプレイのゲームオブジェクト全部死ね
 	DIE_GAMEPLAY_OBJECT,
 
+	// シーン関連-------------------------------------------
+
+	// ポーズが終わる
+	PAUSE_END,
+
+	// ゲーうオーバー、ゲームクリアが死ぬ
+	DIE_O_C,
+
+	// リザルトが死ぬ
+	DIE_RESULT,
+
+
+	// エネミー関連-----------------------------------------
+
 	// エネミーボスが死んだ
 	ENEMY_BOSS_DEAD,
-
-	//ポーズエンド
-	PAUSE_END,
 
 	//エネミー1-1死亡
 	DIE_Enemy1_1,
@@ -35,5 +49,4 @@ enum EventMessageType
 
 	//Boss1が死んだ
 	DIE_BOSS1_DEAD,
-
 };

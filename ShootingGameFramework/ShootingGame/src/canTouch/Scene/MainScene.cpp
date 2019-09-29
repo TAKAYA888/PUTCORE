@@ -12,7 +12,7 @@
 #include "../GameObject/TestObject/AnimSample/AnimSample.h"
 #include "../GameObject/TestObject/GamePlayBgmPlayer/GamePlayBgmPlayer.h"
 #include "../GameObject/ResultObject/Score/Score.h"
-#include "../GameObject/MainObject/Score_screen.h"
+#include "../GameObject/MainObject/Score_Screen/Score_screen.h"
 
 
 MainScene::MainScene()

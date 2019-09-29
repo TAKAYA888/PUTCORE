@@ -32,7 +32,7 @@ void Push_SpaceScript::update()
 
 void Push_SpaceScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
-	if (eventMessageType == DIE_TITLE_OBJECT)
+	if (eventMessageType == DIE_O_C)
 	{
 		getGameObject().lock()->destroy();
 	}

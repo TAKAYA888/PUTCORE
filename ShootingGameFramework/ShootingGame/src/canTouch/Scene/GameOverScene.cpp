@@ -27,5 +27,5 @@ void GameOverScene::update()
 void GameOverScene::end()
 {
 	// 全てのゲームオブジェクトに「DIE_TITLE_OBJECT」のメッセージを飛ばす
-	GameObjectManager::sendMessage(DIE_TITLE_OBJECT);
+	GameObjectManager::sendMessage(DIE_O_C);
 }

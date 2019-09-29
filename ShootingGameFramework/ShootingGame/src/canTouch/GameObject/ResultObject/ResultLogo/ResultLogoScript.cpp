@@ -10,7 +10,7 @@ void ResultLogoScript::update()
 
 void ResultLogoScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
-	if (eventMessageType == DIE_TITLE_OBJECT)
+	if (eventMessageType == DIE_RESULT)
 	{
 		getGameObject().lock()->destroy();
 	}

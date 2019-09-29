@@ -14,7 +14,7 @@ int ScoreScript::score;
 
 void ScoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
-	//タイトルが死ぬとスコアがリセットされます
+	//タイトルが死ぬとスコアがリセットされます（あえてです）
 	if (eventMessageType == DIE_TITLE_OBJECT)
 	{
 		score = 0;

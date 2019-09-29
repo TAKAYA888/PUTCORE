@@ -4,6 +4,7 @@
 #include "ProjectIncludePaths.h"
 
 #include "Score_Screen_Script.h"
+#include "../../ResultObject/Score/ScoreScript.h"
 
 #ifndef _MBCS
 /*F12‚ð‰Ÿ‚µ‚ÄƒWƒƒƒ“ƒv-> */TktkManual;

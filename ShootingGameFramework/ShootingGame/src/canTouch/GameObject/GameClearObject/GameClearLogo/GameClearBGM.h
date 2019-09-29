@@ -22,7 +22,7 @@ struct GameClearBGM
 
 		//特定のメッセージを受信したら自信を殺すコンポーネントを追加
 		gameClearBgm->addComponent(std::make_shared<ReceiveMessageToSelfDestroyer>(
-			DIE_GAMEPLAY_OBJECT
+			DIE_O_C
 			));
 
 		//ゲームオブジェクトを追加
