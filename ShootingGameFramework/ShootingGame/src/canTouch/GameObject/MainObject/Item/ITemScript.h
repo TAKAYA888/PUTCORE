@@ -7,12 +7,12 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
-class VirusEnemyScript3_1
-	:public ComponentBase
+class ItemScript
+	: public ComponentBase
 {
 public:
 
-	VirusEnemyScript3_1();
+	ItemScript();
 
 public:
 
@@ -36,23 +36,15 @@ private:
 	// 移動
 	void move();
 
+	// 弾を発射
+	
+
 private:
 
 	// 体力
-	int m_hp{ 2 };
+	int m_hp{ 1 };
 
-	// 移動速度
-	float m_moveSpeed;
+	
 
-	//タイマー
-	float timer;
-
-	//resultを保存する
-	float Lasttimeresult;
-
-	Vector2 playerPos;
-
-	bool playerFrag;
-
-
+	
 };

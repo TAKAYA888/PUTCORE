@@ -68,7 +68,7 @@ void setCoreScript::update()
 	//画面外にでたら消去する	
 	if (Postion.x > 1400)
 	{
-		getComponent<CoreScript>().lock()->setActive(true);
+		getGameObject().lock()->destroy();
 		counter = 0;
 	}
 }
@@ -85,7 +85,7 @@ void setCoreScript::onCollisionEnter(GameObjectPtr other)
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 
-		getComponent<CoreScript>().lock()->setActive(true);
+		getGameObject().lock()->destroy();
 		counter = 0;
 	}
 }
@@ -115,4 +115,10 @@ void setCoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::
 	{
 		getGameObject().lock()->destroy();
 	}
+}
+
+void setCoreScript::onDestroy()
+{
+	//死んだときにこのメッセージを飛ばす
+	GameObjectManager::sendMessage(DIE_CORE);
 }

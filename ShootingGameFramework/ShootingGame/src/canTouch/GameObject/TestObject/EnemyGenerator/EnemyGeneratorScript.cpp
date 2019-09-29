@@ -7,8 +7,13 @@
 #include "../Enemy/VirusEnemy2/VirusEnemy2.h"
 #include "../Enemy/VirusEnemy3-1/VirusEnemy3-1.h"
 #include "../Enemy/VirusEnemy4/VirusEnemy4.h"
+#include "../Enemy/VirusEnemy5/VirusEnemy5.h"
+#include "../Enemy/zako6/zako6Up/zako6Up.h"
+#include "../Enemy/zako6/zako6Down/zako6Down.h"
 #include "../Enemy/BossEnemy/BossEnemy.h"
 #include "../Enemy/Boss/Boss.h"
+#include "../Enemy/Boss2/Boss2.h"
+#include "../Enemy/Boss3/Boss3.h"
 
 EnemyGeneratorScript::EnemyGeneratorScript(const std::string & stageTextPath)
 {
@@ -99,9 +104,29 @@ void EnemyGeneratorScript::update()
 		{
 			VirueEnemy4::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
 		}
+		else if ((*m_curIterator).name == "virusenemy5")
+		{
+			VirusEnemy5::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
+		}
+		else if ((*m_curIterator).name == "zako6up")
+		{
+			zako6Up::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
+		}
+		else if ((*m_curIterator).name == "zako6down")
+		{
+			zako6Down::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
+		}
 		else if ((*m_curIterator).name == "Boss1")
 		{
 			Boss::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
+		}
+		else if ((*m_curIterator).name == "Boss2")
+		{
+			Boss2::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
+		}
+		else if ((*m_curIterator).name == "Boss3")
+		{
+			Boss3::create((*m_curIterator).position, (*m_curIterator).rotationDeg);
 		}
 
 		// リストでの次に出現する敵の情報の場所を一つ進める

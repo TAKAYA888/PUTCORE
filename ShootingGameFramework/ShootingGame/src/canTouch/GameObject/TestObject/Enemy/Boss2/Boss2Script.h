@@ -7,12 +7,12 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
-class VirusEnemyScript3_1
+class Boss2Script
 	:public ComponentBase
 {
 public:
 
-	VirusEnemyScript3_1();
+	Boss2Script();
 
 public:
 
@@ -31,28 +31,27 @@ public:
 	// メッセージ受信時に呼ばれる
 	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
 
+	// 消える直前に呼ばれる
+	void onDestroy();
+
 private:
 
-	// 移動
-	void move();
+	//射撃
+	void Shot();
 
 private:
 
 	// 体力
-	int m_hp{ 2 };
+	int m_hp{ 500 };
 
-	// 移動速度
-	float m_moveSpeed;
-
-	//タイマー
 	float timer;
 
-	//resultを保存する
-	float Lasttimeresult;
+	// 弾を発射する間隔
+	const float m_shotInterval{ 2.0f };
 
-	Vector2 playerPos;
+	// 弾を発射するタイマー
+	float m_shotTimer{ 0.0f };
 
-	bool playerFrag;
-
+	int counter;
 
 };

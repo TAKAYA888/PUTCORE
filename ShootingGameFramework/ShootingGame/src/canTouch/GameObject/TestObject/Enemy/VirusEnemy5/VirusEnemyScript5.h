@@ -7,16 +7,16 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
-class VirusEnemyScript3_1
+class VirusEnemyScript5
 	:public ComponentBase
 {
 public:
 
-	VirusEnemyScript3_1();
+	VirusEnemyScript5();
 
 public:
 
-	// 毎フレーム呼ばれる
+	//毎フレーム呼ばれる
 	void update();
 
 	// 衝突開始で呼ばれる
@@ -36,23 +36,20 @@ private:
 	// 移動
 	void move();
 
+	// 弾を発射
+	void shot();
+
 private:
 
 	// 体力
-	int m_hp{ 2 };
+	int m_hp{ 1 };
 
-	// 移動速度
-	float m_moveSpeed;
+	// 弾を発射する間隔
+	const float m_shotInterval{ 1.0f };
+
+	// 弾を発射するタイマー
+	float m_shotTimer{ 0.0f };
 
 	//タイマー
 	float timer;
-
-	//resultを保存する
-	float Lasttimeresult;
-
-	Vector2 playerPos;
-
-	bool playerFrag;
-
-
 };

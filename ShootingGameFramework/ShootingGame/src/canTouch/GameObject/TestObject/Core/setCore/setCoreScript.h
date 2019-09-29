@@ -27,6 +27,9 @@ public:
 	// メッセージ受信時に呼ばれる
 	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
 
+	// 消える直前に呼ばれる
+	void onDestroy();
+
 private:
 
 	// 入力による移動

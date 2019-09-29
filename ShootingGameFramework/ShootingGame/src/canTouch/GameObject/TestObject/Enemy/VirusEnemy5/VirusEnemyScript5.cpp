@@ -1,36 +1,32 @@
-#include "VirusEnemyScript2.h"
+#include "VirusEnemyScript5.h"
 
 #include "../../EnemyBullet/VirusEnemyBullet/VirusEnemyBullet.h"
 #include "../../Explosion/Explosion.h"
 #include "../../Explosion_Enemy/Explosion_Enemy.h"
 
-VirusEnemyScript2::VirusEnemyScript2()
+VirusEnemyScript5::VirusEnemyScript5()
 {
-	// プレイヤーの位置を取得
-	playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
-
-	playerFrag = true;
+	timer = 0;
 }
 
 //毎フレーム呼ばれる
-void VirusEnemyScript2::update()
+void VirusEnemyScript5::update()
 {
+	timer += TktkTime::deltaTime();
+
 	//移動
 	move();
-
-	// 弾を発射
-	shot();
 
 	//体力が0以下になったら
 	if (m_hp <= 0)
 	{
-		GameObjectManager::sendMessage(DIE_Enemy2);
+		GameObjectManager::sendMessage(DIE_Enemy5);
 		getGameObject().lock()->destroy();
 	}
 }
 
-//衝突開始で呼ばれる
-void VirusEnemyScript2::onCollisionEnter(GameObjectPtr other)
+// 衝突開始で呼ばれる
+void VirusEnemyScript5::onCollisionEnter(GameObjectPtr other)
 {
 	// 衝突相手のタグが「GAME_OBJECT_TAG_PLAYER_BULLET」だったら
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER_BULLET || other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
@@ -46,7 +42,7 @@ void VirusEnemyScript2::onCollisionEnter(GameObjectPtr other)
 }
 
 //衝突中で呼ばれる
-void VirusEnemyScript2::onCollisionStay(GameObjectPtr other)
+void VirusEnemyScript5::onCollisionStay(GameObjectPtr other)
 {
 	// 衝突相手のタグが「GAME_OBJECT_TAG_PLAYER」だったら
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER || other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
@@ -62,38 +58,52 @@ void VirusEnemyScript2::onCollisionStay(GameObjectPtr other)
 }
 
 //衝突終了で呼ばれる
-void VirusEnemyScript2::onCollisionExit(GameObjectPtr other)
+void VirusEnemyScript5::onCollisionExit(GameObjectPtr other)
 {
 }
 
-void VirusEnemyScript2::handleMessage(int  eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
+void VirusEnemyScript5::handleMessage(int  eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
 	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
 	{
 		getGameObject().lock()->destroy();
 	}
-
-	if (eventMessageType == DIE_PLAYER)
-	{
-		playerFrag = false;
-	}
 }
 
 //移動
-void VirusEnemyScript2::move()
+void VirusEnemyScript5::move()
 {
-	// 自身の回転角度
-	float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
+	if (timer < 0.7f)
+	{
+		// 自身の回転角度
+		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
 
-	// 移動速度＋方向
-	auto velocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 15.0f;
+		// 移動速度＋方向
+		auto velocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 15.0f;
 
-	// 移動する
-	getComponent<InertialMovement2D>().lock()->addForce(velocity);
+		// 移動する
+		getComponent<InertialMovement2D>().lock()->addForce(velocity);
+	}
+	else if (timer <= 5.7f)
+	{
+		//弾を発射
+		shot();
+	}
+	else
+	{
+		// 自身の回転角度
+		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
+
+		// 移動速度＋方向
+		auto velocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 15.0f;
+
+		// 移動する
+		getComponent<InertialMovement2D>().lock()->addForce(velocity);
+	}
 }
 
 //弾を発射
-void VirusEnemyScript2::shot()
+void VirusEnemyScript5::shot()
 {
 	// 弾発射タイマーを更新
 	m_shotTimer += TktkTime::deltaTime();
@@ -104,11 +114,8 @@ void VirusEnemyScript2::shot()
 		// 弾の出現座標
 		auto spawnPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
-		if (playerFrag)
-		{
-			// プレイヤーの位置を取得
-		    playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
-		}
+		// プレイヤーの位置を取得
+		Vector2 playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
 
 		// 自身の回転角度
 		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();

@@ -129,6 +129,9 @@
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\TitleDummyItem\TitleDummyItemScript.cpp.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
     <ClCompile Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButtonScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -141,16 +144,40 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDeadScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemyScript4.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen\Score_Screen_Script.cpp">
+    <ClCompile Include="src\canTouch\GameObject\MainObject\Item\Item.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.cpp">
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\Boss2Script.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="src\canTouch\GameObject\ResultObject\Score_Screen\Score_Screen_Script1.cpp">
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCoreScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCoreDeadScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2DeadScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy5\VirusEnemyScript5.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Up\zako6UpScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Down\zako6DownScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3Script.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -407,6 +434,12 @@
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\TitleDummyItem\TitleDummyItemScript.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score\Score.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButton.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -425,10 +458,16 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossTeleportation\BossTeleportation.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDeadScript.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDead.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemyScript4.h">
@@ -437,22 +476,58 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemy4.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen\Score_Screen.h">
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Item\ITemScript.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen\Score_Screen_Script.h">
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Item\Item.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score\Score.h">
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\Boss2.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.h">
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\Boss2Script.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score_Screen\Score_Screen1.h">
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCore1.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score_Screen\Score_Screen_Script1.h">
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCoreScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore1\BossCoreDeadScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2Script.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss2\BossCore2\BossCore2DeadScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy5\VirusEnemyScript5.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy5\VirusEnemy5.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Up\zako6Up.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Up\zako6UpScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Down\zako6Down.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\zako6\zako6Down\zako6DownScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3Script.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
