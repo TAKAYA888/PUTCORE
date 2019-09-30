@@ -144,9 +144,6 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDeadScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemyScript4.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -178,6 +175,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen\Score_Screen_Script.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -458,16 +458,10 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossTeleportation\BossTeleportation.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDeadScript.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss\BossDead\BossDead.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen_Script.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy4\VirusEnemyScript4.h">
@@ -531,6 +525,12 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\ResultObject\Score_Screen_result\Score_Screen_result.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen\Score_Screen.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\MainObject\Score_Screen\Score_Screen_Script.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
