@@ -30,12 +30,12 @@ void ScoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::we
 
 	if (eventMessageType == DIE_Enemy1_2)
 	{
-		score += 1000;
+		score += 100;
 	}
 
 	if (eventMessageType == DIE_Enemy2)
 	{
-		score += 10000;
+		score += 100;
 	}
 
 	if (eventMessageType == DIE_Enemy3_1)
