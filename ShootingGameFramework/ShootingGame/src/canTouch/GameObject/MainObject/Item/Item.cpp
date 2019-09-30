@@ -9,8 +9,6 @@ void ItemScript::update()
 {
 	// 移動
 	move();
-	
-	
 
 	// 体力が０以下になったら
 	if (m_hp <= 0)
@@ -27,9 +25,6 @@ void ItemScript::onCollisionEnter(GameObjectPtr other)
 	// 衝突相手のタグが「GAME_OBJECT_TAG_PLAYER_BULLET」だったら
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER_BULLET)
 	{
-	
-	
-
 		// 体力を-1する
 		m_hp--;
 	}
@@ -41,7 +36,6 @@ void ItemScript::onCollisionStay(GameObjectPtr other)
 	// 衝突相手のタグが「GAME_OBJECT_TAG_PLAYER」だったら
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER)
 	{
-		
 		// 体力を-1する
 		m_hp--;
 	}
@@ -69,9 +63,6 @@ void ItemScript::move()
 	// 移動速度＋方向
 	auto velocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 20.0f;
 
-
 	// 移動する
 	getComponent<InertialMovement2D>().lock()->addForce(velocity);
 }
-
-

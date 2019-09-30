@@ -41,9 +41,6 @@ void ResultScene::start()
 
 void ResultScene::update()
 {
-	// スコア表示部を生成
-	
-
 	if (Keyboard::getState(InputType::INPUT_ENDED, KeyboardKeyType::KEYBOARD_SPACE))
 	{
 		changeScene(TITLE_SCENE);
