@@ -213,6 +213,7 @@
     <ClInclude Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButtonScript.h" />
     <ClInclude Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogo.h" />
     <ClInclude Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogoScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score_Screen_result\Score_Screen_result.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\AnimSample\AnimSample.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\BackGround\BackGround1\BackGround_1.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\BackGround\BackGround1\BackGround_1Script.h" />

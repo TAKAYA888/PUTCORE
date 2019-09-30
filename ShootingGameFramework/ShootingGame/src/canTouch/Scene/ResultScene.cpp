@@ -1,7 +1,7 @@
 #include "ResultScene.h"
 
 #include "../GameObject/ResultObject/ResultLogo/ResultLogo.h"
-#include "../GameObject/ResultObject/Score_Screen/Score_screen1.h"
+#include "../GameObject/ResultObject/Score_Screen_result/Score_Screen_result.h"
 
 #include "../Utility/ScreenSize.h"
 

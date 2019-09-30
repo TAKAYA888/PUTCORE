@@ -530,5 +530,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\Boss3\Boss3Script.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\ResultObject\Score_Screen_result\Score_Screen_result.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
