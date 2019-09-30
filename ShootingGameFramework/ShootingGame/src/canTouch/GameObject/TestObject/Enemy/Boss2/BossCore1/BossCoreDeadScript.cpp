@@ -11,8 +11,10 @@ void BossCoreDeadScript::update()
 {
 	//カウントアップ
 	timer += TktkTime::deltaTime();
+
 	//bossCore１のスクリプトがオンになっているか受け取る
 	bool ActivFlag = getComponent<BossCore1Script>().lock()->isActive();
+
 	//もしbossCore１のスクリプトがfalseなら
 	if (ActivFlag == false)
 	{
@@ -32,6 +34,7 @@ void BossCoreDeadScript::update()
 		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 		getComponent<AnimatedSprite2d>().lock()->setActive(true);
+
 		//タイマーのリセット
 		timer = 0;
 	}
@@ -97,4 +100,3 @@ void BossCoreDeadScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<
 void BossCoreDeadScript::onDestroy()
 {
 }
-

@@ -173,7 +173,7 @@
     <ClCompile Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleCursor\TitleCursorScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleLogo\TitleLogoScript.cpp" />
-    <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\Source.cppGameEndItemScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\TitleDummyItem\TitleDummyItemScript.cpp.cpp" />
     <ClCompile Include="src\canTouch\Scene\ClearScene.cpp" />

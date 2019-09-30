@@ -32,9 +32,6 @@ public:
 
 private:
 
-	// 入力による移動
-	void inputToMove();
-
 	float m_moveSpeed;
 
 	//タイマー

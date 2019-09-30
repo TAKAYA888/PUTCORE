@@ -2,7 +2,6 @@
 
 #include <TktkMath/Vector2.h>
 
-
 // スクリーンサイズX
 const float SCREEN_SIZE_X = 1280.0f;
 

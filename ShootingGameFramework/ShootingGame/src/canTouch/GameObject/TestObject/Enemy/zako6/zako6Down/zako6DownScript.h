@@ -39,7 +39,6 @@ private:
 	// ˆÚ“®
 	void move();
 
-
 private:
 
 	// ‘Ì—Í

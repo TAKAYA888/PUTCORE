@@ -79,7 +79,6 @@ void BossCore1Script::update()
 		EnemyNormalBullet::create(nowPos, initVelocity2);
 		m_shotTimer = 0.2f;
 	}
-
 }
 
 void BossCore1Script::onCollisionEnter(GameObjectPtr other)

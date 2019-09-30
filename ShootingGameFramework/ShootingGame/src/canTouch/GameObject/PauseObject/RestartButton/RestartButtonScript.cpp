@@ -6,11 +6,6 @@ RestartButtonScript::RestartButtonScript()
 
 void RestartButtonScript::update()
 {
-	Move();
-}
-//	’Ç‰Á
-void RestartButtonScript::Move()
-{
 	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
 	{
 		GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->destroy();

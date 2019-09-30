@@ -36,15 +36,8 @@ private:
 	// ˆÚ“®
 	void move();
 
-	// ’e‚ð”­ŽË
-	
-
 private:
 
 	// ‘Ì—Í
 	int m_hp{ 1 };
-
-	
-
-	
 };

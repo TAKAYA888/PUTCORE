@@ -120,9 +120,6 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy3-1\VirusEnemyScript3-1.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\Source.cppGameEndItemScript.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\TitleDummyItem\TitleDummyItemScript.cpp.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -175,6 +172,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen\Score_Screen_Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItemScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

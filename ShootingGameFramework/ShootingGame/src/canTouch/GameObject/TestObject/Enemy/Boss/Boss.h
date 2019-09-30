@@ -65,7 +65,6 @@ struct Boss
 			true
 			));
 
-
 		// エネミーのスクリプト
 		Boss->addComponent(std::make_shared<BossScript>());
 

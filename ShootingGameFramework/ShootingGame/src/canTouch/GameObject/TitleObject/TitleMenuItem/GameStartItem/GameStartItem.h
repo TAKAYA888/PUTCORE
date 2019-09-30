@@ -13,8 +13,6 @@ struct GameStartItem
 {
 	static void create(const Vector2& initPos)
 	{
-
-
 		// ゲームオブジェクトを作成
 		auto gameStartItem = std::make_shared<GameObject>();
 

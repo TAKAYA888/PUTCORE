@@ -1,8 +1,5 @@
 #include "TitleDummyItemScript.h"
 
-
-
-
 // 毎フレーム呼ばれる
 void TitleDummyItemScript::update()
 {
@@ -21,9 +18,7 @@ void TitleDummyItemScript::update()
 	{
 		Stealth = 1;
 	}
-
 }
-
 
 // 衝突開始で呼ばれる
 void TitleDummyItemScript::onCollisionEnter(GameObjectPtr other)
@@ -33,9 +28,6 @@ void TitleDummyItemScript::onCollisionEnter(GameObjectPtr other)
 // 衝突中で呼ばれる
 void TitleDummyItemScript::onCollisionStay(GameObjectPtr other)
 {
-
-
-
 }
 
 // 衝突終了で呼ばれる

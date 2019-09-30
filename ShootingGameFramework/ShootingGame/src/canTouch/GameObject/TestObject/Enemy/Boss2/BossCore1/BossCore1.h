@@ -63,8 +63,10 @@ struct  BossCore1
 			0.1f,
 			true
 			));
+
 		// エネミーのスクリプト
 		BossCore1->addComponent(std::make_shared<BossCore1Script>());
+
 		// エネミーのスクリプト
 		BossCore1->addComponent(std::make_shared<BossCoreDeadScript>());
 

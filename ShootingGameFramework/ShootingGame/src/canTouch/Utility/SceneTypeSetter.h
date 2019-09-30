@@ -22,7 +22,6 @@ struct SceneTypeSetter
 		SceneManager::addScene(GAMEOVER_SCENE, std::make_shared<GameOverScene>());
 		SceneManager::addScene(RESULT_SCENE, std::make_shared<ResultScene>());
         
-
 		// ‰ŠúƒV[ƒ“‚ğİ’è‚·‚é
 		SceneManager::changeScene(LOAD_SCENE);
 	}

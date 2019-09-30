@@ -24,7 +24,6 @@ enum CollisionGroup
 	// “G‚ÌÕ“Ë”»’è
 	COLLISION_GROUP_ENEMY,
 
-
 	// ƒvƒŒƒCƒ„[‚Ì’e‚ÌÕ“Ë”»’è
 	COLLISION_GROUP_PLAYER_BULLET,
 

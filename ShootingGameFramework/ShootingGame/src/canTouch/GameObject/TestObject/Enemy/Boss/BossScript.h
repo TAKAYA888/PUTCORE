@@ -56,8 +56,6 @@ private:
 	//ŽËŒ‚
 	void Shot();
 
-
-
 private:
 
 	// ‘Ì—Í

@@ -30,8 +30,6 @@ struct Boss3
 			3.0f					// 減速率
 			));
 
-
-
 		// 長方形の当たり判定
 		Boss3->addComponent(std::make_shared<RectCollider>(
 			COLLISION_GROUP_ENEMY,	// 衝突判定のグループ
@@ -48,11 +46,9 @@ struct Boss3
 		Boss3->addComponent(std::make_shared<Sprite2dDrawer>(
 			DrawPriority::DRAW_PRIORITY_ENEMY,// 描画するレイヤー
 			IMAGE_BOSS_DEAD,
-			1,						// 描画する画像のID				
+			1,						// 描画する画像のID
 			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
 			));
-
-
 
 		// エネミーのスクリプト
 		Boss3->addComponent(std::make_shared<Boss3Script>());
