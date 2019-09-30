@@ -27,13 +27,8 @@ void TitleScene::start()
 	// タイトルメニューのゲーム開始項目を生成する
 	GameStartItem::create(Vector2(SCREEN_SIZE.x / 1, 000.0f));
 
-
 	// タイトルメニューのゲーム終了項目を生成する
 	GameEndItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));
-
-
-
-
 
 	// タイトル用のBGMプレイヤーを生成
 	GamePlayBgmPlayer::title();

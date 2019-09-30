@@ -27,6 +27,7 @@ enum ImageId
 	// タイトルメニューのゲームスタートの項目の画像
 	IMAGE_TITLE_MENU_GAMESTART = 20,
 
+	// タイトルメニューのゲームエンドの項目
 	IMAGE_TITLE_MENU_GAMEEND = 30,
 
 	//ゲームプレイ画面の背景の画像

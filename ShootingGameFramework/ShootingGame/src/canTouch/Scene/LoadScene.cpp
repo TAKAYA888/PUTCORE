@@ -19,8 +19,6 @@ void LoadScene::start()
 
 	// SEの読み込みクラスを生成（引数は読み込むSEの情報を表すテキストファイル）
 	SeLoadObject::create("res/text/resourcePaths/seResourcePaths.txt");
-
-	
 }
 
 // 毎フレーム呼ばれる

@@ -14,6 +14,8 @@ enum GameObjectTag
 
 	// プレイヤー
 	GAME_OBJECT_TAG_PLAYER,
+
+	// アイテム
 	GAME_OBJECT_TAG_ITEM,
 
 	//コア

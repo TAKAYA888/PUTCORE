@@ -180,7 +180,6 @@
     <ClCompile Include="src\canTouch\Scene\GameOverScene.cpp" />
     <ClCompile Include="src\canTouch\Scene\LoadScene.cpp" />
     <ClCompile Include="src\canTouch\Scene\MainScene.cpp" />
-    <ClCompile Include="src\canTouch\Scene\PauseScene.cpp" />
     <ClCompile Include="src\canTouch\Scene\ResultScene.cpp" />
     <ClCompile Include="src\canTouch\Scene\TitleScene.cpp" />
     <ClCompile Include="src\dontTouch\main.cpp" />
@@ -295,7 +294,6 @@
     <ClInclude Include="src\canTouch\Scene\GameOverScene.h" />
     <ClInclude Include="src\canTouch\Scene\LoadScene.h" />
     <ClInclude Include="src\canTouch\Scene\MainScene.h" />
-    <ClInclude Include="src\canTouch\Scene\PauseScene.h" />
     <ClInclude Include="src\canTouch\Scene\ResultScene.h" />
     <ClInclude Include="src\canTouch\Scene\TitleScene.h" />
     <ClInclude Include="src\canTouch\Utility\CollisionGroupSetter.h" />

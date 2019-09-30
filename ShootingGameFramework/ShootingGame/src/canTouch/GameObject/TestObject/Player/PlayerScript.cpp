@@ -38,7 +38,6 @@ void PlayerScript::update()
 	}
 
 	
-	
 	//std::cout << flashTime << std::endl;
 	//// タイマーカウントダウン
 	invincibleTime -= TktkTime::deltaTime();
@@ -121,7 +120,6 @@ void PlayerScript::onCollisionStay(GameObjectPtr other)
 	
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_ITEM)
 	{
-
 		// 体力を-1する
 		m_curHp++;
 	}
@@ -138,7 +136,6 @@ void PlayerScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::w
 	{
 		getGameObject().lock()->destroy();
 	}
-
 
 	if (eventMessageType == DIE_CORE)
 	{
