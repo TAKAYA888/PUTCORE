@@ -3,8 +3,8 @@
 #include "../GameObject/TitleObject/TitleLogo/TitleLogo.h"
 #include "../GameObject/TitleObject/TitleCursor/TitleCursor.h"
 #include "../GameObject/TitleObject/TitleMenuItem/GameStartItem/GameStartItem.h"
-#include "../GameObject/TitleObject/TitleMenuItem/GameStartItem/GameStartItem.h"
 #include "../GameObject/TitleObject/TitleMenuItem/GameEndItem/GameEndItem.h"
+#include "../GameObject/TitleObject/TitleMenuItem/SelectMenuItem/SelectMenuItem.h"
 #include "../GameObject/TitleObject/TitleMenuItem/TitleDummyItem/TitleDummyItem.h"
 #include "../GameObject/TestObject/GamePlayBgmPlayer/GamePlayBgmPlayer.h"
 
@@ -26,6 +26,9 @@ void TitleScene::start()
 
 	// タイトルメニューのゲーム開始項目を生成する
 	GameStartItem::create(Vector2(SCREEN_SIZE.x / 1, 000.0f));
+
+	//ステージセレクトボタンを生成
+	SelectMenuItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));
 
 	// タイトルメニューのゲーム終了項目を生成する
 	GameEndItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));

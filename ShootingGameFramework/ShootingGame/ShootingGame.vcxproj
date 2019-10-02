@@ -175,6 +175,7 @@
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleLogo\TitleLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItemScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\SelectMenuItem\SelectMenuItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\TitleDummyItem\TitleDummyItemScript.cpp.cpp" />
     <ClCompile Include="src\canTouch\Scene\ClearScene.cpp" />
     <ClCompile Include="src\canTouch\Scene\GameOverScene.cpp" />
@@ -288,6 +289,8 @@
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItemScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItem.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItemScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\SelectMenuItem\SelectMenuItem.h" />
+    <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\SelectMenuItem\SelectMenuItemScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\TitleDummyItem\TitleDummyItem.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\TitleDummyItem\TitleDummyItemScript.h" />
     <ClInclude Include="src\canTouch\Scene\ClearScene.h" />

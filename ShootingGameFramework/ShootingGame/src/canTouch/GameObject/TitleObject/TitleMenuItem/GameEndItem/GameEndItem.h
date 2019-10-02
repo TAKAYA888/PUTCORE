@@ -60,7 +60,7 @@ struct GameEndItem
 		//// 2次元の座標のクランパー(追加)
 		gameEndItem->addComponent(std::make_shared<PositionClamper>(
 			Vector2(SCREEN_SIZE.x / 2, 000.0f),			// 最小座標
-			Vector2(SCREEN_SIZE.x / 2, 650.0f)			// 最大座標
+			Vector2(SCREEN_SIZE.x / 2, 890.0f)			// 最大座標
 			));
 
 		// プレイヤーのスクリプト（追加）

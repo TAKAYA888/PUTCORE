@@ -7,6 +7,7 @@
 11,res/image/push_space.png
 19,res/image/dame.jpg
 20,res/image/game_start_button.png
+25,res/image/stage_select_button.png
 30,res/image/game_out_button.png
 50,res/image/background1.png
 101,res/image/player.png,1,6

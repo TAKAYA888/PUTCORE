@@ -7,27 +7,27 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
-#include "GameStartItemScript.h"
+#include "SelectMenuItemScript.h"
 
-struct GameStartItem
+struct SelectMenuItem
 {
 	static void create(const Vector2& initPos)
 	{
 		// ゲームオブジェクトを作成
-		auto gameStartItem = std::make_shared<GameObject>();
+		auto selectMenuItem = std::make_shared<GameObject>();
 
 		// タグを設定
-		gameStartItem->setTag(GAME_OBJECT_TAG_MENU_ITEM);
+		selectMenuItem->setTag(GAME_OBJECT_TAG_MENU_ITEM);
 
 		// ２次元座標
-		gameStartItem->addComponent(std::make_shared<Transform2D>(
+		selectMenuItem->addComponent(std::make_shared<Transform2D>(
 			initPos,				// 座標（引数から受け取る）
 			Vector2(1.0f, 1.0f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
 		// 長方形の当たり判定
-		gameStartItem->addComponent(std::make_shared<RectCollider>(
+		selectMenuItem->addComponent(std::make_shared<RectCollider>(
 			COLLISION_GROUP_MENU_ITEM,	// 衝突判定のグループ
 			Vector2(400.0f, 100.0f)	// 衝突判定の大きさ
 			));
@@ -39,28 +39,28 @@ struct GameStartItem
 			//));
 
 		// ２次元画像の描画
-		gameStartItem->addComponent(std::make_shared<Sprite2dDrawer>(
+		selectMenuItem->addComponent(std::make_shared<Sprite2dDrawer>(
 			DrawPriority::DRAW_PRIORITY_UI - 0.1f,	// 描画するレイヤー
-			IMAGE_TITLE_MENU_GAMESTART,		// 描画する画像のID
+			IMAGE_SELECT_MENU_STAGE,		// 描画する画像のID
 			Vector2(0.5f, 0.5f),	// 画像の中心（割合）
 			0.0
 			));
 
 		// サウンドを再生するコンポーネント
-		gameStartItem->addComponent(std::make_shared<SePlayer>(
+		selectMenuItem->addComponent(std::make_shared<SePlayer>(
 			INPUT_SE	// サウンドの名前
 			));
 
 		//追加
-		gameStartItem->addComponent(std::make_shared<InertialMovement2D>(
+		selectMenuItem->addComponent(std::make_shared<InertialMovement2D>(
 			3.0f					// 減速率
 			));
 
 
 		// 2次元の座標のクランパー(追加)
-		gameStartItem->addComponent(std::make_shared<PositionClamper>(
+		selectMenuItem->addComponent(std::make_shared<PositionClamper>(
 			Vector2(SCREEN_SIZE.x / 2, 000.0f),			// 最小座標
-			Vector2(SCREEN_SIZE.x / 2, 480.0f)			// 最大座標
+			Vector2(SCREEN_SIZE.x / 2, 550.0f)			// 最大座標
 			));
 
 
@@ -68,13 +68,13 @@ struct GameStartItem
 		//gameStartItem->addComponent(std::make_shared<GameStartItemScript>());
 
 		// プレイヤーのスクリプト（追加）
-		gameStartItem->addComponent(std::make_shared<GameStartItemScript>(
+		selectMenuItem->addComponent(std::make_shared<SelectMenuItemScript>(
 			32.0f	// 移動速度
 			));
 
 
 		// ゲームオブジェクトを追加
-		GameObjectManager::addGameObject(gameStartItem);
+		GameObjectManager::addGameObject(selectMenuItem);
 
 
 	}
