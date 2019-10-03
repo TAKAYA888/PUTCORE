@@ -80,6 +80,7 @@ void PlayerScript::update()
 		SceneManager::changeScene(GAMEOVER_SCENE);
 		// 自分を殺す
 		getGameObject().lock()->destroy();
+
 	}
 }
 
@@ -187,21 +188,18 @@ void PlayerScript::inputToMove()
 		moveVelocity.x = 3.0f;
 	}
 
-
 	moveVelocity = Vector2::normalize(moveVelocity);
 
 	//プレイヤーのポジションを受けとる
 	Vector2 a = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	//プレイヤーの座標に速度を＋
-
 	//144Hz
-	//Vector2 movePostion = a + moveVelocity * 3 * 60 / 144;
+	//Vector2 movePostion = a + moveVelocity * 9 * 60 / 144;
 	//60Hz
 	Vector2 movePostion = a + moveVelocity * 9;
 
 	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
-
 }
 
 // 入力による回転
@@ -218,7 +216,7 @@ void PlayerScript::inputToShot()
 	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z))
 	{
 		//プレイヤーの座標の受け取り
-		auto playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
+		Vector2 playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 		// 弾の出現座標座標
 		Vector2 bulletPos;
@@ -226,7 +224,7 @@ void PlayerScript::inputToShot()
 		bulletPos.y = playerPos.y + 40.0f;
 
 		// 弾の初期速度
-		auto initVelocity = Vector2(MathHelper::sin(90), -MathHelper::cos(90)) * 512.0f;
+		auto initVelocity = Vector2(MathHelper::sin(90.0f), -MathHelper::cos(90.0f)) * 512.0f;
 
 		// プレイヤーの弾を出現
 		PlayerBullet::create(bulletPos, initVelocity);

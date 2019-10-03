@@ -13,6 +13,8 @@
 
 //MainSceneのスコア表示部（左から1）
 
+float baritu = 0.5f;
+
 struct Score_Screen_1
 {
 	static void create(const Vector2& position)
@@ -23,7 +25,7 @@ struct Score_Screen_1
 		// ２次元座標
 		scoreScreen->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(0.2f, 0.2f),	// スケール（倍率）
+			Vector2(0.5f, 0.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
@@ -52,7 +54,7 @@ struct Score_Screen_2
 		// ２次元座標
 		scoreScreen->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(0.2f, 0.2f),	// スケール（倍率）
+			Vector2(0.5f, 0.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
@@ -81,7 +83,7 @@ struct Score_Screen_3
 		// ２次元座標
 		scoreScreen->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(0.2f, 0.2f),	// スケール（倍率）
+			Vector2(0.5f, 0.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
@@ -110,7 +112,7 @@ struct Score_Screen_4
 		// ２次元座標
 		scoreScreen->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(0.2f, 0.2f),	// スケール（倍率）
+			Vector2(0.5f, 0.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
@@ -139,7 +141,7 @@ struct Score_Screen_5
 		// ２次元座標
 		scoreScreen->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(0.2f, 0.2f),	// スケール（倍率）
+			Vector2(0.5f, 0.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
@@ -168,7 +170,7 @@ struct Score_Screen_6
 		// ２次元座標
 		scoreScreen->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(0.2f, 0.2f),	// スケール（倍率）
+			Vector2(0.5f, 0.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
@@ -197,7 +199,7 @@ struct Score_Screen_7
 		// ２次元座標
 		scoreScreen->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(0.2f, 0.2f),	// スケール（倍率）
+			Vector2(0.5f, 0.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
@@ -226,7 +228,7 @@ struct Score_Screen_8
 		// ２次元座標
 		scoreScreen->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(0.2f, 0.2f),	// スケール（倍率）
+			Vector2(0.5f, 0.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
@@ -255,7 +257,7 @@ struct Score_Screen_9
 		// ２次元座標
 		scoreScreen->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(0.2f, 0.2f),	// スケール（倍率）
+			Vector2(0.5f, 0.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 

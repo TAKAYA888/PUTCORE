@@ -23,9 +23,8 @@ MainScene::MainScene()
 void MainScene::start()
 {
 	//背景１を生成する
-	BackGround_1::create(SCREEN_SIZE/2);
-	BackGround_1::create(Vector2(1280.0f, 360));
-	BackGround_1::create(Vector2(1920, 360));
+	BackGround_1::create(Vector2::zero);
+	BackGround_1::create(Vector2(SCREEN_SIZE_X,0));
 
 	// プレイヤーを生成する
 	Player::create(SCREEN_SIZE / 2);
@@ -34,7 +33,7 @@ void MainScene::start()
 	Core::create(SCREEN_SIZE / 2);
 
 	// プレイヤーのHPゲージを生成する
-	PlayerHpUi::create(Vector2(10.0f, SCREEN_SIZE_Y - 20.0f));
+	PlayerHpUi::create(Vector2(20.0f, SCREEN_SIZE_Y - 30.0f));
 
 	// エネミージェネレーターを生成する
 	EnemyGenerator::create();
@@ -56,7 +55,7 @@ void MainScene::start()
 void MainScene::update()
 {
 	// スコア表示部を生成
-	float Complement = 2.0f; // 数字間の隙間
+	float Complement = 30.0f; // 数字間の隙間
 
 	float x = 0.0f;
 	float Crack = 128.0f / 10.0f + Complement;

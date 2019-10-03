@@ -79,7 +79,7 @@ void BossCore2Script::update()
 	{
 		EnemyNormalBullet::create(nowPos, initVelocity1);
 		EnemyNormalBullet::create(nowPos, initVelocity2);
-		m_shotTimer = 0.2f;
+		m_shotTimer = 0.5f;
 	}
 
 }

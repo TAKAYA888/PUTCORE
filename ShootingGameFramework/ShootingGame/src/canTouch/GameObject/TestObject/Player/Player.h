@@ -23,7 +23,7 @@ struct Player
 		// ２次元座標
 		player->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(1.0f, 1.0f),	// スケール（倍率）
+			Vector2(1.5f, 1.5f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 
@@ -37,7 +37,6 @@ struct Player
 			Vector2(64, 40),			// 最小座標
 			Vector2(SCREEN_SIZE_X - 64.0f, SCREEN_SIZE_Y - 64.0f)				// 最大座標
 			));
-
 
 		// 円の当たり判定
 		player->addComponent(std::make_shared<RectCollider>(
@@ -71,8 +70,6 @@ struct Player
 		player->addComponent(std::make_shared<PlayerScript>(
 			50.0f	// 移動速度
 			));
-
-
 
 		// ゲームオブジェクトを追加
 		GameObjectManager::addGameObject(player);
