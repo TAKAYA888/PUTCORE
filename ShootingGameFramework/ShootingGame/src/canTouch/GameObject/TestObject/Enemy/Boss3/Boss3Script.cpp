@@ -13,8 +13,7 @@ Boss3Script::Boss3Script()
 	Vector2 playerPos = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
 	//プレイヤーが生存している
 	PlayerFrag = true;
-	//射撃するかどうかの
-	ShotFrag1 = true;
+	//射撃するかどうかの	
 	ShotFrag2 = true;
 }
 
@@ -25,25 +24,54 @@ void Boss3Script::update()
 
 	if (ActionCounter < 4)
 	{
-		if (timer > 1 && ShotFrag1)
+		if (timer > 1 && ShotFrag[0])
 		{
 			Shot1();
 
-			ShotFrag1 = false;
+			ShotFrag[0] = false;
 		}
-		else if (timer > 1.5 && ShotFrag2)
+		else if (timer > 1.15 && ShotFrag[1])
 		{
 			Shot2();
 
-			ShotFrag2 = false;
+			ShotFrag[1] = false;
+		}
+		else if (timer > 1.3 && ShotFrag[2])
+		{
+			Shot1();
+
+			ShotFrag[2] = false;
+		}
+		else if (timer > 1.45 && ShotFrag[3])
+		{
+			Shot2();
+
+			ShotFrag[3] = false;
+		}
+		else if (timer > 1.6 && ShotFrag[4])
+		{
+			Shot1();
+
+			ShotFrag[4] = false;
+		}
+		else if (timer > 1.75 && ShotFrag[5])
+		{
+			Shot2();
+
+			ShotFrag[5] = false;
 		}
 		else if (timer > 3)
 		{
 			ActionCounter++;
 
 			//リセット
-			ShotFrag1 = true;
-			ShotFrag2 = true;
+			/*ShotFrag1 = true;
+			ShotFrag2 = true;*/
+
+			for (size_t i = 0; i < 6; i++)
+			{
+				ShotFrag[i] = true;
+			}
 
 			Move();
 

@@ -69,7 +69,7 @@ private:
 	bool PlayerFrag;
 
 	//ŽËŒ‚‚µ‚½‚©‚Ç‚¤‚©
-	bool ShotFrag1;
+	bool ShotFrag[6] = { true,true,true,true,true,true };
 
 	//ŽËŒ‚‚µ‚½‚©‚Ç‚¤‚©
 	bool ShotFrag2;
