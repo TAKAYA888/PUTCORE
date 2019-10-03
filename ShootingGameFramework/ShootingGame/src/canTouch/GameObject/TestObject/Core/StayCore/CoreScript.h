@@ -39,4 +39,10 @@ private:
 
 	//描画タイマー
 	float DrawTime;
+
+	//プレイヤーの現在位置
+	Vector2 playerPostion;
+
+	//プレイヤーがいるか？
+	bool playerFrag = true;
 };

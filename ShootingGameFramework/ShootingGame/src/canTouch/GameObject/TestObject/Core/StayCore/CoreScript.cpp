@@ -6,11 +6,16 @@ CoreScript::CoreScript()
 {
 	CoreCoolTime = 10;
 	DrawTime = 0;
+	playerPostion = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
 }
 
 void CoreScript::update()
 {
-	Vector2 playerPostion = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
+	if (playerFrag)
+	{
+		playerPostion = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<Transform2D>().lock()->getWorldPosition();
+	}
+		
 	Vector2 setPosition;
 	setPosition.x = playerPostion.x;
 	setPosition.y = playerPostion.y + 40;
@@ -62,6 +67,11 @@ void CoreScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::wea
 	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
 	{
 		getGameObject().lock()->destroy();
+	}
+
+	if (eventMessageType == DIE_PLAYER)
+	{
+		playerFrag = false;
 	}
 }
 
