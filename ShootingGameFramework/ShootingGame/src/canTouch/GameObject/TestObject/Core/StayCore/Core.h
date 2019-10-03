@@ -36,7 +36,7 @@ struct Core
 		// 2次元の座標のクランパー
 		core->addComponent(std::make_shared<PositionClamper>(
 			Vector2::zero,			// 最小座標
-			Vector2(1400.0f, 720.0f)// 最大座標		// 最大座標
+			Vector2(SCREEN_SIZE_X, SCREEN_SIZE_Y)// 最大座標
 			));
 
 		core->addComponent(std::make_shared<AnimatedSprite2d>(

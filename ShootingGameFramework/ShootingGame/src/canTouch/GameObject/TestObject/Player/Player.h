@@ -34,8 +34,8 @@ struct Player
 
 		// 2次元の座標のクランパー
 		player->addComponent(std::make_shared<PositionClamper>(
-			Vector2(64,40),			// 最小座標
-			Vector2(1280.0f-64.0f, 720.0f-64.0f)				// 最大座標
+			Vector2(64, 40),			// 最小座標
+			Vector2(SCREEN_SIZE_X - 64.0f, SCREEN_SIZE_Y - 64.0f)				// 最大座標
 			));
 
 
@@ -72,7 +72,7 @@ struct Player
 			50.0f	// 移動速度
 			));
 
-		
+
 
 		// ゲームオブジェクトを追加
 		GameObjectManager::addGameObject(player);

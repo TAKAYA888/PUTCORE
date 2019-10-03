@@ -11,7 +11,7 @@ PlayerScript::PlayerScript(float moveSpeed)
 	: m_moveSpeed(moveSpeed)
 {
 	invincibleTime = 0;
-	flashTime = 0;	
+	flashTime = 0;
 }
 
 // 毎フレーム呼ばれる
@@ -37,7 +37,7 @@ void PlayerScript::update()
 		flashTime -= TktkTime::deltaTime();
 	}
 
-	
+
 	//std::cout << flashTime << std::endl;
 	//// タイマーカウントダウン
 	invincibleTime -= TktkTime::deltaTime();
@@ -56,8 +56,8 @@ void PlayerScript::update()
 	else if (invincibleTime <= 0.0f)
 	{
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
-		getComponent<RectCollider>().lock()->setActive(true);		
-		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);		
+		getComponent<RectCollider>().lock()->setActive(true);
+		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
 	}
 
 
@@ -117,7 +117,7 @@ void PlayerScript::onCollisionEnter(GameObjectPtr other)
 // 衝突中で呼ばれる
 void PlayerScript::onCollisionStay(GameObjectPtr other)
 {
-	
+
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_ITEM)
 	{
 		// 体力を-1する
@@ -161,6 +161,7 @@ void PlayerScript::inputToMove()
 {
 	// 移動方向
 	Vector2 moveVelocity = Vector2::zero;
+	Vector2 playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	// ｗキーの入力時
 	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP))
@@ -185,6 +186,7 @@ void PlayerScript::inputToMove()
 	{
 		moveVelocity.x = 3.0f;
 	}
+
 
 	moveVelocity = Vector2::normalize(moveVelocity);
 
