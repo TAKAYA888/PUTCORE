@@ -163,7 +163,7 @@ void PlayerScript::inputToMove()
 	Vector2 moveVelocity = Vector2::zero;
 
 	// ÇóÉLÅ[ÇÃì¸óÕéû
-	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP))
+	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP)||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_PUSHING,GamePadButtonType::GAME_PAD_LEFT_THUMB_BUTTON))
 	{
 		moveVelocity.y = -3.0f;
 	}

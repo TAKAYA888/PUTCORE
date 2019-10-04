@@ -25,7 +25,7 @@ void BossScript::update()
 			BossTeleportation::create(getComponent<Transform2D>().lock()->getWorldPosition());
 			teleportionCounter = false;
 		}
-		else if (timer > 2)
+		else if (timer > 2.0f)
 		{
 			Shot();
 
@@ -54,7 +54,7 @@ void BossScript::update()
 	else if (m_curState == State::faint)
 	{
 		//もしタイマーが2秒以上経過したら
-		if (timer > 2)
+		if (timer > 2.0f)
 		{
 			//ステータスを怒り状態にする
 			changeState(angry);
@@ -67,7 +67,7 @@ void BossScript::update()
 	else if (m_curState == State::angry)
 	{
 		//もしカウンターが3以下なら
-		if (counter < 3)
+		if (counter < 3.0f)
 		{
 			//もしタイマーが一秒以上なら
 			if (timer > 0.96f && teleportionCounter)
@@ -75,7 +75,7 @@ void BossScript::update()
 				BossTeleportation::create(getComponent<Transform2D>().lock()->getWorldPosition());
 				teleportionCounter = false;
 			}
-			if (timer > 1)
+			if (timer > 1.0f)
 			{
 				Shot();
 
@@ -207,16 +207,16 @@ void BossScript::Shot()
 
 	//弾のスポーン位置をずらす
 	spawnPos;
-	spawnPos.x = spawnPos.x - 45;
-	spawnPos.y = spawnPos.y + 15;
+	spawnPos.x = spawnPos.x - 45.0f;
+	spawnPos.y = spawnPos.y + 15.0f;
 
-	for (int i = 0; i < 12; i++)
+	for (float i = 0; i < 12; i++)
 	{
 		// 自身の回転角度
 		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
 
 		// 弾の初期速度
-		auto initVelocity = Vector2(MathHelper::sin(30 * i), MathHelper::cos(30 * i)) * 512.0f;
+		auto initVelocity = Vector2(MathHelper::sin(30.0f * i), MathHelper::cos(30.0f * i)) * 512.0f;
 
 		// 敵の通常弾を出現
 		EnemyNormalBullet::create(spawnPos, initVelocity);
