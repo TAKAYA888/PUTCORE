@@ -57,11 +57,7 @@ struct SelectMenuItem
 			));
 
 
-		// 2次元の座標のクランパー(追加)
-		selectMenuItem->addComponent(std::make_shared<PositionClamper>(
-			Vector2(SCREEN_SIZE.x / 2, 000.0f),			// 最小座標
-			Vector2(SCREEN_SIZE.x / 2, 550.0f)			// 最大座標
-			));
+	
 
 
 		// ゲーム開始のメニュー項目のスクリプト

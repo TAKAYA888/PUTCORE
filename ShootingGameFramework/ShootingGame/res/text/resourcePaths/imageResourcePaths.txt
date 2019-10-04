@@ -9,7 +9,7 @@
 20,res/image/game_start_button.png
 25,res/image/stage_select_button.png
 30,res/image/game_out_button.png
-50,res/image/background1.png
+50,res/image/background3.png
 101,res/image/player.png,1,6
 102,res/image/core.png,1,6
 110,res/image/enemy.png

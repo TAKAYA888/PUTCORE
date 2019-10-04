@@ -25,7 +25,7 @@ void TitleScene::start()
 	TitleDummyItem::create(Vector2(SCREEN_SIZE.x / 1, 045.0f));
 
 	// タイトルメニューのゲーム開始項目を生成する
-	GameStartItem::create(Vector2(SCREEN_SIZE.x / 1, 000.0f));
+	GameStartItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));
 
 	//ステージセレクトボタンを生成
 	SelectMenuItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));

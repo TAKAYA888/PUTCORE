@@ -122,9 +122,11 @@ void GameStartItemScript::Move()
 
 		getComponent<InertialMovement2D>().lock()->addForce(moveVelocity * m_moveSpeed);
 
-		if (selfPos.y > SCREEN_SIZE.y - 250)
+		if (selfPos.y > SCREEN_SIZE.y - 350)
 		{
-			m_moveSpeed = 0;
+			getComponent<InertialMovement2D>().lock()->setVelocity(Vector2(0, 0));
 		}
+				
+
 	}
 }
