@@ -11,7 +11,7 @@ PlayerScript::PlayerScript(float moveSpeed)
 	: m_moveSpeed(moveSpeed)
 {
 	invincibleTime = 0;
-	flashTime = 0;	
+	flashTime = 0;
 }
 
 // 毎フレーム呼ばれる
@@ -37,7 +37,7 @@ void PlayerScript::update()
 		flashTime -= TktkTime::deltaTime();
 	}
 
-	
+
 	//std::cout << flashTime << std::endl;
 	//// タイマーカウントダウン
 	invincibleTime -= TktkTime::deltaTime();
@@ -56,8 +56,8 @@ void PlayerScript::update()
 	else if (invincibleTime <= 0.0f)
 	{
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
-		getComponent<RectCollider>().lock()->setActive(true);		
-		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);		
+		getComponent<RectCollider>().lock()->setActive(true);
+		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
 	}
 
 
@@ -80,6 +80,7 @@ void PlayerScript::update()
 		SceneManager::changeScene(GAMEOVER_SCENE);
 		// 自分を殺す
 		getGameObject().lock()->destroy();
+
 	}
 }
 
@@ -117,7 +118,7 @@ void PlayerScript::onCollisionEnter(GameObjectPtr other)
 // 衝突中で呼ばれる
 void PlayerScript::onCollisionStay(GameObjectPtr other)
 {
-	
+
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_ITEM)
 	{
 		// 体力を-1する
@@ -161,6 +162,7 @@ void PlayerScript::inputToMove()
 {
 	// 移動方向
 	Vector2 moveVelocity = Vector2::zero;
+	Vector2 playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	// ｗキーの入力時
 	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP)||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_PUSHING,GamePadButtonType::GAME_PAD_LEFT_THUMB_BUTTON))
@@ -192,14 +194,12 @@ void PlayerScript::inputToMove()
 	Vector2 a = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	//プレイヤーの座標に速度を＋
-
 	//144Hz
-	//Vector2 movePostion = a + moveVelocity * 3 * 60 / 144;
+	//Vector2 movePostion = a + moveVelocity * 9 * 60 / 144;
 	//60Hz
 	Vector2 movePostion = a + moveVelocity * 9;
 
 	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
-
 }
 
 // 入力による回転
@@ -216,7 +216,7 @@ void PlayerScript::inputToShot()
 	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z))
 	{
 		//プレイヤーの座標の受け取り
-		auto playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
+		Vector2 playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 		// 弾の出現座標座標
 		Vector2 bulletPos;
@@ -224,7 +224,7 @@ void PlayerScript::inputToShot()
 		bulletPos.y = playerPos.y + 40.0f;
 
 		// 弾の初期速度
-		auto initVelocity = Vector2(MathHelper::sin(90), -MathHelper::cos(90)) * 512.0f;
+		auto initVelocity = Vector2(MathHelper::sin(90.0f), -MathHelper::cos(90.0f)) * 512.0f;
 
 		// プレイヤーの弾を出現
 		PlayerBullet::create(bulletPos, initVelocity);

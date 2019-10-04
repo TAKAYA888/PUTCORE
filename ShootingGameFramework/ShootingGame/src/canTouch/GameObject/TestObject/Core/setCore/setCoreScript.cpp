@@ -12,7 +12,7 @@
 setCoreScript::setCoreScript()
 {
 	counter = 0;
-	coolTime = 0.2f;
+	coolTime = 0.5f;
 }
 
 void setCoreScript::update()

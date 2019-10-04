@@ -14,7 +14,7 @@ void BossTeleportationScript::update()
 	//カウントアップ
 	timer += TktkTime::deltaTime();
 
-	if (timer > 0.2f)
+	if (timer > 0.5f)
 	{
 		getGameObject().lock()->destroy();
 	}

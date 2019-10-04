@@ -193,9 +193,9 @@ void BossScript::changeState(State nextState)
 void BossScript::move()
 {
 	//xを500、1100の間でランダムに移動する
-	float x = Random::getRandF(500, 1100);
+	float x = Random::getRandF(500.0f, 1100.0f);
 	//yを128、600の間でランダムに移動する
-	float y = Random::getRandF(128, 600);
+	float y = Random::getRandF(128.0f, 600.0f);
 
 	getComponent<Transform2D>().lock()->setLocalPosition(Vector2(x, y));
 }
@@ -220,5 +220,6 @@ void BossScript::Shot()
 
 		// 敵の通常弾を出現
 		EnemyNormalBullet::create(spawnPos, initVelocity);
+
 	}
 }

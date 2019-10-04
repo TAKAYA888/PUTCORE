@@ -38,7 +38,7 @@ void GameEndCheckerScript::update()
 	if (player.expired())
 	{
 		// 時間の経過速度を1/5にする
-		TktkTime::setTimeScale(0.2f);
+		TktkTime::setTimeScale(0.5f);
 
 		// ゲーム終了フラグを立てる
 		m_gameEnd = true;
@@ -48,7 +48,7 @@ void GameEndCheckerScript::update()
 	if (m_bossKillCount >= m_bossKillTargetValue)
 	{
 		// 時間の経過速度を1/5にする
-		TktkTime::setTimeScale(0.2f);
+		TktkTime::setTimeScale(0.5f);
 
 		// ゲーム終了フラグを立てる
 		m_gameEnd = true;
