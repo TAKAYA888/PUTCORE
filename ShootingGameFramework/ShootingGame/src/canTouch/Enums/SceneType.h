@@ -23,4 +23,7 @@ enum SceneType
 
 	//ポーズのシーン
 	PAUSE_SCENE = 6,
+
+	//ステージセレクトシーン
+	STAGE_SELECT_SCENE = 7,
 };

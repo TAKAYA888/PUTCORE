@@ -9,6 +9,7 @@
 #include "../Scene/ClearScene.h"
 #include "../Scene/GameOverScene.h"
 #include "../Scene/ResultScene.h"
+#include "../Scene/SelectStageScene.h"
 
 struct SceneTypeSetter
 {
@@ -21,6 +22,7 @@ struct SceneTypeSetter
 		SceneManager::addScene(CLEAR_SCENE, std::make_shared<ClearScene>());
 		SceneManager::addScene(GAMEOVER_SCENE, std::make_shared<GameOverScene>());
 		SceneManager::addScene(RESULT_SCENE, std::make_shared<ResultScene>());
+		SceneManager::addScene(STAGE_SELECT_SCENE, std::make_shared<SelectStageScene>());
         
 		// ‰ŠúƒV[ƒ“‚ğİ’è‚·‚é
 		SceneManager::changeScene(LOAD_SCENE);
