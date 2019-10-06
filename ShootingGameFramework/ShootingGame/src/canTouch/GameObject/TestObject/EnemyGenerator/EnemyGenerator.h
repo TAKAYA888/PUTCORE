@@ -18,7 +18,7 @@ struct EnemyGenerator
 
 		// 使用する敵の出現情報のテキストファイルのパスを引数に敵出現コンポーネントを追加
 		enemyGenerator->addComponent(std::make_shared<EnemyGeneratorScript>(
-			"res/text/stageData/stage2.txt"
+			"res/text/stageData/stage1.txt"
 			));
 
 		// 特定のメッセージを受信したら自身を殺すコンポーネントを追加

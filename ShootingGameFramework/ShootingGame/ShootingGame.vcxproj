@@ -137,7 +137,6 @@
     <ClCompile Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButtonScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogoScript.cpp" />
-    <ClCompile Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\BackGround\BackGround1\BackGround_1Script.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\CoreBullet\CoreBulletScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Core\setCore\setCoreScript.cpp" />
@@ -174,6 +173,7 @@
     <ClCompile Include="src\canTouch\GameObject\ResultObject\Score\ScoreScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleCursor\TitleCursorScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleLogo\TitleLogoScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\SelectMenuItem\SelectMenuItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\TitleDummyItem\TitleDummyItemScript.cpp.cpp" />
@@ -182,7 +182,6 @@
     <ClCompile Include="src\canTouch\Scene\LoadScene.cpp" />
     <ClCompile Include="src\canTouch\Scene\MainScene.cpp" />
     <ClCompile Include="src\canTouch\Scene\ResultScene.cpp" />
-    <ClCompile Include="src\canTouch\Scene\StageSelectScene.cpp" />
     <ClCompile Include="src\canTouch\Scene\TitleScene.cpp" />
     <ClCompile Include="src\dontTouch\main.cpp" />
     <ClCompile Include="src\dontTouch\MyGame\MyGame.cpp" />
@@ -215,8 +214,6 @@
     <ClInclude Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogo.h" />
     <ClInclude Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogoScript.h" />
     <ClInclude Include="src\canTouch\GameObject\ResultObject\Score_Screen_result\Score_Screen_result.h" />
-    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogo.h" />
-    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogoScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\AnimSample\AnimSample.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\BackGround\BackGround1\BackGround_1.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\BackGround\BackGround1\BackGround_1Script.h" />
@@ -288,6 +285,8 @@
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleCursor\TitleCursorScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleLogo\TitleLogo.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleLogo\TitleLogoScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItem.h" />
+    <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItemScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItem.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItemScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\SelectMenuItem\SelectMenuItem.h" />
@@ -299,7 +298,6 @@
     <ClInclude Include="src\canTouch\Scene\LoadScene.h" />
     <ClInclude Include="src\canTouch\Scene\MainScene.h" />
     <ClInclude Include="src\canTouch\Scene\ResultScene.h" />
-    <ClInclude Include="src\canTouch\Scene\StageSelectScene.h" />
     <ClInclude Include="src\canTouch\Scene\TitleScene.h" />
     <ClInclude Include="src\canTouch\Utility\CollisionGroupSetter.h" />
     <ClInclude Include="src\canTouch\Utility\DrawPriority.h" />

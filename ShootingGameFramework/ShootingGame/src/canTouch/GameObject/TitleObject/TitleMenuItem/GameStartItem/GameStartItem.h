@@ -57,6 +57,16 @@ struct GameStartItem
 			));
 
 
+		//// 2次元の座標のクランパー(追加)
+		//gameStartItem->addComponent(std::make_shared<PositionClamper>(
+		//	Vector2(SCREEN_SIZE.x / 2, 000.0f),			// 最小座標
+		//	Vector2(SCREEN_SIZE.x / 2, 700.0f)			// 最大座標
+		//	));
+
+
+		// ゲーム開始のメニュー項目のスクリプト
+		//gameStartItem->addComponent(std::make_shared<GameStartItemScript>());
+
 		// プレイヤーのスクリプト（追加）
 		gameStartItem->addComponent(std::make_shared<GameStartItemScript>(
 			32.0f	// 移動速度
