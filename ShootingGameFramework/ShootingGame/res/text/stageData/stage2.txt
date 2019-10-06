@@ -1,0 +1,63 @@
+virusenemy4, 2.0,1920,450 , 0
+virusenemy4, 2.0,1920,720, 0
+virusenemy4, 4.0,1920,450 , 0
+virusenemy4, 4.0,1920,720, 0
+virusenemy5, 7.0,1920,300, 0
+virusenemy5, 7.0,1920,540, 0
+virusenemy5, 7.0,1920,780 , 0
+virusenemy3-1, 9.0,1920,450, -90
+virusenemy3-1, 9.0,1920,720   , -90
+virusenemy2, 11.0,1920,150, -90
+virusenemy2, 11.0,1920,930, -90
+virusenemy4, 11.0,1920,540, 0
+virusenemy2, 14.0,1920,150, -90
+virusenemy2, 14.0,1920,930,-90
+virusenemy4, 14.0,1920,450, 0
+virusenemy4, 14.0,1920,720, 0
+virusenemy5, 18.0,1920,450, 0
+virusenemy5, 18.0,1920,720, 0
+virusenemy3-1, 19.0,1920,300, -90
+virusenemy3-1, 19.0,1920,540, -90
+virusenemy3-1, 19.0,1920,780, -90
+virusenemy5, 24.0,1920,450, 0
+virusenemy5, 24.0,1920,720, 0
+virusenemy3-1, 25.0,0,1920,300, -90
+virusenemy3-1, 25.0,0,1920,540, -90
+virusenemy3-1, 25.0,0,1920,780, -90
+virusenemy5, 29.0,1920,450, 0
+virusenemy5, 29.0,1920,720, 0
+virusenemy3-1, 30.0,0,1920,300, -90
+virusenemy3-1, 30.0,0,1920,540, -90
+virusenemy3-1, 30.0,0,1920,780, -90
+virusenemy1-2, 34.0,1920,780, 0
+virusenemy1-2, 34.3,1920,780, 0
+virusenemy1-2, 34.6,1920,780, 0
+virusenemy1-2, 34.9,1920,780, 0
+virusenemy1-1, 38.0,1920,300, 0
+virusenemy1-1, 38.3,1920,300, 0
+virusenemy1-1, 38.6,1920,300, 0
+virusenemy1-1, 38.9,1920,300, 0
+virusenemy1-2, 42.0,1920,780, 0
+virusenemy1-2, 42.3,1920,780, 0
+virusenemy1-2, 42.6,1920,780, 0
+virusenemy1-2, 42.9,1920,780, 0
+virusenemy1-1, 46.0,1920,300, 0
+virusenemy1-1, 46.3,1920,300, 0
+virusenemy1-1, 46.6,1920,300, 0
+virusenemy1-1, 46.9,1920,300, 0
+virusenemy4, 49.0,1920,300, 0
+virusenemy4, 49.0,1920,540, 0
+virusenemy4, 49.0,1920,780, 0
+virusenemy4, 51.0,1920,300, 0
+virusenemy4, 51.0,1920,540, 0
+virusenemy4, 51.0,1920,780, 0
+virusenemy4, 53.0,1920,300, 0
+virusenemy4, 53.0,1920,540, 0
+virusenemy4, 53.0,1920,780, 0
+virusenemy5, 56.0,1920,300, 0
+virusenemy5, 56.0,1920,540, 0
+virusenemy5, 62.0,1920,540, 0
+virusenemy5, 62.0,1920,780 , 0
+virusenemy5, 68.0,1920,300, 0
+virusenemy5, 68.0,1920,780 , 0
+Boss2, 76.0,1650,540,0

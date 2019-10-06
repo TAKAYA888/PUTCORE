@@ -1,48 +1,33 @@
-#include "TitleScene.h"
-
-#include "../GameObject/TitleObject/TitleLogo/TitleLogo.h"
+#include "StageSelectScene.h"
+#include "../GameObject/StageSelectObject/StageSelectLogo/StageSelectLogo.h"
 #include "../GameObject/TitleObject/TitleCursor/TitleCursor.h"
 #include "../GameObject/TitleObject/TitleMenuItem/GameStartItem/GameStartItem.h"
 #include "../GameObject/TitleObject/TitleMenuItem/SelectMenuItem/SelectMenuItem.h"
 #include "../GameObject/TitleObject/TitleMenuItem/TitleDummyItem/TitleDummyItem.h"
 #include "../GameObject/TestObject/GamePlayBgmPlayer/GamePlayBgmPlayer.h"
 
-TitleScene::TitleScene()
+StageSelectScene::StageSelectScene()
 {
 }
 
 // シーンの開始時に呼ばれる
-void TitleScene::start()
+void StageSelectScene::start()
 {
 	// タイトルロゴを生成する
-	TitleLogo::create();
+	StageSelectLogo::create();
 
-	// タイトルカーソルを生成する
-	TitleCursor::create();
-
-	//張りぼて
-	TitleDummyItem::create(Vector2(SCREEN_SIZE.x / 1, 045.0f));
-
-	// タイトルメニューのゲーム開始項目を生成する
-	GameStartItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));
-
-	//ステージセレクトボタンを生成
-	SelectMenuItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));
-
-
-	// タイトル用のBGMプレイヤーを生成
-	GamePlayBgmPlayer::title();
+	
 
 }
 
 // 毎フレーム呼ばれる
-void TitleScene::update()
+void StageSelectScene::update()
 {
 	counter++;
 }
 
 // シーンの終了時に呼ばれる
-void TitleScene::end()
+void StageSelectScene::end()
 {
 	// 全てのゲームオブジェクトに「DIE_TITLE_OBJECT」のメッセージを飛ばす
 	GameObjectManager::sendMessage(DIE_TITLE_OBJECT);

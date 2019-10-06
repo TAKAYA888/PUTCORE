@@ -22,7 +22,7 @@ void SelectMenuItemScript::update()
 		getComponent<Sprite2dDrawer>().lock()->setBlendParam(m_curAlpha);
 	}
 
-	if (select == 1)
+	if (select == 2)
 	{
 		if (counter % 40 == 0)
 		{
@@ -55,15 +55,7 @@ void SelectMenuItemScript::onCollisionEnter(GameObjectPtr other)
 // 衝突中で呼ばれる
 void SelectMenuItemScript::onCollisionStay(GameObjectPtr other)
 {
-	// 衝突相手のタグが「GAME_OBJECT_TAG_CURSOR」でクリック開始時だったら
-	//if (other.lock()->getTag() == GAME_OBJECT_TAG_CURSOR
-	//	&& Mouse::getState(InputType::INPUT_BEGIN, MouseButtonType::MOUSE_LEFT_BUTTON))
-	//{
-		//getComponent<SePlayer>().lock()->playSe();
-		// メインシーンに遷移する
-		//SceneManager::changeScene(MAIN_SCENE);
 
-	//}
 }
 
 // 衝突終了で呼ばれる
@@ -84,18 +76,20 @@ void SelectMenuItemScript::Move()
 {
 	if (select == 1 || select == 2 || select == 0)
 	{
-		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP) )
+	    if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN))
+	    {
+     		select = 2;
+	    	
+	    }
+		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP))
 		{
 			select = 1;
-		}
-		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN) )
-		{
-			select = 2;
 			getComponent<Sprite2dDrawer>().lock()->setActive(true);
 		}
+
 	}
 
-	if (select == 1 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
+	if (select == 2 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
 	{
 		getComponent<SePlayer>().lock()->playSe();
 		counter = 0;
@@ -104,8 +98,8 @@ void SelectMenuItemScript::Move()
 
 	else if (counter == 120 && select == 3)
 	{
-		// メインシーンに遷移する
-		SceneManager::changeScene(MAIN_SCENE);
+		// セレクトシーンに移行する
+		SceneManager::changeScene(SELECT_SCENE);
 	}
 
 	if (counter >= 130)

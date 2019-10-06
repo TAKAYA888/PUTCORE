@@ -174,10 +174,13 @@
     <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen\Score_Screen_Script.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItemScript.cpp">
+    <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\SelectMenuItem\SelectMenuItemScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\SelectMenuItem\SelectMenuItemScript.cpp">
+    <ClCompile Include="src\canTouch\Scene\StageSelectScene.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogoScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -195,9 +198,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\Enums\GameObjectTag.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="src\canTouch\Enums\ImageId.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\Enums\SceneType.h">
@@ -419,12 +419,6 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\Enemy\VirusEnemy3-1\VirusEnemy3-1.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItem.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameEndItem\GameEndItemScript.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\TitleDummyItem\TitleDummyItem.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -534,6 +528,18 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\SelectMenuItem\SelectMenuItemScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\Scene\StageSelectScene.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\Enums\ImageId.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogo.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogoScript.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
