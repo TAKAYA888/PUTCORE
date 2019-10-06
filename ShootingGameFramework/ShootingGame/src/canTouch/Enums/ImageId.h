@@ -30,8 +30,8 @@ enum ImageId
 	//タイトルメニューのステージセレクト画面へ移動する項目の画像
 	IMAGE_SELECT_MENU_STAGE = 25,
 
-	// タイトルメニューのゲームエンドの項目
-	IMAGE_TITLE_MENU_GAMEEND = 30,
+	// ステージセレクト画面の背景
+	IMAGE_STAGE_SELECT_BG = 30,
 
 	//ゲームプレイ画面の背景の画像
 	IMAGE_PLAY_BG = 50,

@@ -22,7 +22,7 @@ void SelectMenuItemScript::update()
 		getComponent<Sprite2dDrawer>().lock()->setBlendParam(m_curAlpha);
 	}
 
-	if (select == 1)
+	if (select == 2)
 	{
 		if (counter % 40 == 0)
 		{
@@ -87,15 +87,16 @@ void SelectMenuItemScript::Move()
 		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP) )
 		{
 			select = 1;
+			getComponent<Sprite2dDrawer>().lock()->setActive(true);
 		}
 		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN) )
 		{
 			select = 2;
-			getComponent<Sprite2dDrawer>().lock()->setActive(true);
+			
 		}
 	}
 
-	if (select == 1 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
+	if (select == 2 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
 	{
 		getComponent<SePlayer>().lock()->playSe();
 		counter = 0;
@@ -105,7 +106,7 @@ void SelectMenuItemScript::Move()
 	else if (counter == 120 && select == 3)
 	{
 		// ƒƒCƒ“ƒV[ƒ“‚É‘JˆÚ‚·‚é
-		SceneManager::changeScene(MAIN_SCENE);
+		SceneManager::changeScene(STAGE_SELECT_SCENE);
 	}
 
 	if (counter >= 130)
