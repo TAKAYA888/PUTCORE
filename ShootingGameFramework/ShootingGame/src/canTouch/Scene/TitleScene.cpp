@@ -33,6 +33,8 @@ void TitleScene::start()
 	// タイトル用のBGMプレイヤーを生成
 	GamePlayBgmPlayer::title();
 
+	
+
 }
 
 // 毎フレーム呼ばれる

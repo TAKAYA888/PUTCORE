@@ -26,4 +26,10 @@ enum SceneType
 
 	//ステージセレクトシーン
 	STAGE_SELECT_SCENE = 7,
+
+	//ステージ２
+	STAGE_TWO_SCENE = 8,
+
+	//ステージ３
+	STAGE_THREE_SCENE = 9,
 };

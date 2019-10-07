@@ -1,6 +1,13 @@
 #include"SelectStageScene.h"
 
 #include "../GameObject/StageSelectObject/StageSelectLogo/StageSelectLogo.h"
+#include "../GameObject/StageSelectObject/StageSelectOneItem/StageSelectOneItem.h"
+#include "../GameObject/StageSelectObject/StageSelectTwoItem/StageSelectTwoItem.h"
+#include "../GameObject/StageSelectObject/StageSelectThreeItem/StageSelectThreeItem.h"
+
+
+
+
 
 SelectStageScene::SelectStageScene()
 {
@@ -10,7 +17,20 @@ SelectStageScene::SelectStageScene()
 // シーンの開始時に呼ばれる
 void SelectStageScene::start()
 {
+	//背景～この手紙～♪
 	StageSelectLogo::create();
+
+	//ステージ１のボタン
+	StageSelectOneItem::create(Vector2(SCREEN_SIZE.x / 5, 700.0f));
+
+	//ステージ２の牡丹
+	StageSelectTwoItem::create(Vector2(SCREEN_SIZE.x / 2, 700.0f));
+
+	//ステージ３の釦
+	StageSelectThreeItem::create(Vector2(SCREEN_SIZE.x / 1,800.0f));
+
+
+
 	
 
 }

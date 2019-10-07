@@ -183,6 +183,33 @@
     <ClCompile Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogoScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\StageSelectObject\StageSelectOneItem\StageSelectOneItemScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\StageSelectObject\StageSelectTwoItem\StageSelectTwoItemScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\StageSelectObject\StageSelectThreeItem\StageSelectThreeItemScript.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\BackGround\BackGround2\BackGround_2Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyGenerator2\EnemyGenerator2Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\Scene\Main2Scene.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\Scene\Main3Scene.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\EnemyGenerator3\EnemyGenerator3Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\canTouch\GameObject\TestObject\BackGround\BackGround3\BackGround_3Script.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\dontTouch\MyGame\MyGame.h">
@@ -270,9 +297,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleCursor\TitleCursorScript.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItem.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItemScript.h">
@@ -540,6 +564,57 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogoScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TitleObject\TitleMenuItem\GameStartItem\GameStartItem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectOneItem\StageSelectOneItem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectOneItem\StageSelectOneItemScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectTwoItem\StageSelectTwoItemScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectTwoItem\StageSelectTwoItem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectThreeItem\StageSelectThreeItem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectThreeItem\StageSelectThreeItemScript.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\BackGround\BackGround2\BackGround_2Script.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\BackGround\BackGround2\BackGround_2.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyGenerator2\EnemyGenerator2.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyGenerator2\EnemyGenerator2Script.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\Scene\Main2Scene.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\Scene\Main3Scene.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyGenerator3\EnemyGenerator3.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\EnemyGenerator3\EnemyGenerator3Script.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\BackGround\BackGround3\BackGround_3.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\canTouch\GameObject\TestObject\BackGround\BackGround3\BackGround_3Script.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

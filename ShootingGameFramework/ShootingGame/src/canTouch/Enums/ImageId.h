@@ -33,8 +33,18 @@ enum ImageId
 	// ステージセレクト画面の背景
 	IMAGE_STAGE_SELECT_BG = 30,
 
+	IMAGE_STAGE_SELECT_ONE = 31,
+
+	IMAGE_STAGE_SELECT_TWO = 32,
+
+	IMAGE_STAGE_SELECT_THREE = 33,
+
 	//ゲームプレイ画面の背景の画像
-	IMAGE_PLAY_BG = 50,
+	IMAGE_PLAY_BG1 = 50,
+
+	IMAGE_PLAY_BG2 = 51,
+
+	IMAGE_PLAY_BG3 = 52,
 
 	// プレイヤーの画像
 	IMAGE_PLAYER = 101,
