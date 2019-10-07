@@ -46,6 +46,9 @@ private:
 	// 入力による移動
 	void inputToMove();
 
+	//コントローラーの入力移動
+	void BoxInputToMove();
+
 	// 入力による回転
 	void inputToRotate();
 

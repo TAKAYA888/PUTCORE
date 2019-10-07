@@ -64,6 +64,9 @@ void PlayerScript::update()
 	// 入力による移動
 	inputToMove();
 
+	// 入力による移動
+	BoxInputToMove();
+
 	// 入力による回転
 	inputToRotate();
 
@@ -202,6 +205,32 @@ void PlayerScript::inputToMove()
 	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
 }
 
+void PlayerScript::BoxInputToMove()
+{
+	//移動方向
+	Vector2 moveVelocity = Vector2::zero;
+
+	//左スティックの傾きを取得
+	moveVelocity = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
+
+	//スティックの方向と座標軸のy座標が逆なので反転する
+	moveVelocity.y *= -1.0f;
+
+	//スティックの傾きが0.01以下なら傾きを0にする
+	if (moveVelocity.length() < 0.01f)
+	{
+		moveVelocity = Vector2::zero;
+	}
+
+	moveVelocity = Vector2::normalize(moveVelocity);
+
+	Vector2 curPos = getComponent<Transform2D>().lock()->getLocalPosition();
+
+	curPos += moveVelocity * 9 * (144 * TktkTime::deltaTime());
+
+	getComponent<Transform2D>().lock()->setLocalPosition(curPos);
+}
+
 // 入力による回転
 void PlayerScript::inputToRotate()
 {
@@ -213,7 +242,7 @@ void PlayerScript::inputToRotate()
 void PlayerScript::inputToShot()
 {
 	// 左クリック入力開始時
-	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z))
+	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_PUSHING, GamePadButtonType::GAME_PAD_B_BUTTON))
 	{
 		//プレイヤーの座標の受け取り
 		Vector2 playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
