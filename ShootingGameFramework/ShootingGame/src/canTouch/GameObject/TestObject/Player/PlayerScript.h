@@ -71,4 +71,11 @@ private:
 
 	//点滅タイマー
 	float flashTime;
+
+public:
+
+	//パワーアップアイテムカウンター
+	int PowerupCounter;
+
+	int add_core_bullet;
 };

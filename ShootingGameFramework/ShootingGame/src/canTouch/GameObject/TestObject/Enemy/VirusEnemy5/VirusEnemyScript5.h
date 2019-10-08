@@ -39,6 +39,9 @@ private:
 	// 弾を発射
 	void shot();
 
+	//パワーアップアイテム出現
+	void PowerupItem();
+
 private:
 
 	// 体力
@@ -52,4 +55,6 @@ private:
 
 	//タイマー
 	float timer;
+
+	int add_core_bullet;
 };

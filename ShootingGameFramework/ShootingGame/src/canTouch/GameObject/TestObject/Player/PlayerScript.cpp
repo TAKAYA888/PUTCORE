@@ -12,6 +12,8 @@ PlayerScript::PlayerScript(float moveSpeed)
 {
 	invincibleTime = 0;
 	flashTime = 0;
+	add_core_bullet = 3;
+	PowerupCounter = 0;
 }
 
 // 毎フレーム呼ばれる
@@ -116,17 +118,25 @@ void PlayerScript::onCollisionEnter(GameObjectPtr other)
 		// 体力を-1する
 		m_curHp--;
 	}
+
+	// 衝突相手のタグが「GAME_OBJECT_TAG_CORE_POWER_UP_ITEM」だったら
+	if (other.lock()->getTag() == GAME_OBJECT_TAG_CORE_POWER_UP_ITEM)
+	{
+		if (PowerupCounter < 3)
+		{
+			//カウンターを+1する
+			PowerupCounter++;
+		}
+		else
+		{
+			add_core_bullet++;
+		}
+	}
 }
 
 // 衝突中で呼ばれる
 void PlayerScript::onCollisionStay(GameObjectPtr other)
 {
-
-	if (other.lock()->getTag() == GAME_OBJECT_TAG_ITEM)
-	{
-		// 体力を-1する
-		m_curHp++;
-	}
 }
 
 // 衝突終了で呼ばれる

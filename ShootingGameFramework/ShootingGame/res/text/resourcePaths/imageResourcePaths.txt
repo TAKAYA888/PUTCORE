@@ -26,6 +26,8 @@
 122,res/image/boss_stop.png
 130,res/image/playerBullet.png
 131,res/image/enemy_bullet.png
+132,res/image/item_core_power.png
+133,res/image/item_hp.png
 140,res/image/explosion.png,1,10
 141,res/image/zako_dead.png,1,10
 142,res/image/boss_move.png,1,5

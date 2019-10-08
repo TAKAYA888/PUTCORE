@@ -7,12 +7,12 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
-class VirusEnemyScript3_1
+class CorePowerupItemScript
 	:public ComponentBase
 {
 public:
 
-	VirusEnemyScript3_1();
+	CorePowerupItemScript();
 
 public:
 
@@ -30,32 +30,4 @@ public:
 
 	// メッセージ受信時に呼ばれる
 	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
-
-private:
-
-	// 移動
-	void move();
-
-	//パワーアップアイテム出現
-	void PowerupItem();
-
-private:
-
-	// 体力
-	int m_hp{ 2 };
-
-	// 移動速度
-	float m_moveSpeed;
-
-	//タイマー
-	float timer;
-
-	//resultを保存する
-	float Lasttimeresult;
-
-	Vector2 playerPos;
-
-	bool playerFrag;
-
-	int add_core_bullet;
 };
