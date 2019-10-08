@@ -3,12 +3,14 @@
 #include "../../Explosion_Enemy/Explosion_Enemy.h"
 #include "VirusEnemy1-2.h"
 #include "../../Item/CorePowerupItem/CorePowerupItem.h"
+#include "../../Item/RecoveryItem/RecoveryItem.h"
 #include "../../Player/PlayerScript.h"
 
 VirusEnemyScript1_2::VirusEnemyScript1_2()
 {
 	timer = 0;
 	add_core_bullet = 0;
+	counter = 0;
 }
 
 //毎フレーム呼ばれる
@@ -20,13 +22,26 @@ void VirusEnemyScript1_2::update()
 
 	timer += TktkTime::deltaTime();
 
+	Random::randomize();
+
 	//移動
 	move();
 
 	//体力が0以下になったら
 	if (m_hp <= 0)
 	{
-		PowerupItem();
+		counter = Random::getRandI(0, 10);
+
+		if (0 <= counter && counter < 2)
+		{
+			//`パワーアップアイテム
+			PowerupItem();
+		}
+		else
+		{
+			//回復アイテム
+			RecoveryItem();
+		}
 
 		GameObjectManager::sendMessage(DIE_Enemy1_2);
 		getGameObject().lock()->destroy();
@@ -138,4 +153,14 @@ void VirusEnemyScript1_2::PowerupItem()
 
 	//パワーアップアイテム
 	CorePowerupItem::create(PowerupItemPos, inivelocity);
+}
+
+void VirusEnemyScript1_2::RecoveryItem()
+{
+	auto RecoveryItemPos = getComponent<Transform2D>().lock()->getWorldPosition();
+
+	// 移動速度＋方向
+	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 20.0f;
+
+	RecoveryItem::create(RecoveryItemPos, inivelocity);
 }

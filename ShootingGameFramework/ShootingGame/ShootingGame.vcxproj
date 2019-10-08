@@ -175,6 +175,7 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Explosion_Enemy\Explosion_EnemyScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\GameEndChecker\GameEndCheckerScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Item\CorePowerupItem\CorePowerupItemScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\TestObject\Item\RecoveryItem\RecoveryItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\PlayerBullet\PlayerBulletScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\PlayerHpUi\PlayerHpUiScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\TestObject\Player\PlayerScript.cpp" />
@@ -300,6 +301,8 @@
     <ClInclude Include="src\canTouch\GameObject\TestObject\GamePlayBgmPlayer\GamePlayBgmPlayer.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Item\CorePowerupItem\CorePowerupItem.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\Item\CorePowerupItem\CorePowerupItemScript.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Item\RecoveryItem\RecoveryItem.h" />
+    <ClInclude Include="src\canTouch\GameObject\TestObject\Item\RecoveryItem\RecoveryItemScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\PlayerBullet\PlayerBullet.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\PlayerBullet\PlayerBulletScript.h" />
     <ClInclude Include="src\canTouch\GameObject\TestObject\PlayerHpUi\PlayerHpUi.h" />

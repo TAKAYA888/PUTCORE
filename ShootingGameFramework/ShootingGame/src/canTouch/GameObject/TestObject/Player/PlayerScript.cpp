@@ -132,6 +132,16 @@ void PlayerScript::onCollisionEnter(GameObjectPtr other)
 			add_core_bullet++;
 		}
 	}
+
+	// 衝突相手のタグが「GAME_OBJECT_TAG_RECOVERY_ITEM」だったら
+	if (other.lock()->getTag() == GAME_OBJECT_TAG_RECOVERY_ITEM)
+	{
+		if (m_curHp < m_maxHp)
+		{
+			//回復+1する
+			m_curHp++;
+		}
+	}
 }
 
 // 衝突中で呼ばれる
