@@ -43,10 +43,10 @@ struct  VirusEnemy3_1
 			));
 
 		// ’·•ûŒ`‚Ì“–‚½‚è”»’è‚Ì”ÍˆÍ‚Ì•`‰æ
-		virusenemy3_1->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
-			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
-			Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
-			));
+		//virusenemy3_1->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
+		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
+		//	Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
+		//	));
 
 		// ‚QŸŒ³‰æ‘œ‚Ì•`‰æ
 		virusenemy3_1->addComponent(std::make_shared<Sprite2dDrawer>(

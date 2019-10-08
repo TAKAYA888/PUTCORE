@@ -44,11 +44,11 @@ struct PlayerBullet
 			8.0f							// Õ“Ë”»’è‚Ì”¼Œa
 			));
 
-		// ‰~‚Ì“–‚½‚è”»’è‚Ì”ÍˆÍ‚Ì•`‰æ
-		playerBullet->addComponent(std::make_shared<CircleColliderWireFrameDrawer>(
-			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
-			Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
-			));
+		//// ‰~‚Ì“–‚½‚è”»’è‚Ì”ÍˆÍ‚Ì•`‰æ
+		//playerBullet->addComponent(std::make_shared<CircleColliderWireFrameDrawer>(
+		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
+		//	Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
+		//	));
 
 		// ‚QŸŒ³‰æ‘œ‚Ì•`‰æ
 		playerBullet->addComponent(std::make_shared<Sprite2dDrawer>(

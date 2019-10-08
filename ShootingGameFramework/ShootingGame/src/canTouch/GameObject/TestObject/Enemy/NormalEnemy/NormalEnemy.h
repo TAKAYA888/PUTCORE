@@ -43,10 +43,10 @@ struct NormalEnemy
 			));
 
 		// ’·•ûŒ`‚Ì“–‚½‚è”»’è‚Ì”ÍˆÍ‚Ì•`‰æ
-		enemy->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
-			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
-			Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
-			));
+		//enemy->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
+		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
+		//	Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
+		//	));
 
 		// ‚QŸŒ³‰æ‘œ‚Ì•`‰æ
 		enemy->addComponent(std::make_shared<Sprite2dDrawer>(
