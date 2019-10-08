@@ -27,11 +27,7 @@ void SelectStageScene::start()
 	StageSelectTwoItem::create(Vector2(SCREEN_SIZE.x / 2, 700.0f));
 
 	//ステージ３の釦
-	StageSelectThreeItem::create(Vector2(SCREEN_SIZE.x / 1,800.0f));
-
-
-
-	
+	StageSelectThreeItem::create(Vector2(SCREEN_SIZE.x / 1,800.0f));	
 
 }
 
