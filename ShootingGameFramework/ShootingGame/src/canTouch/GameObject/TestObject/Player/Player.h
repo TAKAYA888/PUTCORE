@@ -20,6 +20,12 @@ struct Player
 		// タグを設定
 		player->setTag(GAME_OBJECT_TAG_PLAYER);
 
+		// 2次元の座標のクランパー
+		player->addComponent(std::make_shared<PositionClamper>(
+			Vector2(95, 60),			// 最小座標
+			Vector2(SCREEN_SIZE_X - 70.0f, SCREEN_SIZE_Y - 80.0f)				// 最大座標
+			));
+
 		// ２次元座標
 		player->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
@@ -32,11 +38,7 @@ struct Player
 			10.0f					// 減速率
 			));
 
-		// 2次元の座標のクランパー
-		player->addComponent(std::make_shared<PositionClamper>(
-			Vector2(64, 40),			// 最小座標
-			Vector2(SCREEN_SIZE_X - 64.0f, SCREEN_SIZE_Y - 64.0f)				// 最大座標
-			));
+		
 
 		// 円の当たり判定
 		player->addComponent(std::make_shared<RectCollider>(
