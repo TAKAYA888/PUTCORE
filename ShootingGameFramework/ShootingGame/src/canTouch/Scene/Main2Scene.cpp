@@ -42,13 +42,8 @@ void Main2Scene::start()
 	// ゲーム終了条件を判定するクラスを生成する
 	GameEndChecker::create();
 
-	// アニメーションサンプルを生成
-	AnimSample::create(Vector2(SCREEN_SIZE.x / 2, 32.0f));
-
 	// ゲームプレイ用のBGMプレイヤーを生成
 	GamePlayBgmPlayer::create();
-
-
 }
 
 // 毎フレーム呼ばれる

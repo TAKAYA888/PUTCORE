@@ -26,7 +26,6 @@ void TitleScene::start()
 	//ステージセレクトボタンを生成
 	SelectMenuItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));
 
-
 	// タイトル用のBGMプレイヤーを生成
 	GamePlayBgmPlayer::title();
 }
