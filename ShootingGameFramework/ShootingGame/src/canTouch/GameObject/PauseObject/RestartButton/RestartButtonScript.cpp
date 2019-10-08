@@ -6,7 +6,7 @@ RestartButtonScript::RestartButtonScript()
 
 void RestartButtonScript::update()
 {
-	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
+	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE)||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_BACK_BUTTON))
 	{
 		GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->destroy();
 		GameObjectManager::sendMessage(DIE_GAMEPLAY_OBJECT);

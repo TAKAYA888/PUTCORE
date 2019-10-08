@@ -26,7 +26,7 @@ void CoreScript::update()
 	//“–‚½‚è”»’è‚ð•`‰æ•t‚¯‚é
 	getComponent<RectColliderWireFrameDrawer>().lock()->setActive(false);
 
-	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_X) && CoreCoolTime < 0)
+	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_X) ||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_A_BUTTON)&& CoreCoolTime < 0)
 	{
 		getComponent<setCoreScript>().lock()->setActive(true);
 		getComponent<CoreScript>().lock()->setActive(false);

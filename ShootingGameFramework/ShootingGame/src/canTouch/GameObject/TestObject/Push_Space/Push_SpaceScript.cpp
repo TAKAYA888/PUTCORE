@@ -24,7 +24,7 @@ void Push_SpaceScript::update()
 	}
 
 	//SPACEÉLÅ[ÇâüÇ∑Ç∆SEÇ™ó¨ÇÍÇÈ
-	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE))
+	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON))
 	{
 		getComponent<SePlayer>().lock()->playSe();
 	}

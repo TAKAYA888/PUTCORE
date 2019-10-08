@@ -47,4 +47,6 @@ private:
 
 	float m_curAlpha = 0.0f;
 	const float m_increaseAlphaPerSec = 1.0f;
+	//ˆÚ“®•ûŒü
+	Vector2 moveVelocity = Vector2::zero;
 };

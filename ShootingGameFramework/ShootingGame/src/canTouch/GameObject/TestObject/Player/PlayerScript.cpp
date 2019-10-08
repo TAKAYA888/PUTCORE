@@ -242,7 +242,7 @@ void PlayerScript::inputToRotate()
 void PlayerScript::inputToShot()
 {
 	// 左クリック入力開始時
-	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_PUSHING, GamePadButtonType::GAME_PAD_B_BUTTON))
+	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON))
 	{
 		//プレイヤーの座標の受け取り
 		Vector2 playerPos = getComponent<Transform2D>().lock()->getWorldPosition();

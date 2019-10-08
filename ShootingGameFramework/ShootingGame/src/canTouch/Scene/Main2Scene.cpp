@@ -77,7 +77,7 @@ void Main2Scene::update()
 	x += Crack;
 	Score_Screen_9::create(Vector2(x, 0.0f));
 
-	if (Keyboard::getState(InputType::INPUT_ENDED, KeyboardKeyType::KEYBOARD_TAB))
+	if (Keyboard::getState(InputType::INPUT_ENDED, KeyboardKeyType::KEYBOARD_TAB) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_START_BUTTON))
 	{
 		float TimeScale = 0.0f;
 		TimeScale = TktkTime::getTimeScale();
