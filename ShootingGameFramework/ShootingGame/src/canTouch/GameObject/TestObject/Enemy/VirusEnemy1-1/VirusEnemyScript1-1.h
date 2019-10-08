@@ -39,6 +39,9 @@ private:
 	//パワーアップアイテム出現
 	void PowerupItem();
 
+	//回復アイテム出現
+	void RecoveryItem();
+
 private:
 
 	// 体力
@@ -47,5 +50,7 @@ private:
 	float timer;
 
 	int add_core_bullet;
+
+	int counter;
 };
 
