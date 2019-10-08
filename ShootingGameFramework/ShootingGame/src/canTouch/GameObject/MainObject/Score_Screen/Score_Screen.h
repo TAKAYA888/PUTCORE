@@ -13,8 +13,6 @@
 
 //MainSceneのスコア表示部（左から1）
 
-float baritu = 0.5f;
-
 struct Score_Screen_1
 {
 	static void create(const Vector2& position)

@@ -20,9 +20,6 @@ void TitleScene::start()
 	// タイトルカーソルを生成する
 	TitleCursor::create();
 
-	//張りぼて
-	TitleDummyItem::create(Vector2(SCREEN_SIZE.x / 1, 045.0f));
-
 	// タイトルメニューのゲーム開始項目を生成する
 	GameStartItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));
 
@@ -32,9 +29,6 @@ void TitleScene::start()
 
 	// タイトル用のBGMプレイヤーを生成
 	GamePlayBgmPlayer::title();
-
-	
-
 }
 
 // 毎フレーム呼ばれる

@@ -61,7 +61,7 @@ private:
 	int m_maxHp{ 3 };
 
 	// Œ»İ‚Ì‘Ì—Í
-	int m_curHp{ 3 };
+	int m_curHp{ 100 };
 
 	// ˆÚ“®‘¬“x
 	float m_moveSpeed;

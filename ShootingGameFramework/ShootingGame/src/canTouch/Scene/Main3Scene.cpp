@@ -11,6 +11,8 @@
 
 #include "../GameObject/TestObject/AnimSample/AnimSample.h"
 #include "../GameObject/TestObject/GamePlayBgmPlayer/GamePlayBgmPlayer.h"
+#include "../GameObject/ResultObject/Score/Score.h"
+#include "../GameObject/MainObject/Score_Screen/Score_screen.h"
 
 
 
@@ -46,13 +48,35 @@ void Main3Scene::start()
 	// ゲームプレイ用のBGMプレイヤーを生成
 	GamePlayBgmPlayer::create();
 
-
+	// スコアを生成
+	Score::create();
 }
 
 // 毎フレーム呼ばれる
 void Main3Scene::update()
 {
+	// スコア表示部を生成
+	float Complement = 30.0f; // 数字間の隙間
 
+	float x = 0.0f;
+	float Crack = 128.0f / 10.0f + Complement;
+	Score_Screen_1::create(Vector2(x, 0.0f));
+	x += Crack;
+	Score_Screen_2::create(Vector2(x, 0.0f));
+	x += Crack;
+	Score_Screen_3::create(Vector2(x, 0.0f));
+	x += Crack;
+	Score_Screen_4::create(Vector2(x, 0.0f));
+	x += Crack;
+	Score_Screen_5::create(Vector2(x, 0.0f));
+	x += Crack;
+	Score_Screen_6::create(Vector2(x, 0.0f));
+	x += Crack;
+	Score_Screen_7::create(Vector2(x, 0.0f));
+	x += Crack;
+	Score_Screen_8::create(Vector2(x, 0.0f));
+	x += Crack;
+	Score_Screen_9::create(Vector2(x, 0.0f));
 
 	if (Keyboard::getState(InputType::INPUT_ENDED, KeyboardKeyType::KEYBOARD_TAB))
 	{
