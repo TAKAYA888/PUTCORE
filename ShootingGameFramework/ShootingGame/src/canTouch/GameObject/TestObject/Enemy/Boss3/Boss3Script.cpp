@@ -314,7 +314,7 @@ void Boss3Script::Move()
 	//xを500、1100の間でランダムに移動する
 	float x = Random::getRandF(900, 1650);
 	//yを128、600の間でランダムに移動する
-	float y = Random::getRandF(0, 1140);
+	float y = Random::getRandF(100, 1040);
 
 	//テレポのエフェクトを生成
 	BossTeleportation::create(Vector2(x, y));
