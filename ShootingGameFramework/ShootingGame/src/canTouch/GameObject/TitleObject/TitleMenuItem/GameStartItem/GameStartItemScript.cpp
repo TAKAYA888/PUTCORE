@@ -85,7 +85,7 @@ void GameStartItemScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr
 //’Ç‰Á
 void GameStartItemScript::Move()
 {
-	if (counter >= 200 && select != 3)
+	if (select == 1 || select == 2 || select == 0)
 	{
 		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP)|| (moveVelocity.y > 0.1 && moveVelocity.y < 1.0f))
 		{
