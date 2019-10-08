@@ -9,10 +9,11 @@ SelectMenuItemScript::SelectMenuItemScript(float moveSpeed)
 // 毎フレーム呼ばれる
 void SelectMenuItemScript::update()
 {
-	//追加
-	Move();
 	//左スティックの傾きを取得
 	moveVelocity = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
+	//追加
+	Move();
+	
 	counter++;
 
 	if (Stealth == 1)
@@ -86,12 +87,12 @@ void SelectMenuItemScript::Move()
 {
 	if (select == 1 || select == 2 || select == 0)
 	{
-		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP) ||moveVelocity.y>0)
+		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP) )
 		{
 			select = 1;
 			getComponent<Sprite2dDrawer>().lock()->setActive(true);
 		}
-		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN)||moveVelocity.y<0 )
+		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.y < -0.1 && moveVelocity.y > -1.0f) || (moveVelocity.y > 0.1 && moveVelocity.y < 1.0f))
 		{
 			select = 2;
 			

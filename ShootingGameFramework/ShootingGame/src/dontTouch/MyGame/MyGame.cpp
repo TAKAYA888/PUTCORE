@@ -19,6 +19,8 @@
 #include <TktkAppend2DComponent/RectCollider.h>
 #include <TktkAppend2DComponent/CircleCollider.h>
 
+#include "../../canTouch/Scene/LoadScene.h"
+
 #include <DxLib.h>
 
 MyGame::MyGame(const Vector2 & initWindowSize, bool initFullScreenFlag)
@@ -75,6 +77,11 @@ void MyGame::update()
 
 	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_ESCAPE)) MyGame::exitGame();
 
+	if (GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_BACK_BUTTON&&GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_BACK_BUTTON)))
+	{
+		// ゲームリセット
+		SceneManager::changeScene(LOAD_SCENE);
+	}
 	Graphics::clearScreen();
 }
 
