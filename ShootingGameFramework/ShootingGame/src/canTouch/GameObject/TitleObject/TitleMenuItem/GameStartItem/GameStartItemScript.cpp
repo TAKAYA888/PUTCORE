@@ -13,6 +13,7 @@ void GameStartItemScript::update()
 	Move();
 	//左スティックの傾きを取得
 	moveVelocity = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
+
 	counter++;
 
 	if (Stealth == 1)
@@ -86,11 +87,11 @@ void GameStartItemScript::Move()
 {
 	if (select == 1 || select == 2 || select == 0)
 	{
-		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP)||moveVelocity.y>0.0f)
+		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP)|| (moveVelocity.y > 0.1 && moveVelocity.y < 1.0f))
 		{
 			select = 1;
 		}
-		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN)||moveVelocity.y<0.0f)
+		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.y < -0.1 && moveVelocity.y > -1.0f))
 		{
 			select = 2;
 			getComponent<Sprite2dDrawer>().lock()->setActive(true);

@@ -1,5 +1,5 @@
 #include "Boss3Script.h"
-#include "../../EnemyBullet/EnemyNormalBullet/EnemyNormalBullet.h"
+#include "../../EnemyBullet/VirusEnemyBullet/VirusEnemyBullet.h"
 #include "../../Enemy/Boss/BossTeleportation/BossTeleportation.h"
 #include "../../Enemy/zako6/zako6Up/zako6Up.h"
 #include "../../Enemy/zako6/zako6Down/zako6Down.h"
@@ -272,7 +272,7 @@ void Boss3Script::Shot1()
 		// íeÇÃèâä˙ë¨ìx
 		auto initVelocity = Vector2(MathHelper::sin(result + shotAngle1[i] + 180), MathHelper::cos(result + shotAngle1[i] + 180)) * 512.0f;
 
-		EnemyNormalBullet::create(Boss3Pos, initVelocity);
+		VirusEnemyBullet::create(Boss3Pos, initVelocity);
 	}
 }
 
@@ -305,7 +305,7 @@ void Boss3Script::Shot2()
 		auto initVelocity = Vector2(MathHelper::sin(result + shotAngle2[i] + 180), MathHelper::cos(result + shotAngle2[i] + 180)) * 512.0f;
 
 		//éÀèo
-		EnemyNormalBullet::create(Boss3Pos, initVelocity);
+		VirusEnemyBullet::create(Boss3Pos, initVelocity);
 	}
 }
 

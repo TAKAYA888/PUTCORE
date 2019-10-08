@@ -1,6 +1,6 @@
 #include "BossScript.h"
 
-#include "../../EnemyBullet/EnemyNormalBullet/EnemyNormalBullet.h"
+#include "../../EnemyBullet/VirusEnemyBullet/VirusEnemyBullet.h"
 #include "../../Explosion_Enemy/Explosion_Enemy.h"
 #include "BossTeleportation/BossTeleportation.h"
 #include "BossDead/BossDead.h"
@@ -219,7 +219,7 @@ void BossScript::Shot()
 		auto initVelocity = Vector2(MathHelper::sin(30.0f * i), MathHelper::cos(30.0f * i)) * 512.0f;
 
 		// ìGÇÃí èÌíeÇèoåª
-		EnemyNormalBullet::create(spawnPos, initVelocity);
+		VirusEnemyBullet::create(spawnPos, initVelocity);
 
 	}
 }

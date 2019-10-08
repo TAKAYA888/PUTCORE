@@ -2,7 +2,7 @@
 #include "BossCore1/BossCore1.h"
 #include "../../Explosion_Enemy/Explosion_Enemy.h"
 #include "BossCore2/BossCore2.h"
-#include "../../EnemyBullet/EnemyNormalBullet/EnemyNormalBullet.h"
+#include "../../EnemyBullet/VirusEnemyBullet/VirusEnemyBullet.h"
 #include "../Boss/BossDead/BossDead.h"
 
 Boss2Script::Boss2Script()
@@ -29,7 +29,7 @@ void Boss2Script::update()
 			//向きと速度の設定
 			auto initVelocity1 = Vector2(MathHelper::sin(240.0f + i), MathHelper::cos(240.0f + i)) * 512.0f;
 			//弾の生成
-			EnemyNormalBullet::create(nowPos, initVelocity1);
+			VirusEnemyBullet::create(nowPos, initVelocity1);
 		}
 		//タイマーのリセット
 		timer = 0;
