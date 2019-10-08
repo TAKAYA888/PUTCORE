@@ -33,7 +33,7 @@ struct Boss3
 		// 長方形の当たり判定
 		Boss3->addComponent(std::make_shared<RectCollider>(
 			COLLISION_GROUP_ENEMY,	// 衝突判定のグループ
-			Vector2(128.0f, 128.0f)	// 衝突判定の大きさ
+			Vector2(110.0f, 100.0f)	// 衝突判定の大きさ
 			));
 
 		// 長方形の当たり判定の範囲の描画

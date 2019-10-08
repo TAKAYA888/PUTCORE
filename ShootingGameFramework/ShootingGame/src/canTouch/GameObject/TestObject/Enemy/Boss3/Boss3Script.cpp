@@ -82,74 +82,74 @@ void Boss3Script::update()
 	{
 		if (timer > 1 && EnemyFrag[0])
 		{
-			zako6Up::create(Vector2(600, 700), 0);
-			zako6Down::create(Vector2(400, 0), 0);
+			zako6Up::create(Vector2(900, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(450, 0), 0);
 			EnemyFrag[0] = false;
 		}
 		else if (timer > 1.5&&EnemyFrag[1])
 		{
-			zako6Up::create(Vector2(600, 700), 0);
-			zako6Down::create(Vector2(400, 0), 0);
+			zako6Up::create(Vector2(900, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(450, 0), 0);
 			EnemyFrag[1] = false;
 		}
 		else if (timer > 2 && EnemyFrag[2])
 		{
-			zako6Up::create(Vector2(600, 700), 0);
-			zako6Down::create(Vector2(400, 0), 0);
+			zako6Up::create(Vector2(900, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(450, 0), 0);
 			EnemyFrag[2] = false;
 		}
 		else if (timer > 4.5 && EnemyFrag2[0])
 		{
-			zako6Up::create(Vector2(400, 700), 0);
-			zako6Down::create(Vector2(600, 0), 0);
+			zako6Up::create(Vector2(600, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(1050, 0), 0);
 			EnemyFrag2[0] = false;
 		}
 		else if (timer > 5 && EnemyFrag2[1])
 		{
-			zako6Up::create(Vector2(400, 700), 0);
-			zako6Down::create(Vector2(600, 0), 0);
+			zako6Up::create(Vector2(600, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(1050, 0), 0);
 			EnemyFrag2[1] = false;
 		}
 		else if (timer > 5.5 && EnemyFrag2[2])
 		{
-			zako6Up::create(Vector2(400, 700), 0);
-			zako6Down::create(Vector2(600, 0), 0);
+			zako6Up::create(Vector2(600, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(1050, 0), 0);
 			EnemyFrag2[2] = false;
 		}
 		else if (timer > 8 && EnemyFrag3[0])
 		{
-			zako6Up::create(Vector2(500, 700), 0);
-			zako6Down::create(Vector2(300, 0), 0);
+			zako6Up::create(Vector2(750, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(350, 0), 0);
 			EnemyFrag3[0] = false;
 		}
 		else if (timer > 8.5 && EnemyFrag3[1])
 		{
-			zako6Up::create(Vector2(500, 700), 0);
-			zako6Down::create(Vector2(300, 0), 0);
+			zako6Up::create(Vector2(750, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(350, 0), 0);
 			EnemyFrag3[1] = false;
 		}
 		else if (timer > 9 && EnemyFrag3[2])
 		{
-			zako6Up::create(Vector2(500, 700), 0);
-			zako6Down::create(Vector2(300, 0), 0);
+			zako6Up::create(Vector2(750, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(350, 0), 0);
 			EnemyFrag3[2] = false;
 		}
 		else if (timer > 11.5&&EnemyFrag4[0])
 		{
-			zako6Up::create(Vector2(300, 700), 0);
-			zako6Down::create(Vector2(500, 0), 0);
+			zako6Up::create(Vector2(450, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(900, 0), 0);
 			EnemyFrag4[0] = false;
 		}
 		else if (timer > 12 && EnemyFrag4[1])
 		{
-			zako6Up::create(Vector2(300, 700), 0);
-			zako6Down::create(Vector2(500, 0), 0);
+			zako6Up::create(Vector2(450, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(900, 0), 0);
 			EnemyFrag4[1] = false;
 		}
 		else if (timer > 12.5&&EnemyFrag4[2])
 		{
-			zako6Up::create(Vector2(300, 700), 0);
-			zako6Down::create(Vector2(500, 0), 0);
+			zako6Up::create(Vector2(450, SCREEN_SIZE_Y), 0);
+			zako6Down::create(Vector2(900, 0), 0);
 			EnemyFrag4[2] = false;
 		}
 		else if (timer > 13)
@@ -312,9 +312,9 @@ void Boss3Script::Shot2()
 void Boss3Script::Move()
 {
 	//xを500、1100の間でランダムに移動する
-	float x = Random::getRandF(600, 1280);
+	float x = Random::getRandF(900, 1650);
 	//yを128、600の間でランダムに移動する
-	float y = Random::getRandF(0, 760);
+	float y = Random::getRandF(0, 1140);
 
 	//テレポのエフェクトを生成
 	BossTeleportation::create(Vector2(x, y));
