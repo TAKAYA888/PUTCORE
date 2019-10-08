@@ -9,12 +9,11 @@ void GameOverLogoScript::update()
 	// 現在のスケールを取得
 	Vector2 curScaleRate = getComponent<Transform2D>().lock()->getWorldScaleRate();
 
-
-	if (curScaleRate.x <= 1.5f && curScaleRate.y <= 1.5f)
+	if (curScaleRate.x <= 1 && curScaleRate.y <= 1)
 	{
 		// スケールを変える
-		curScaleRate.x += 0.01f;
-		curScaleRate.y += 0.01f;
+		curScaleRate.x += 0.02f;
+		curScaleRate.y += 0.02f;
 
 	}
 	getComponent<Transform2D>().lock()->setLocalScaleRate(curScaleRate);

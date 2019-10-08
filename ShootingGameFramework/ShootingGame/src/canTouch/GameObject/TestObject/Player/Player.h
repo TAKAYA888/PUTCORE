@@ -38,8 +38,6 @@ struct Player
 			10.0f					// Œ¸‘¬—¦
 			));
 
-		
-
 		// ‰~‚Ì“–‚½‚è”»’è
 		player->addComponent(std::make_shared<RectCollider>(
 			COLLISION_GROUP_PLAYER,	// Õ“Ë”»’è‚ÌƒOƒ‹[ƒv

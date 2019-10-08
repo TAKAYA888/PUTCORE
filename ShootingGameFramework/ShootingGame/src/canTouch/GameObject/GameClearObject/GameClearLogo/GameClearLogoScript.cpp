@@ -12,8 +12,8 @@ void GameClearLogoScript::update()
 	if (curScaleRate.x <= 1 && curScaleRate.y <= 1)
 	{
 		// ƒXƒP[ƒ‹‚ð•Ï‚¦‚é
-		curScaleRate.x += 0.005f;
-		curScaleRate.y += 0.005f;
+		curScaleRate.x += 0.02f;
+		curScaleRate.y += 0.02f;
 
 	}
 	getComponent<Transform2D>().lock()->setLocalScaleRate(curScaleRate);
