@@ -51,13 +51,13 @@ void PlayerScript::update()
 	if (invincibleTime > 0.0f)
 	{
 		getComponent<RectCollider>().lock()->setActive(false);
-		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(false);
+		//getComponent<RectColliderWireFrameDrawer>().lock()->setActive(false);
 	}
 	else if (invincibleTime <= 0.0f)
 	{
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 		getComponent<RectCollider>().lock()->setActive(true);
-		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
+		//getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
 	}
 
 

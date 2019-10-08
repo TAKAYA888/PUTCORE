@@ -30,7 +30,7 @@ void setCoreScript::update()
 	//“–‚½‚è”»’è‚ð•t‚¯‚é
 	getComponent<RectCollider>().lock()->setActive(true);
 	//“–‚½‚è”»’è‚ð•`‰æ•t‚¯‚é
-	getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
+	//getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
 
 	if (counter >= 5)
 	{
