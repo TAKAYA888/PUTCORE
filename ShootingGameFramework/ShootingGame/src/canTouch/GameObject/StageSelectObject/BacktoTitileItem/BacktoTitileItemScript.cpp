@@ -67,7 +67,7 @@ void BacktoTitileItemScript::Move()
 {
 	if (counter >= 12)
 	{
-		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z) /*|| (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f)*/)
+		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z) ||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_A_BUTTON))
 		{
 			
 			// ƒƒCƒ“ƒV[ƒ“‚É‘JˆÚ‚·‚é
