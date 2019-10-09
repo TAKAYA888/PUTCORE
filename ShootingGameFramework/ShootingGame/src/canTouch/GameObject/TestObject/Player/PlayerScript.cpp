@@ -64,7 +64,7 @@ void PlayerScript::update()
 
 
 	// 入力による移動
-	inputToMove();
+	// inputToMove();
 
 	// 入力による移動
 	BoxInputToMove();
@@ -85,7 +85,6 @@ void PlayerScript::update()
 		SceneManager::changeScene(GAMEOVER_SCENE);
 		// 自分を殺す
 		getGameObject().lock()->destroy();
-
 	}
 }
 
@@ -188,7 +187,7 @@ void PlayerScript::inputToMove()
 	Vector2 playerPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	// ｗキーの入力時
-	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP)||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_PUSHING,GamePadButtonType::GAME_PAD_LEFT_THUMB_BUTTON))
+	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP))
 	{
 		moveVelocity.y = -3.0f;
 	}
@@ -227,28 +226,38 @@ void PlayerScript::inputToMove()
 
 void PlayerScript::BoxInputToMove()
 {
-	//移動方向
-	Vector2 moveVelocity = Vector2::zero;
+	// 移動方向
+	Vector2 moveVelocity = Vector2(-0.06582,0.06824);
 
-	//左スティックの傾きを取得
-	moveVelocity = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
+	// 初期傾き計測
+	//Vector2 Box_con_init = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
 
-	//スティックの方向と座標軸のy座標が逆なので反転する
+	// 左スティックの傾きを取得
+	moveVelocity += GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
+
+	// スティックの方向と座標軸のy座標が逆なので反転する
 	moveVelocity.y *= -1.0f;
 
-	//スティックの傾きが0.01以下なら傾きを0にする
-	if (moveVelocity.length() < 0.01f)
+	// 補正
+	//moveVelocity -= Box_con_init;
+
+	// スティックの傾きが0.01以下なら傾きを0にする
+	if (moveVelocity.length() < 0.1f)
 	{
 		moveVelocity = Vector2::zero;
 	}
 
+	// 正規化
 	moveVelocity = Vector2::normalize(moveVelocity);
 
-	Vector2 curPos = getComponent<Transform2D>().lock()->getLocalPosition();
+	// プレイヤーのローカルポジション取得
+	Vector2 curPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
-	curPos += moveVelocity * 9 * (144 * TktkTime::deltaTime());
+	// プレイヤーの速度調整
+	Vector2 movePostion = curPos + moveVelocity * 9;;
 
-	getComponent<Transform2D>().lock()->setLocalPosition(curPos);
+	// プレイヤーのローカルポジションをセット
+	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
 }
 
 // 入力による回転
