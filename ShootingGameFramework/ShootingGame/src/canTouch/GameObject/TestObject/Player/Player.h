@@ -41,8 +41,8 @@ struct Player
 		// ‰~‚Ì“–‚½‚è”»’è
 		player->addComponent(std::make_shared<RectCollider>(
 			COLLISION_GROUP_PLAYER,	// Õ“Ë”»’è‚ÌƒOƒ‹[ƒv
-			Vector2(32.0f, 32.0f),   // Õ“Ë”»’è‚Ì”¼Œa
-			Vector2(15, -10)
+			Vector2(30.0f, 25.0f),   // Õ“Ë”»’è‚Ì”¼Œa
+			Vector2(20, 5)
 			));
 
 		// ‰~‚Ì“–‚½‚è”»’è‚Ì”ÍˆÍ‚Ì•`‰æ
