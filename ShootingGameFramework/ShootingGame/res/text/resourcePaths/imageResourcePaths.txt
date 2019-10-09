@@ -29,7 +29,7 @@
 132,res/image/item_core_power.png
 133,res/image/item_hp.png
 140,res/image/explosion.png,1,10
-141,res/image/zako_dead.png,1,10
+141,res/image/zako_dead.png,2,8
 142,res/image/boss_move.png,1,5
 200,res/image/playerHpGauge.png
 300,res/image/pause.png
