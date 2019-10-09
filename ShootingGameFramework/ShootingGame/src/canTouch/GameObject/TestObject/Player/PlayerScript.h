@@ -58,7 +58,7 @@ private:
 private:
 
 	// Å‘å‚Ì‘Ì—Í
-	int m_maxHp{ 3 };
+	int m_maxHp{ 6 };
 
 	// Œ»İ‚Ì‘Ì—Í
 	int m_curHp{ 3 };

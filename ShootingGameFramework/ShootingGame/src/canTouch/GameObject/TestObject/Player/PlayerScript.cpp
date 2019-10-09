@@ -229,17 +229,11 @@ void PlayerScript::BoxInputToMove()
 	// 移動方向
 	Vector2 moveVelocity = Vector2(-0.06582,0.06824);
 
-	// 初期傾き計測
-	//Vector2 Box_con_init = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
-
 	// 左スティックの傾きを取得
 	moveVelocity += GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
 
 	// スティックの方向と座標軸のy座標が逆なので反転する
 	moveVelocity.y *= -1.0f;
-
-	// 補正
-	//moveVelocity -= Box_con_init;
 
 	// スティックの傾きが0.01以下なら傾きを0にする
 	if (moveVelocity.length() < 0.1f)
