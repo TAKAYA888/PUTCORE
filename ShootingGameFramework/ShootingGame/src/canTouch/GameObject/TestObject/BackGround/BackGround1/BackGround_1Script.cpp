@@ -7,7 +7,7 @@ BackGround_1Script::BackGround_1Script()
 
 void BackGround_1Script::update()
 {
-	timer = TktkTime::deltaTime() * 60.0f;
+	timer = TktkTime::deltaTime() * 60.0f*3.0f;
 	Vector2 nowPosition = getComponent<Transform2D>().lock()->getWorldPosition();
 	if (nowPosition.x >= SCREEN_SIZE_X * -1.0f + 3.0f)
 	{
