@@ -85,7 +85,7 @@ void SelectMenuItemScript::handleMessage(int eventMessageType, SafetyVoidSmartPt
 //’Ç‰Á
 void SelectMenuItemScript::Move()
 {
-	if (select == 1 || select == 2 || select == 0)
+	if (counter >= 200 && select != 3)
 	{
 		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP) )
 		{
