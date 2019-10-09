@@ -236,8 +236,8 @@ void PlayerScript::BoxInputToMove()
 	//スティックの方向と座標軸のy座標が逆なので反転する
 	moveVelocity.y *= -1.0f;
 
-	//スティックの傾きが0.01以下なら傾きを0にする
-	if (moveVelocity.length() < 0.01f)
+	//スティックの傾きが0.1以下なら傾きを0にする
+	if (moveVelocity.length() < 0.1f)
 	{
 		moveVelocity = Vector2::zero;
 	}
@@ -246,9 +246,9 @@ void PlayerScript::BoxInputToMove()
 
 	Vector2 curPos = getComponent<Transform2D>().lock()->getLocalPosition();
 
-	curPos += moveVelocity * 9 * (144 * TktkTime::deltaTime());
+	Vector2 movePostion = curPos + moveVelocity * 9;
 
-	getComponent<Transform2D>().lock()->setLocalPosition(curPos);
+	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
 }
 
 // 入力による回転
