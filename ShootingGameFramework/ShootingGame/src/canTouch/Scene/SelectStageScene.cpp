@@ -4,6 +4,7 @@
 #include "../GameObject/StageSelectObject/StageSelectOneItem/StageSelectOneItem.h"
 #include "../GameObject/StageSelectObject/StageSelectTwoItem/StageSelectTwoItem.h"
 #include "../GameObject/StageSelectObject/StageSelectThreeItem/StageSelectThreeItem.h"
+#include "../GameObject/StageSelectObject/BacktoTitileItem/BacktoTitileItem.h"
 
 
 
@@ -28,6 +29,9 @@ void SelectStageScene::start()
 
 	//ステージ３の釦
 	StageSelectThreeItem::create(Vector2(SCREEN_SIZE.x / 1,800.0f));	
+
+	//タイトルに戻るボタン
+	BacktoTitileItem::create(Vector2(SCREEN_SIZE.y / 5,000.0f));
 
 }
 

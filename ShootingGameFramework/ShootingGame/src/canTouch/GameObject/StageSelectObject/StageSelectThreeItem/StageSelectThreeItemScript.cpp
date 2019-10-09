@@ -108,9 +108,20 @@ void StageSelectThreeItemScript::Move()
 		{
 			select = 1;
 		}
+		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
+		{
+			select = 4;
+
+		}
 
 		
 	}
+	else if (select == 4 && Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_UP) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
+	{
+		select = 0;
+
+	}
+
 
 
 	if (select == 2 && counter >= 12 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
