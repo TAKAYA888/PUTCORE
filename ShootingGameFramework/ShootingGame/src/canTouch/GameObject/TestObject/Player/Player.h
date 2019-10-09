@@ -71,6 +71,11 @@ struct Player
 			50.0f	// 移動速度
 			));
 
+		// 特定のメッセージを受信したら自身を殺すコンポーネントを追加
+		player->addComponent(std::make_shared<ReceiveMessageToSelfDestroyer>(
+			DIE_GAMEPLAY_OBJECT
+			));
+
 		// ゲームオブジェクトを追加
 		GameObjectManager::addGameObject(player);
 	}

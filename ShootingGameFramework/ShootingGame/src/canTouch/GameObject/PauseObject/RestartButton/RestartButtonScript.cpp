@@ -46,4 +46,8 @@ void RestartButtonScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr
 	{
 		getGameObject().lock()->destroy();
 	}
+	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
+	{
+		getGameObject().lock()->destroy();
+	}
 }

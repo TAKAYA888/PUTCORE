@@ -45,6 +45,9 @@ void Main2Scene::start()
 
 	// ゲームプレイ用のBGMプレイヤーを生成
 	GamePlayBgmPlayer::game_2();
+
+	// スコアを生成
+	Score::create();
 }
 
 // 毎フレーム呼ばれる
