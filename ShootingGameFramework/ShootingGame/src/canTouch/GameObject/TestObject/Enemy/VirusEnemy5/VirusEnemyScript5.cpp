@@ -132,11 +132,8 @@ void VirusEnemyScript5::move()
 {
 	if (timer < 0.7f)
 	{
-		// 自身の回転角度
-		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
-
 		// 移動速度＋方向
-		auto velocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 15.0f;
+		auto velocity = Vector2(MathHelper::sin(270), -MathHelper::cos(270)) * 15.0f;
 
 		// 移動する
 		getComponent<InertialMovement2D>().lock()->addForce(velocity);
@@ -148,11 +145,8 @@ void VirusEnemyScript5::move()
 	}
 	else
 	{
-		// 自身の回転角度
-		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
-
 		// 移動速度＋方向
-		auto velocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 15.0f;
+		auto velocity = Vector2(MathHelper::sin(270), -MathHelper::cos(270)) * 15.0f;
 
 		// 移動する
 		getComponent<InertialMovement2D>().lock()->addForce(velocity);
@@ -207,7 +201,7 @@ void VirusEnemyScript5::PowerupItem()
 	auto PowerupItemPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	// 移動速度＋方向
-	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 20.0f;
+	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 100.0f;
 
 	//パワーアップアイテム
 	CorePowerupItem::create(PowerupItemPos, inivelocity);
@@ -218,7 +212,7 @@ void VirusEnemyScript5::RecoveryItem()
 	auto RecoveryItemPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	// 移動速度＋方向
-	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 20.0f;
+	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 100.0f;
 
 	RecoveryItem::create(RecoveryItemPos, inivelocity);
 }

@@ -219,7 +219,7 @@ void PlayerScript::inputToMove()
 	//144Hz
 	//Vector2 movePostion = a + moveVelocity * 9 * 60 / 144;
 	//60Hz
-	Vector2 movePostion = a + moveVelocity * 9;
+	Vector2 movePostion = a + moveVelocity * 12;
 
 	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
 }
@@ -227,8 +227,8 @@ void PlayerScript::inputToMove()
 void PlayerScript::BoxInputToMove()
 {
 	// 移動方向
-	Vector2 moveVelocity = Vector2::zero;
-	//Vector2 moveVelocity = Vector2(-0.06582,0.06824);
+	//Vector2 moveVelocity = Vector2::zero;
+	Vector2 moveVelocity = Vector2((float)-0.0658,(float)0.0682);
 
 	// 左スティックの傾きを取得
 	moveVelocity += GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
@@ -277,7 +277,7 @@ void PlayerScript::inputToShot()
 		bulletPos.y = playerPos.y + 40.0f;
 
 		// 弾の初期速度
-		auto initVelocity = Vector2(MathHelper::sin(90.0f), -MathHelper::cos(90.0f)) * 512.0f;
+		auto initVelocity = Vector2(MathHelper::sin(90.0f), -MathHelper::cos(90.0f)) * 512.0f * 2;
 
 		// プレイヤーの弾を出現
 		PlayerBullet::create(bulletPos, initVelocity);

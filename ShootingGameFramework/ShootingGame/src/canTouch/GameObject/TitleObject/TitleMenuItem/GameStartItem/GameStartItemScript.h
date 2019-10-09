@@ -39,7 +39,7 @@ public:
 
 	int counter = 0;
 
-	int select = 1;
+	int select = 0;
 
 	int Stealth = 0;
 

@@ -22,7 +22,7 @@ struct EnemyNormalBullet
 		// ２次元座標
 		enemyNormalBullet->addComponent(std::make_shared<Transform2D>(
 			position,				// 座標（引数から受け取る）
-			Vector2(1.0f, 1.0f),	// スケール（倍率）
+			Vector2(0.2f, 0.2f),	// スケール（倍率）
 			0.0f					// 回転（度数法）
 			));
 

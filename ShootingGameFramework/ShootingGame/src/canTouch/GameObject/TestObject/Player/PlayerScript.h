@@ -58,10 +58,10 @@ private:
 private:
 
 	// Å‘å‚Ì‘Ì—Í
-	int m_maxHp{ 6 };
+	int m_maxHp{ 10 };
 
 	// Œ»İ‚Ì‘Ì—Í
-	int m_curHp{ 3 };
+	int m_curHp{ 10 };
 
 	// ˆÚ“®‘¬“x
 	float m_moveSpeed;
