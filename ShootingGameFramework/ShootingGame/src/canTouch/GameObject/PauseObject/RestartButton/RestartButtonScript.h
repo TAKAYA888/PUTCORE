@@ -21,4 +21,8 @@ public:
 
 	// メッセージ受信時に呼ばれる
 	void handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param);
+
+	int counter = 0;
+
+	int select;
 };
