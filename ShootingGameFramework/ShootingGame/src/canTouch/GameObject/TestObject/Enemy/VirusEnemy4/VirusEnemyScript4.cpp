@@ -160,7 +160,7 @@ void VirusEnemyScript4::PowerupItem()
 	auto PowerupItemPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	// 移動速度＋方向
-	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 20.0f;
+	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 100.0f;
 
 	//パワーアップアイテム
 	CorePowerupItem::create(PowerupItemPos, inivelocity);
@@ -171,7 +171,7 @@ void VirusEnemyScript4::RecoveryItem()
 	auto RecoveryItemPos = getComponent<Transform2D>().lock()->getWorldPosition();
 
 	// 移動速度＋方向
-	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 20.0f;
+	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 100.0f;
 
 	RecoveryItem::create(RecoveryItemPos, inivelocity);
 }
