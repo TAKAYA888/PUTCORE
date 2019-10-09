@@ -18,7 +18,7 @@ SelectStageScene::SelectStageScene()
 // シーンの開始時に呼ばれる
 void SelectStageScene::start()
 {
-	//背景～この手紙～♪
+	//背景～この手紙～♪よんでーいるあなたはー♪
 	StageSelectLogo::create();
 
 	//ステージ１のボタン
