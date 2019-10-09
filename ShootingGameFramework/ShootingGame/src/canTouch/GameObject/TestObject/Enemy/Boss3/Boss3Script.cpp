@@ -312,7 +312,7 @@ void Boss3Script::Shot2()
 void Boss3Script::Move()
 {
 	//xを500、1100の間でランダムに移動する
-	float x = Random::getRandF(900, 1650);
+	float x = Random::getRandF(900, SCREEN_SIZE.x-100);
 	//yを128、600の間でランダムに移動する
 	float y = Random::getRandF(100, 1040);
 
