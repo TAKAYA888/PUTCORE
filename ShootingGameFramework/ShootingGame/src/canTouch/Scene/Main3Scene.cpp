@@ -24,7 +24,8 @@ Main3Scene::Main3Scene()
 void Main3Scene::start()
 {
 	//”wŒi2‚ğ¶¬‚·‚é
-	BackGround_3::create(Vector2::zero);
+	BackGround_3::create(Vector2(-10,0));
+	BackGround_3::create(Vector2(SCREEN_SIZE_X/2, 0));
 	BackGround_3::create(Vector2(SCREEN_SIZE_X, 0));
 
 	// ƒvƒŒƒCƒ„[‚ğ¶¬‚·‚é
