@@ -23,11 +23,7 @@ struct ModeManager
 			0.0f					// 回転（度数法）
 			));
 
-		// プレイヤーのスクリプト
-		ModeManager->addComponent(std::make_shared<ModeManagerScript>(
-			50.0f	// 移動速度
-			));
-
+	
 		// ゲームオブジェクトを追加
 		GameObjectManager::addGameObject(ModeManager);
 	}

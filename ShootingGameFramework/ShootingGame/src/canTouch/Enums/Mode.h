@@ -1,6 +1,6 @@
 #pragma once
 
-enum gamemode {
+static enum GameMode {
 
 	// ’Êíƒ‚[ƒh
 	NORMAL,

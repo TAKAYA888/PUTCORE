@@ -7,6 +7,8 @@
 /*F12を押してジャンプ-> */ProjectIncludePaths;
 #endif
 
+#include "../../canTouch/Enums/Mode.h"
+
 class ModeManagerScript
 	: public ComponentBase
 {
@@ -18,5 +20,13 @@ public:
 
 	// 毎フレーム呼ばれる
 	void update();
+
+public:
+	
+	//現在のモードを取得
+	auto getMode() const;
+
+	//現在のモードを変更
+	auto changeMode(ModeManagerScript changeMode);
 
 };

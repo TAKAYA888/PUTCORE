@@ -64,7 +64,7 @@ void PlayerScript::update()
 
 
 	// 入力による移動
-	// inputToMove();
+	inputToMove();
 
 	// 入力による移動
 	BoxInputToMove();
@@ -227,7 +227,8 @@ void PlayerScript::inputToMove()
 void PlayerScript::BoxInputToMove()
 {
 	// 移動方向
-	Vector2 moveVelocity = Vector2(-0.06582,0.06824);
+	Vector2 moveVelocity = Vector2::zero;
+	//Vector2 moveVelocity = Vector2(-0.06582,0.06824);
 
 	// 左スティックの傾きを取得
 	moveVelocity += GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
