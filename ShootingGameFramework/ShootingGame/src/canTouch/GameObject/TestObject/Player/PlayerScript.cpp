@@ -252,7 +252,7 @@ void PlayerScript::BoxInputToMove()
 	Vector2 movePostion = curPos + moveVelocity * 9;;
 
 	// プレイヤーのローカルポジションをセット
-	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
+	//getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
 }
 
 // 入力による回転
