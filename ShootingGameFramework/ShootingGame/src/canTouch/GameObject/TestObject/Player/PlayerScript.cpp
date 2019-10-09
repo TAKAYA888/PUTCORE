@@ -1,7 +1,7 @@
 #include "PlayerScript.h"
 
 #include "../PlayerBullet/PlayerBullet.h"
-#include "../Explosion/Explosion.h"
+#include "../Explosion_Player/Explosion_Player.h"
 #include "../Core/StayCore/Core.h"
 
 #include <string>
@@ -95,7 +95,7 @@ void PlayerScript::onCollisionEnter(GameObjectPtr other)
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_ENEMY_BULLET)
 	{
 		// 爆発を生成する
-		Explosion::create(
+		Explosion_Player::create(
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 		//無敵時間を加算する
@@ -108,7 +108,7 @@ void PlayerScript::onCollisionEnter(GameObjectPtr other)
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_ENEMY)
 	{
 		// 爆発を生成する
-		Explosion::create(
+		Explosion_Player::create(
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 
@@ -252,7 +252,7 @@ void PlayerScript::BoxInputToMove()
 	Vector2 movePostion = curPos + moveVelocity * 9;;
 
 	// プレイヤーのローカルポジションをセット
-	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
+	//getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
 }
 
 // 入力による回転

@@ -45,10 +45,10 @@ struct PlayerBullet
 			));
 
 		// ‰~‚Ì“–‚½‚è”»’è‚Ì”ÍˆÍ‚Ì•`‰æ
-		playerBullet->addComponent(std::make_shared<CircleColliderWireFrameDrawer>(
-			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
-			Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
-			));
+		//playerBullet->addComponent(std::make_shared<CircleColliderWireFrameDrawer>(
+		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
+		//	Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
+		//	));
 
 		// ‚QŸŒ³‰æ‘œ‚Ì•`‰æ
 		playerBullet->addComponent(std::make_shared<Sprite2dDrawer>(

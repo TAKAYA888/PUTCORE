@@ -109,6 +109,9 @@ enum ImageId
 	//Boss１の死亡時のアニメーション
 	IMAGE_BOSS_DEAD = 1001,
 
+    //プレイヤーがダメージを受けた時の画像
+	IMAGE_PLAYER_DAMAGE = 1500,
+
 	//スコアの数字
 	SCORE_NUMBER = 2000,
 };
