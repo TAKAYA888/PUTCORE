@@ -1,18 +1,47 @@
 #include "zako6UpScript.h"
 #include "../../../Explosion_Enemy/Explosion_Enemy.h"
+#include "../../../Item/CorePowerupItem/CorePowerupItem.h"
+#include "../../../Item/RecoveryItem/RecoveryItem.h"
+#include "../../../Player/PlayerScript.h"
 
 zako6UpScript::zako6UpScript()
 {
+	add_core_bullet = 0;
 
+	counter = 0;
+
+	playerFrag = true;
 }
 
 void zako6UpScript::update()
 {
+	auto player = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER);
+
+	if (playerFrag)
+	{
+		add_core_bullet = player.lock()->getComponent<PlayerScript>().lock()->add_core_bullet;
+	}
+
 	move();
+
+	Random::randomize();
 
 	//体力が0以下になったら
 	if (m_hp <= 0)
 	{
+		counter = Random::getRandI(0, 10);
+
+		if (0 <= counter && counter < 2)
+		{
+			//`パワーアップアイテム
+			PowerupItem();
+		}
+		else
+		{
+			//回復アイテム
+			RecoveryItem();
+		}
+
 		GameObjectManager::sendMessage(DIE_Enemy6);
 		getGameObject().lock()->destroy();
 	}
@@ -72,6 +101,11 @@ void zako6UpScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::
 		//このコンポーネントが死ぬ
 		getGameObject().lock()->destroy();
 	}
+
+	if (eventMessageType == DIE_PLAYER)
+	{
+		playerFrag = false;
+	}
 }
 
 void zako6UpScript::onDestroy()
@@ -87,6 +121,27 @@ void zako6UpScript::move()
 
 	// 移動する
 	getComponent<InertialMovement2D>().lock()->addForce(velocity);
+}
+
+void zako6UpScript::PowerupItem()
+{
+	auto PowerupItemPos = getComponent<Transform2D>().lock()->getWorldPosition();
+
+	// 移動速度＋方向
+	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 100.0f;
+
+	//パワーアップアイテム
+	CorePowerupItem::create(PowerupItemPos, inivelocity);
+}
+
+void zako6UpScript::RecoveryItem()
+{
+	auto RecoveryItemPos = getComponent<Transform2D>().lock()->getWorldPosition();
+
+	// 移動速度＋方向
+	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 100.0f;
+
+	RecoveryItem::create(RecoveryItemPos, inivelocity);
 }
 
 

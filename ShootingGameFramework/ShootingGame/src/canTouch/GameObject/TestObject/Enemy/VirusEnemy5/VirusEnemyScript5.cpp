@@ -132,11 +132,8 @@ void VirusEnemyScript5::move()
 {
 	if (timer < 0.7f)
 	{
-		// ©g‚Ì‰ñ“]Šp“x
-		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
-
 		// ˆÚ“®‘¬“x{•ûŒü
-		auto velocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 15.0f;
+		auto velocity = Vector2(MathHelper::sin(270), -MathHelper::cos(270)) * 15.0f;
 
 		// ˆÚ“®‚·‚é
 		getComponent<InertialMovement2D>().lock()->addForce(velocity);
@@ -148,11 +145,8 @@ void VirusEnemyScript5::move()
 	}
 	else
 	{
-		// ©g‚Ì‰ñ“]Šp“x
-		float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
-
 		// ˆÚ“®‘¬“x{•ûŒü
-		auto velocity = Vector2(MathHelper::sin(rotationDeg), -MathHelper::cos(rotationDeg)) * 15.0f;
+		auto velocity = Vector2(MathHelper::sin(270), -MathHelper::cos(270)) * 15.0f;
 
 		// ˆÚ“®‚·‚é
 		getComponent<InertialMovement2D>().lock()->addForce(velocity);
