@@ -37,17 +37,22 @@ void VirusEnemyScript1_1::update()
 	//体力が0以下になったら
 	if (m_hp <= 0)
 	{
-		counter = Random::getRandI(0, 10);
+		counter = Random::getRandI(1, 4);
 
-		if (0 <= counter && counter < 2)
-		{
-			//`パワーアップアイテム
-			PowerupItem();
-		}
-		else
-		{
-			//回復アイテム
-			RecoveryItem();
+		if (counter == 1) {
+
+			counter = Random::getRandI(1, 10);
+
+			if (counter <= 3)
+			{
+				// パワーアップアイテム
+				PowerupItem();
+			}
+			else
+			{
+				// 回復アイテム
+				RecoveryItem();
+			}
 		}
 
 		GameObjectManager::sendMessage(DIE_Enemy1_1);
