@@ -22,7 +22,7 @@ struct PlayerBullet
 		// ‚QŸŒ³À•W
 		playerBullet->addComponent(std::make_shared<Transform2D>(
 			position,				// À•Wiˆø”‚©‚çó‚¯æ‚éj
-			Vector2(1.0f, 1.0f),	// ƒXƒP[ƒ‹i”{—¦j
+			Vector2(0.2f, 0.2f),	// ƒXƒP[ƒ‹i”{—¦j
 			0.0f					// ‰ñ“]i“x”–@j
 			));
 
@@ -44,11 +44,11 @@ struct PlayerBullet
 			8.0f							// Õ“Ë”»’è‚Ì”¼Œa
 			));
 
-		//// ‰~‚Ì“–‚½‚è”»’è‚Ì”ÍˆÍ‚Ì•`‰æ
-		//playerBullet->addComponent(std::make_shared<CircleColliderWireFrameDrawer>(
-		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
-		//	Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
-		//	));
+		// ‰~‚Ì“–‚½‚è”»’è‚Ì”ÍˆÍ‚Ì•`‰æ
+		playerBullet->addComponent(std::make_shared<CircleColliderWireFrameDrawer>(
+			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
+			Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
+			));
 
 		// ‚QŸŒ³‰æ‘œ‚Ì•`‰æ
 		playerBullet->addComponent(std::make_shared<Sprite2dDrawer>(
