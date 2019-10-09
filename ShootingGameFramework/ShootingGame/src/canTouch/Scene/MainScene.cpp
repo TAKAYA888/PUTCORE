@@ -23,7 +23,8 @@ MainScene::MainScene()
 void MainScene::start()
 {
 	//”wŒi‚P‚ğ¶¬‚·‚é
-	BackGround_1::create(Vector2::zero);
+	BackGround_1::create(Vector2(-10,0));
+	BackGround_1::create(Vector2(SCREEN_SIZE_X/2,0));
 	BackGround_1::create(Vector2(SCREEN_SIZE_X,0));
 
 	// ƒvƒŒƒCƒ„[‚ğ¶¬‚·‚é

@@ -138,6 +138,7 @@
     <ClCompile Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\PauseObject\RestartButton\RestartButtonScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogoScript.cpp" />
+    <ClCompile Include="src\canTouch\GameObject\StageSelectObject\BacktoTitileItem\BacktoTitileItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\StageSelectObject\StageSelectOneItem\StageSelectOneItemScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\StageSelectObject\StageSelectThreeItem\StageSelectThreeItemScript.cpp" />
@@ -231,6 +232,8 @@
     <ClInclude Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogo.h" />
     <ClInclude Include="src\canTouch\GameObject\ResultObject\ResultLogo\ResultLogoScript.h" />
     <ClInclude Include="src\canTouch\GameObject\ResultObject\Score_Screen_result\Score_Screen_result.h" />
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\BacktoTitileItem\BacktoTitileItem.h" />
+    <ClInclude Include="src\canTouch\GameObject\StageSelectObject\BacktoTitileItem\BacktoTitileItemScript.h" />
     <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectOneItem\StageSelectOneItem.h" />
     <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectOneItem\StageSelectOneItemScript.h" />
     <ClInclude Include="src\canTouch\GameObject\StageSelectObject\StageSelectLogo\StageSelectLogo.h" />
@@ -345,6 +348,10 @@
     <ClInclude Include="src\dontTouch\MyGame\MyGame.h" />
     <ClInclude Include="src\dontTouch\ProjectIncludePaths\ProjectIncludePaths.h" />
     <ClInclude Include="src\canTouch\Utility\SceneTypeSetter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\g019g1017\Desktop\BACK TO TITLE2.png" />
+    <Image Include="F:\BACK TO TITLE2.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

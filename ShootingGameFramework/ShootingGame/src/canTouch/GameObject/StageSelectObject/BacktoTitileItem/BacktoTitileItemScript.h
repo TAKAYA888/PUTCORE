@@ -7,12 +7,12 @@
 /*F12‚ð‰Ÿ‚µ‚ÄƒWƒƒƒ“ƒv-> */ProjectIncludePaths;
 #endif
 
-class StageSelectThreeItemScript
+class BacktoTitileItemScript
 	: public ComponentBase
 {
 public:
 
-	StageSelectThreeItemScript(float moveSpeed);
+	BacktoTitileItemScript(float moveSpeed);
 
 public:
 
@@ -45,10 +45,7 @@ public:
 
 private:
 
-	float timer = 0;
-	bool frag = true;
 	float m_curAlpha = 0.0f;
 	const float m_increaseAlphaPerSec = 1.0f;
-	// ˆÚ“®•ûŒü
 	Vector2 moveVelocity = Vector2::zero;
 };

@@ -24,7 +24,8 @@ Main2Scene::Main2Scene()
 void Main2Scene::start()
 {
 	//”wŒi2‚ğ¶¬‚·‚é
-	BackGround_2::create(Vector2::zero);
+	BackGround_2::create(Vector2(-10,0));
+	BackGround_2::create(Vector2(SCREEN_SIZE_X/2, 0));
 	BackGround_2::create(Vector2(SCREEN_SIZE_X, 0));
 
 	// ƒvƒŒƒCƒ„[‚ğ¶¬‚·‚é
