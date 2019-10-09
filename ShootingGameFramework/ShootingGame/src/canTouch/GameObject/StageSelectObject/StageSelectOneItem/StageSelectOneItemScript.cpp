@@ -9,6 +9,14 @@ StageSelectOneItemScript::StageSelectOneItemScript(float moveSpeed)
 // 毎フレーム呼ばれる
 void StageSelectOneItemScript::update()
 {
+	if (!frag)
+	{
+		timer -= TktkTime::deltaTime();
+		if (timer < 0.0f)
+		{
+			frag = true;
+		}
+	}
 	//追加
 	Move();
 	//左スティックの傾きを取得
@@ -79,23 +87,28 @@ void StageSelectOneItemScript::Move()
 {
     if (select == 0 && counter >= 12)
 	{
-	    if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x<1.0f))
+	    if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x<1.0f) && frag)
 	    {
 		 select = 1;
-
+		 frag = false;
+		 timer = 0.5f;
 	    }
 
 	}
 	else if (select == 1 && counter >= 12)
 	{
-		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f&& moveVelocity.x < 1.0f))
+		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f&& moveVelocity.x < 1.0f) && frag)
 		{
 			select = 2;
+			frag = false;
+			timer = 0.5f;
 
 		}
-		else if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || (moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f))
+		else if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || (moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f) && frag)
 		{
 			select = 0;
+			frag = false;
+			timer = 0.5f;
 		}
 	
 
@@ -104,9 +117,11 @@ void StageSelectOneItemScript::Move()
 	else if (select >= 2 && counter >= 12)
 	{
 
-	  if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) ||( moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f))
+	  if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) ||( moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f) && frag)
 	  {
 		 select = 1;
+		 frag = false;
+		 timer = 0.5f;
 	  }
 
 	  getComponent<Sprite2dDrawer>().lock()->setActive(true);
