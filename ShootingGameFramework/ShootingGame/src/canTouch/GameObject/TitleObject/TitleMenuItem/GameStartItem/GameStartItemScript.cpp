@@ -85,7 +85,7 @@ void GameStartItemScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr
 //’Ç‰Á
 void GameStartItemScript::Move()
 {
-	if (counter >= 200 && select != 3)
+	if (counter >= 200 && select != 3 )
 	{
 		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP)|| (moveVelocity.y > 0.1 && moveVelocity.y < 1.0f))
 		{
@@ -105,7 +105,7 @@ void GameStartItemScript::Move()
 		select = 3;
 	}
 
-	else if (counter == 120 && select == 3)
+	else if (counter == 120 && select == 3 )
 	{
 		// ƒƒCƒ“ƒV[ƒ“‚É‘JˆÚ‚·‚é
 		SceneManager::changeScene(MAIN_SCENE);
