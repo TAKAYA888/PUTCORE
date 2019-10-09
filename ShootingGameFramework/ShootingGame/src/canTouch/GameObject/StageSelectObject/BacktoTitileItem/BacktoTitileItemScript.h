@@ -7,12 +7,12 @@
 /*F12‚ð‰Ÿ‚µ‚ÄƒWƒƒƒ“ƒv-> */ProjectIncludePaths;
 #endif
 
-class GameStartItemScript
+class BacktoTitileItemScript
 	: public ComponentBase
 {
 public:
 
-	GameStartItemScript(float moveSpeed);
+	BacktoTitileItemScript(float moveSpeed);
 
 public:
 
@@ -39,7 +39,7 @@ public:
 
 	int counter = 0;
 
-	int select = 1;
+	int select = 0;
 
 	int Stealth = 0;
 
@@ -47,6 +47,5 @@ private:
 
 	float m_curAlpha = 0.0f;
 	const float m_increaseAlphaPerSec = 1.0f;
-	//ˆÚ“®•ûŒü
 	Vector2 moveVelocity = Vector2::zero;
 };

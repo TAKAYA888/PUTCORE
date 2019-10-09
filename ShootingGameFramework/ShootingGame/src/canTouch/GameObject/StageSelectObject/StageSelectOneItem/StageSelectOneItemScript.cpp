@@ -81,9 +81,10 @@ void StageSelectOneItemScript::Move()
 	{
 	    if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x<1.0f))
 	    {
-		select = 1;
+		 select = 1;
 
 	    }
+
 	}
 	else if (select == 1 && counter >= 12)
 	{
@@ -110,7 +111,8 @@ void StageSelectOneItemScript::Move()
 
 	  getComponent<Sprite2dDrawer>().lock()->setActive(true);
 	}
-	
+
+
 
 	if (select == 0 && counter >= 12 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE)||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_B_BUTTON)))
 	{

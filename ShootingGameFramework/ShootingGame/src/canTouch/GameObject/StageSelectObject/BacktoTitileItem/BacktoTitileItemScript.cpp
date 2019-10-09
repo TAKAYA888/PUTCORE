@@ -1,13 +1,13 @@
-#include "GameStartItemScript.h"
+#include "BacktoTitileItemScript.h"
 
 //追加　float moveSpeed　＆　:m_moveSpeed(moveSpeed)
-GameStartItemScript::GameStartItemScript(float moveSpeed)
+BacktoTitileItemScript::BacktoTitileItemScript(float moveSpeed)
 	:m_moveSpeed(moveSpeed)
 {
 }
 
 // 毎フレーム呼ばれる
-void GameStartItemScript::update()
+void BacktoTitileItemScript::update()
 {
 	//追加
 	Move();
@@ -25,7 +25,7 @@ void GameStartItemScript::update()
 		getComponent<Sprite2dDrawer>().lock()->setBlendParam(m_curAlpha);
 	}
 
-	if (select == 1)
+	if (select == 4)
 	{
 		if (counter % 40 == 0)
 		{
@@ -51,30 +51,22 @@ void GameStartItemScript::update()
 }
 
 // 衝突開始で呼ばれる
-void GameStartItemScript::onCollisionEnter(GameObjectPtr other)
+void BacktoTitileItemScript::onCollisionEnter(GameObjectPtr other)
 {
 }
 
 // 衝突中で呼ばれる
-void GameStartItemScript::onCollisionStay(GameObjectPtr other)
+void BacktoTitileItemScript::onCollisionStay(GameObjectPtr other)
 {
-	// 衝突相手のタグが「GAME_OBJECT_TAG_CURSOR」でクリック開始時だったら
-	//if (other.lock()->getTag() == GAME_OBJECT_TAG_CURSOR
-	//	&& Mouse::getState(InputType::INPUT_BEGIN, MouseButtonType::MOUSE_LEFT_BUTTON))
-	//{
-		//getComponent<SePlayer>().lock()->playSe();
-		// メインシーンに遷移する
-		//SceneManager::changeScene(MAIN_SCENE);
 
-	//}
 }
 
 // 衝突終了で呼ばれる
-void GameStartItemScript::onCollisionExit(GameObjectPtr other)
+void BacktoTitileItemScript::onCollisionExit(GameObjectPtr other)
 {
 }
 
-void GameStartItemScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
+void BacktoTitileItemScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std::weak_ptr> param)
 {
 	if (eventMessageType == DIE_TITLE_OBJECT)
 	{
@@ -83,37 +75,34 @@ void GameStartItemScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr
 }
 
 //追加
-void GameStartItemScript::Move()
+void BacktoTitileItemScript::Move()
 {
-	if (counter >= 350 && select != 3)
+	if (counter >= 12)
 	{
-		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP) || (moveVelocity.y > 0.1 && moveVelocity.y < 1.0f))
+		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
 		{
-			select = 1;
+			select = 4;
+
 		}
-		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.y < -0.1 && moveVelocity.y > -1.0f))
+		else if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_UP) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
 		{
-			select = 2;
+			select = 0;
 			getComponent<Sprite2dDrawer>().lock()->setActive(true);
 		}
 	}
-
-	if (counter >= 350 && select == 1 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
+	else if (select >= 0 || select >= 1||select >= 2)
 	{
-		getComponent<SePlayer>().lock()->playSe();
-		counter = 0;
-		select = 3;
+
+		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 	}
 
 	else if (counter == 120 && select == 3)
 	{
-		select = 0;
-		counter = 0;
 		// メインシーンに遷移する
 		SceneManager::changeScene(MAIN_SCENE);
 	}
 
-	if (counter >= 130)
+	if (counter >= 10)
 	{
 		Stealth = 1;
 
@@ -127,10 +116,10 @@ void GameStartItemScript::Move()
 
 		getComponent<InertialMovement2D>().lock()->addForce(moveVelocity * m_moveSpeed);
 
-		if (selfPos.y > SCREEN_SIZE.y - 350)
+
+		if (selfPos.y > SCREEN_SIZE.y - 250)
 		{
 			getComponent<InertialMovement2D>().lock()->setVelocity(Vector2(0, 0));
 		}
-
 	}
 }
