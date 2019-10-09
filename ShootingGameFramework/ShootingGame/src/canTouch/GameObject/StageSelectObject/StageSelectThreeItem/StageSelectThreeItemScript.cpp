@@ -107,14 +107,7 @@ void StageSelectThreeItemScript::Move()
 		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || ( moveVelocity.x < -0.1f && moveVelocity.x > -1.0f))
 		{
 			select = 1;
-		}
-		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
-		{
-			select = 4;
-
-		}
-
-		
+		}		
 	}
 	else if (select == 4 && Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_UP) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
 	{

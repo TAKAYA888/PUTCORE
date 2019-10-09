@@ -97,13 +97,6 @@ void StageSelectTwoItemScript::Move()
 		{
 			select = 0;
 		}
-		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
-		{
-			select = 4;
-
-		}
-
-
 	
 	}
 	else if (select >= 2 && counter >= 12)
@@ -116,11 +109,7 @@ void StageSelectTwoItemScript::Move()
 
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 	}
-	else if (select == 4 && Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_UP) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
-	{
-		select = 0;
 
-	}
 
 
 

@@ -42,7 +42,7 @@ struct BacktoTitileItem
 		backtoTitileItem->addComponent(std::make_shared<Sprite2dDrawer>(
 			DrawPriority::DRAW_PRIORITY_UI - 0.1f,	// 描画するレイヤー
 			IMAGE_BACK_TO_TITLE2,		// 描画する画像のID
-			Vector2(0.65f, 2.0f),	// 画像の中心（割合）
+			Vector2(0.5f, 0.0f),	// 画像の中心（割合）
 			0.0
 			));
 

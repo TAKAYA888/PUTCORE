@@ -31,7 +31,7 @@ void SelectStageScene::start()
 	StageSelectThreeItem::create(Vector2(SCREEN_SIZE.x / 1,800.0f));	
 
 	//タイトルに戻るボタン
-	BacktoTitileItem::create(Vector2(SCREEN_SIZE.y / 5,000.0f));
+	BacktoTitileItem::create(Vector2(SCREEN_SIZE.x / 2,500.0f));
 
 }
 

@@ -25,18 +25,6 @@ void BacktoTitileItemScript::update()
 		getComponent<Sprite2dDrawer>().lock()->setBlendParam(m_curAlpha);
 	}
 
-	if (select == 4)
-	{
-		if (counter % 40 == 0)
-		{
-			getComponent<Sprite2dDrawer>().lock()->setActive(false);
-		}
-		else if (counter % 40 == 20)
-		{
-			getComponent<Sprite2dDrawer>().lock()->setActive(true);
-		}
-	}
-
 	if (select == 3)
 	{
 		if (counter % 5 == 0)
@@ -79,28 +67,15 @@ void BacktoTitileItemScript::Move()
 {
 	if (counter >= 12)
 	{
-		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
+		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_Z) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
 		{
-			select = 4;
-
+			
+			// メインシーンに遷移する
+			SceneManager::changeScene(TITLE_SCENE);
 		}
-		else if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_UP) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
-		{
-			select = 0;
-			getComponent<Sprite2dDrawer>().lock()->setActive(true);
-		}
-	}
-	else if (select >= 0 || select >= 1||select >= 2)
-	{
 
-		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 	}
 
-	else if (counter == 120 && select == 3)
-	{
-		// メインシーンに遷移する
-		SceneManager::changeScene(MAIN_SCENE);
-	}
 
 	if (counter >= 10)
 	{
