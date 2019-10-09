@@ -18,7 +18,7 @@ void TitleScene::start()
 	TitleLogo::create();
 
 	// タイトルカーソルを生成する
-	TitleCursor::create();
+	// TitleCursor::create();
 
 	// タイトルメニューのゲーム開始項目を生成する
 	GameStartItem::create(Vector2(SCREEN_SIZE.x / 2, 000.0f));
