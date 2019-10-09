@@ -36,6 +36,12 @@ enum GameObjectTag
 	// 敵の弾
 	GAME_OBJECT_TAG_ENEMY_BULLET,
 
+	//コアパワーアップアイテム
+	GAME_OBJECT_TAG_CORE_POWER_UP_ITEM,
+
+	//回復アイテム
+	GAME_OBJECT_TAG_RECOVERY_ITEM,
+
 	//BG
 	AKITA_BANZAI,
 };

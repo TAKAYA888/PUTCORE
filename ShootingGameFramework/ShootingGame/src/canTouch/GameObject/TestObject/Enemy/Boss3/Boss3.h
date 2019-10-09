@@ -33,14 +33,14 @@ struct Boss3
 		// ’·•ûŒ`‚Ì“–‚½‚è”»’è
 		Boss3->addComponent(std::make_shared<RectCollider>(
 			COLLISION_GROUP_ENEMY,	// Õ“Ë”»’è‚ÌƒOƒ‹[ƒv
-			Vector2(128.0f, 128.0f)	// Õ“Ë”»’è‚Ì‘å‚«‚³
+			Vector2(110.0f, 100.0f)	// Õ“Ë”»’è‚Ì‘å‚«‚³
 			));
 
 		// ’·•ûŒ`‚Ì“–‚½‚è”»’è‚Ì”ÍˆÍ‚Ì•`‰æ
-		Boss3->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
-			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
-			Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
-			));
+		//Boss3->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
+		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// •`‰æ‚·‚éƒŒƒCƒ„[
+		//	Color::red				// “–‚½‚è”»’è‚Ì”ÍˆÍ‚ÌF
+		//	));
 
 		// ‚QŸŒ³‰æ‘œ‚Ì•`‰æ
 		Boss3->addComponent(std::make_shared<Sprite2dDrawer>(

@@ -9,9 +9,9 @@ Boss2Script::Boss2Script()
 {
 	timer = 0;
 	//bossコア１の生成
-	BossCore1::create(Vector2(900, 200), 0);
+	BossCore1::create(Vector2(1450, 400), 0);
 	//bossコア２の生成
-	BossCore2::create(Vector2(900, 550), 0);
+	BossCore2::create(Vector2(1450, 700), 0);
 }
 
 void Boss2Script::update()

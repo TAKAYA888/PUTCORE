@@ -17,16 +17,16 @@ void CoreScript::update()
 	}
 		
 	Vector2 setPosition;
-	setPosition.x = playerPostion.x;
-	setPosition.y = playerPostion.y + 40;
+	setPosition.x = playerPostion.x+20;
+	setPosition.y = playerPostion.y + 60;
 	getComponent<Transform2D>().lock()->setLocalPosition(setPosition);
 
 	//“–‚½‚è”»’è‚ğÁ‚·
 	getComponent<RectCollider>().lock()->setActive(false);
 	//“–‚½‚è”»’è‚ğ•`‰æ•t‚¯‚é
-	getComponent<RectColliderWireFrameDrawer>().lock()->setActive(false);
+	//getComponent<RectColliderWireFrameDrawer>().lock()->setActive(false);
 
-	if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_X) ||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_A_BUTTON)&& CoreCoolTime < 0)
+	if ((Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_X) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_A_BUTTON)) && CoreCoolTime < 0)
 	{
 		getComponent<setCoreScript>().lock()->setActive(true);
 		getComponent<CoreScript>().lock()->setActive(false);

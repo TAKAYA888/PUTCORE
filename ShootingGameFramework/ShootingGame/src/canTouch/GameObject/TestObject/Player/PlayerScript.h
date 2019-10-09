@@ -58,10 +58,10 @@ private:
 private:
 
 	// 最大の体力
-	int m_maxHp{ 3 };
+	int m_maxHp{ 6 };
 
 	// 現在の体力
-	int m_curHp{ 100 };
+	int m_curHp{ 3 };
 
 	// 移動速度
 	float m_moveSpeed;
@@ -71,4 +71,11 @@ private:
 
 	//点滅タイマー
 	float flashTime;
+
+public:
+
+	//パワーアップアイテムカウンター
+	int PowerupCounter;
+
+	int add_core_bullet;
 };

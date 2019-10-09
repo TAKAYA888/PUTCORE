@@ -36,6 +36,12 @@ private:
 	// 移動
 	void move();
 
+	//パワーアップアイテム出現
+	void PowerupItem();
+
+	//回復アイテム出現
+	void RecoveryItem();
+
 private:
 
 	// 体力
@@ -54,5 +60,7 @@ private:
 
 	bool playerFrag;
 
+	int add_core_bullet;
 
+	int counter;
 };

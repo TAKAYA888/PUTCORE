@@ -36,10 +36,22 @@ private:
 	// 移動
 	void move();
 
+	//パワーアップアイテム出現
+	void PowerupItem();
+
+	//回復アイテム出現
+	void RecoveryItem();
+
 private:
 
 	// 体力
 	int m_hp{ 2 };
 
 	float timer;
+
+	int add_core_bullet;
+
+	int counter;
+
+	bool playerFrag;
 };

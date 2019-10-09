@@ -3,3 +3,4 @@
 3,res/sound/se/enemy_dead.wav
 4,res/sound/se/input.mp3
 5,res/sound/se/enemy_bullet.wav
+6,res/sound/se/item_get.mp3

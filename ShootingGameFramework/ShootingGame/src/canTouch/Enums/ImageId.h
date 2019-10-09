@@ -79,6 +79,12 @@ enum ImageId
 	//ウイルスエネミーの弾の画像
 	IMAGE_VIRUS_ENEMY_BULLET = 131,
 
+	//コアパワーアップアイテムの画像
+	IMAGE_CORE_POWER_UP_ITEM = 132,
+
+	//回復アイテムの画像
+	IMAGE_RECOVERY_ITEM = 133,
+
 	// 爆発の画像
 	IMAGE_EXPLOSION = 140,
 

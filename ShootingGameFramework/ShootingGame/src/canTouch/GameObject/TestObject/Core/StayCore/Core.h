@@ -47,7 +47,6 @@ struct Core
 			true				// アニメーションをループさせるか？		
 			));
 
-
 		// 長方形の当たり判定
 		core->addComponent(std::make_shared<RectCollider>(
 			COLLISION_GROUP_CORE,	// 衝突判定のグループ
@@ -56,10 +55,10 @@ struct Core
 
 
 		// 長方形の当たり判定の範囲の描画
-		core->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
-			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// 描画するレイヤー
-			Color::red				// 当たり判定の範囲の色
-			));
+		//core->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
+		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// 描画するレイヤー
+		//	Color::red				// 当たり判定の範囲の色
+		//	));
 
 		// ２次元画像の描画
 		core->addComponent(std::make_shared<Sprite2dDrawer>(

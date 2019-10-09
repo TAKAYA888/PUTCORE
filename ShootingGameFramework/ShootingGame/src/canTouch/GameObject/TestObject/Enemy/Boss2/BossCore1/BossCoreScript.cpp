@@ -1,7 +1,7 @@
 #include "BossCoreScript.h"
 #include "BossCoreDeadScript.h"
 #include "../../../Explosion_Enemy/Explosion_Enemy.h"
-#include "../../../EnemyBullet/EnemyNormalBullet/EnemyNormalBullet.h"
+#include "../../../EnemyBullet/VirusEnemyBullet/VirusEnemyBullet.h"
 #include <string>
 #include<iostream>
 
@@ -75,8 +75,8 @@ void BossCore1Script::update()
 	//’e‚ðŒ‚‚Â
 	if (m_shotTimer < 0.0f && shotfrag)
 	{
-		EnemyNormalBullet::create(nowPos, initVelocity1);
-		EnemyNormalBullet::create(nowPos, initVelocity2);
+		VirusEnemyBullet::create(nowPos, initVelocity1);
+		VirusEnemyBullet::create(nowPos, initVelocity2);
 		m_shotTimer = 0.5f;
 	}
 }

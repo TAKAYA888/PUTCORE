@@ -193,9 +193,9 @@ void BossScript::changeState(State nextState)
 void BossScript::move()
 {
 	//xを500、1100の間でランダムに移動する
-	float x = Random::getRandF(500.0f, 1100.0f);
+	float x = Random::getRandF(750.0f, 1650.0f);
 	//yを128、600の間でランダムに移動する
-	float y = Random::getRandF(128.0f, 600.0f);
+	float y = Random::getRandF(192.0f, 900.0f);
 
 	getComponent<Transform2D>().lock()->setLocalPosition(Vector2(x, y));
 }

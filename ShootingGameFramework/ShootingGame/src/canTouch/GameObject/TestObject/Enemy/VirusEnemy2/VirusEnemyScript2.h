@@ -39,6 +39,12 @@ private:
 	// 弾を発射
 	void shot();
 
+	//パワーアップアイテム出現
+	void PowerupItem();
+
+	//回復アイテム出現
+	void RecoveryItem();
+
 private:
 
 	// 体力
@@ -56,4 +62,8 @@ private:
 	Vector2 playerPos;
 
 	bool playerFrag;
+
+	int add_core_bullet;
+
+	int counter;
 };

@@ -39,13 +39,7 @@ struct Boss
 		// 長方形の当たり判定
 		Boss->addComponent(std::make_shared<RectCollider>(
 			COLLISION_GROUP_ENEMY,	// 衝突判定のグループ
-			Vector2(128.0f, 128.0f)	// 衝突判定の大きさ
-			));
-
-		// 長方形の当たり判定の範囲の描画
-		Boss->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
-			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// 描画するレイヤー
-			Color::red				// 当たり判定の範囲の色
+			Vector2(110.0f, 100.0f)	// 衝突判定の大きさ
 			));
 
 		// ２次元画像の描画
@@ -56,6 +50,11 @@ struct Boss
 			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
 			));
 
+		//// 長方形の当たり判定の範囲の描画
+		//Boss->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
+		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// 描画するレイヤー
+		//	Color::red				// 当たり判定の範囲の色
+		//	));
 		//ボスのアニメーションの描画とループ
 		Boss->addComponent(std::make_shared<AnimatedSprite2d>(
 			IMAGE_ENEMY_BOSS_1,

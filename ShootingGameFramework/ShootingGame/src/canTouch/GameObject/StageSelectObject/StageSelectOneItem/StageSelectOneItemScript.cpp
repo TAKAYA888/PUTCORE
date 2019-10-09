@@ -79,20 +79,20 @@ void StageSelectOneItemScript::Move()
 {
     if (select == 0)
 	{
-	  if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || moveVelocity.x > 0.0f)
-	  {
+	    if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x<1.0f))
+	    {
 		select = 1;
 
-	  }
+	    }
 	}
 	else if (select == 1)
 	{
-		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || moveVelocity.x > 0.0f)
+		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f&& moveVelocity.x < 1.0f))
 		{
 			select = 2;
 
 		}
-		else if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || moveVelocity.x < 0.0f)
+		else if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || (moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f))
 		{
 			select = 0;
 		}
@@ -103,7 +103,7 @@ void StageSelectOneItemScript::Move()
 	else if (select >= 2)
 	{
 
-	  if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || moveVelocity.x < 0.0f)
+	  if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) ||( moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f))
 	  {
 		 select = 1;
 	  }
@@ -112,7 +112,7 @@ void StageSelectOneItemScript::Move()
 	}
 	
 
-	if (select == 0 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE)||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_B_BUTTON))
+	if (select == 0 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE)||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_B_BUTTON)))
 	{
 		getComponent<SePlayer>().lock()->playSe();
 		counter = 0;

@@ -18,7 +18,7 @@ void BossCore2DeadScript::update()
 	{
 		//当たり判定、当たり判定の描画、画像の描画、アニメーションのコンポーネントをfalseにする
 		getComponent<RectCollider>().lock()->setActive(false);
-		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(false);
+		//getComponent<RectColliderWireFrameDrawer>().lock()->setActive(false);
 		getComponent<Sprite2dDrawer>().lock()->setActive(false);
 		getComponent<AnimatedSprite2d>().lock()->setActive(false);
 	}
@@ -29,7 +29,7 @@ void BossCore2DeadScript::update()
 		//当たり判定、当たり判定の描画、画像の描画、アニメーションのコンポーネントをtrueにする
 		getComponent<BossCore2Script>().lock()->setActive(true);
 		getComponent<RectCollider>().lock()->setActive(true);
-		getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
+		//getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 		getComponent<AnimatedSprite2d>().lock()->setActive(true);
 		//タイマーのリセット

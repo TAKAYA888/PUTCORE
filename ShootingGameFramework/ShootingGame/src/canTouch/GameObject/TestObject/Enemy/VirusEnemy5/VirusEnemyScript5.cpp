@@ -3,16 +3,33 @@
 #include "../../EnemyBullet/VirusEnemyBullet/VirusEnemyBullet.h"
 #include "../../Explosion/Explosion.h"
 #include "../../Explosion_Enemy/Explosion_Enemy.h"
+#include "../../Item/CorePowerupItem/CorePowerupItem.h"
+#include "../../Player/PlayerScript.h"
+#include "../../Item/RecoveryItem/RecoveryItem.h"
 
 VirusEnemyScript5::VirusEnemyScript5()
 {
 	timer = 0;
+
+	add_core_bullet = 0;
+
+	counter = 0;
+
+	playerFrag = true;
 }
 
 //毎フレーム呼ばれる
 void VirusEnemyScript5::update()
 {
+	auto player = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER);
+	if (playerFrag)
+	{
+		add_core_bullet = player.lock()->getComponent<PlayerScript>().lock()->add_core_bullet;
+	}
+
 	timer += TktkTime::deltaTime();
+
+	Random::randomize();
 
 	//移動
 	move();
@@ -20,6 +37,19 @@ void VirusEnemyScript5::update()
 	//体力が0以下になったら
 	if (m_hp <= 0)
 	{
+		counter = Random::getRandI(0, 10);
+
+		if (0 <= counter && counter < 2)
+		{
+			//`パワーアップアイテム
+			PowerupItem();
+		}
+		else
+		{
+			//回復アイテム
+			RecoveryItem();
+		}
+
 		GameObjectManager::sendMessage(DIE_Enemy5);
 		getGameObject().lock()->destroy();
 	}
@@ -29,7 +59,7 @@ void VirusEnemyScript5::update()
 void VirusEnemyScript5::onCollisionEnter(GameObjectPtr other)
 {
 	// 衝突相手のタグが「GAME_OBJECT_TAG_PLAYER_BULLET」だったら
-	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER_BULLET || other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
+	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER_BULLET)
 	{
 		// 爆発を生成する
 		Explosion_Enemy::create(
@@ -39,13 +69,24 @@ void VirusEnemyScript5::onCollisionEnter(GameObjectPtr other)
 		// 体力を-1する
 		m_hp--;
 	}
+
+	if (other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
+	{
+		// 爆発を生成する
+		Explosion_Enemy::create(
+			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
+		);
+
+		//体力を-3以上する
+		m_hp = m_hp - add_core_bullet;
+	}
 }
 
 //衝突中で呼ばれる
 void VirusEnemyScript5::onCollisionStay(GameObjectPtr other)
 {
 	// 衝突相手のタグが「GAME_OBJECT_TAG_PLAYER」だったら
-	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER || other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
+	if (other.lock()->getTag() == GAME_OBJECT_TAG_PLAYER)
 	{
 		// 爆発を生成する
 		Explosion_Enemy::create(
@@ -54,6 +95,17 @@ void VirusEnemyScript5::onCollisionStay(GameObjectPtr other)
 
 		// 体力を-1する
 		m_hp--;
+	}
+
+	if (other.lock()->getTag() == GAME_OBJECT_TAG_CORE_BULLET)
+	{
+		// 爆発を生成する
+		Explosion_Enemy::create(
+			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
+		);
+
+		//体力を-3以上する
+		m_hp = m_hp - add_core_bullet;
 	}
 }
 
@@ -67,6 +119,11 @@ void VirusEnemyScript5::handleMessage(int  eventMessageType, SafetyVoidSmartPtr<
 	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
 	{
 		getGameObject().lock()->destroy();
+	}
+
+	if (eventMessageType == DIE_PLAYER)
+	{
+		playerFrag = false;
 	}
 }
 
@@ -143,4 +200,25 @@ void VirusEnemyScript5::shot()
 		// 弾発射タイマーを初期化
 		m_shotTimer = 0.0f;
 	}
+}
+
+void VirusEnemyScript5::PowerupItem()
+{
+	auto PowerupItemPos = getComponent<Transform2D>().lock()->getWorldPosition();
+
+	// 移動速度＋方向
+	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 20.0f;
+
+	//パワーアップアイテム
+	CorePowerupItem::create(PowerupItemPos, inivelocity);
+}
+
+void VirusEnemyScript5::RecoveryItem()
+{
+	auto RecoveryItemPos = getComponent<Transform2D>().lock()->getWorldPosition();
+
+	// 移動速度＋方向
+	auto inivelocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 20.0f;
+
+	RecoveryItem::create(RecoveryItemPos, inivelocity);
 }

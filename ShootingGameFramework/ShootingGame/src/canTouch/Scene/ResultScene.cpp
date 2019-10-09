@@ -15,8 +15,8 @@ void ResultScene::start()
 
 	float Complement = 60.0f; // êîéöä‘ÇÃåÑä‘
 
-	float x = 300.0f - 5.0f;
-	float y = SCREEN_SIZE_Y / 2 - 40.0f;
+	float x = SCREEN_SIZE_X / 4 + SCREEN_SIZE_X / 14;
+	float y = SCREEN_SIZE_Y / 2 + SCREEN_SIZE_Y / 100;
 
 	float Crack = 128.0f / 10.0f + Complement;
 

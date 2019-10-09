@@ -16,4 +16,7 @@ enum SeId
 
 	// 
 	enemy_bullet = 5,
+
+	//アイテムゲットのSE
+	item_get = 6,
 };

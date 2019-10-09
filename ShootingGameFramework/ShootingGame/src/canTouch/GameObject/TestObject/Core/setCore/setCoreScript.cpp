@@ -3,6 +3,7 @@
 #include "../StayCore/CoreScript.h"
 #include "../../../TestObject/PlayerBullet/PlayerBullet.h"
 #include "../../../TestObject/CoreBullet/CoreBullet.h"
+#include "../../Player/PlayerScript.h"
 
 #include "../../Explosion/Explosion.h"
 
@@ -13,12 +14,17 @@ setCoreScript::setCoreScript()
 {
 	counter = 0;
 	coolTime = 0.5f;
+	Power_counter = 0;
 }
 
 void setCoreScript::update()
 {
 	bool curActiveFlag = getComponent<CoreScript>().lock()->isActive();
 	Vector2 Postion = getComponent<Transform2D>().lock()->getWorldPosition();
+
+	auto player = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER);
+
+	Power_counter = player.lock()->getComponent<PlayerScript>().lock()->PowerupCounter;
 
 	counter += TktkTime::deltaTime();
 
@@ -30,7 +36,7 @@ void setCoreScript::update()
 	//ìñÇΩÇËîªíËÇïtÇØÇÈ
 	getComponent<RectCollider>().lock()->setActive(true);
 	//ìñÇΩÇËîªíËÇï`âÊïtÇØÇÈ
-	getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
+	//getComponent<RectColliderWireFrameDrawer>().lock()->setActive(true);
 
 	if (counter >= 5)
 	{
@@ -47,14 +53,68 @@ void setCoreScript::update()
 	{
 		if (coolTime < 0)
 		{
-			// íeÇÃèâä˙ë¨ìx
-			auto initVelocity1 = Vector2(MathHelper::sin(90), -MathHelper::cos(90)) * 512.0f;
-			auto initVelocity2 = Vector2(MathHelper::sin(70), -MathHelper::cos(70)) * 512.0f;
-			auto initVelocity3 = Vector2(MathHelper::sin(110), -MathHelper::cos(110)) * 512.0f;
-			CoreBullet::create(Postion, initVelocity1);
-			CoreBullet::create(Postion, initVelocity2);
-			CoreBullet::create(Postion, initVelocity3);
+			if (Power_counter == 0)
+			{
+				// íeÇÃèâä˙ë¨ìx
+				auto initVelocity1 = Vector2(MathHelper::sin(90), -MathHelper::cos(90)) * 512.0f;
+				auto initVelocity2 = Vector2(MathHelper::sin(70), -MathHelper::cos(70)) * 512.0f;
+				auto initVelocity3 = Vector2(MathHelper::sin(110), -MathHelper::cos(110)) * 512.0f;
+				CoreBullet::create(Postion, initVelocity1);
+				CoreBullet::create(Postion, initVelocity2);
+				CoreBullet::create(Postion, initVelocity3);
+			}
+			else if (Power_counter == 1)
+			{
+				// íeÇÃèâä˙ë¨ìx
+				auto initVelocity1 = Vector2(MathHelper::sin(90), -MathHelper::cos(90)) * 512.0f;
+				auto initVelocity2 = Vector2(MathHelper::sin(70), -MathHelper::cos(70)) * 512.0f;
+				auto initVelocity3 = Vector2(MathHelper::sin(110), -MathHelper::cos(110)) * 512.0f;
+				auto initVelocity4 = Vector2(MathHelper::sin(50), -MathHelper::cos(50)) * 512.0f;
+				auto initVelocity5 = Vector2(MathHelper::sin(130), -MathHelper::cos(130)) * 512.0f;
+				CoreBullet::create(Postion, initVelocity1);
+				CoreBullet::create(Postion, initVelocity2);
+				CoreBullet::create(Postion, initVelocity3);
+				CoreBullet::create(Postion, initVelocity4);
+				CoreBullet::create(Postion, initVelocity5);
+			}
+			else if (Power_counter == 2)
+			{
+				// íeÇÃèâä˙ë¨ìx
+				auto initVelocity1 = Vector2(MathHelper::sin(90), -MathHelper::cos(90)) * 512.0f;
+				auto initVelocity2 = Vector2(MathHelper::sin(70), -MathHelper::cos(70)) * 512.0f;
+				auto initVelocity3 = Vector2(MathHelper::sin(110), -MathHelper::cos(110)) * 512.0f;
+				auto initVelocity4 = Vector2(MathHelper::sin(50), -MathHelper::cos(50)) * 512.0f;
+				auto initVelocity5 = Vector2(MathHelper::sin(130), -MathHelper::cos(130)) * 512.0f;
+				auto initVelocity6 = Vector2(MathHelper::sin(30), -MathHelper::cos(30)) * 512.0f;
+				auto initVelocity7 = Vector2(MathHelper::sin(150), -MathHelper::cos(150)) * 512.0f;
+				CoreBullet::create(Postion, initVelocity1);
+				CoreBullet::create(Postion, initVelocity2);
+				CoreBullet::create(Postion, initVelocity3);
+				CoreBullet::create(Postion, initVelocity4);
+				CoreBullet::create(Postion, initVelocity5);
+				CoreBullet::create(Postion, initVelocity6);
+				CoreBullet::create(Postion, initVelocity7);
+			}
+			else if (Power_counter >= 3)
+			{
+				// íeÇÃèâä˙ë¨ìx
+				auto initVelocity1 = Vector2(MathHelper::sin(90), -MathHelper::cos(90)) * 512.0f;
+				auto initVelocity2 = Vector2(MathHelper::sin(70), -MathHelper::cos(70)) * 512.0f;
+				auto initVelocity3 = Vector2(MathHelper::sin(110), -MathHelper::cos(110)) * 512.0f;
+				auto initVelocity4 = Vector2(MathHelper::sin(50), -MathHelper::cos(50)) * 512.0f;
+				auto initVelocity5 = Vector2(MathHelper::sin(130), -MathHelper::cos(130)) * 512.0f;
+				auto initVelocity6 = Vector2(MathHelper::sin(30), -MathHelper::cos(30)) * 512.0f;
+				auto initVelocity7 = Vector2(MathHelper::sin(150), -MathHelper::cos(150)) * 512.0f;
+				CoreBullet::create(Postion, initVelocity1);
+				CoreBullet::create(Postion, initVelocity2);
+				CoreBullet::create(Postion, initVelocity3);
+				CoreBullet::create(Postion, initVelocity4);
+				CoreBullet::create(Postion, initVelocity5);
+				CoreBullet::create(Postion, initVelocity6);
+				CoreBullet::create(Postion, initVelocity7);
 
+				/*add_core_bullet++;*/
+			}
 			coolTime += 0.5f;
 		}
 		else

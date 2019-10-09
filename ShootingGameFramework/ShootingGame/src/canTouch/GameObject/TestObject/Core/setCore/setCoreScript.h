@@ -39,4 +39,7 @@ private:
 
 	//クールタイム
 	float coolTime;
+
+	//パワーアップカウンター
+	int Power_counter;
 };
