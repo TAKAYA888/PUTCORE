@@ -128,8 +128,7 @@ void GameStartItemScript::Move()
 		if (selfPos.y > SCREEN_SIZE.y - 350)
 		{
 			getComponent<InertialMovement2D>().lock()->setVelocity(Vector2(0, 0));
-		}
-				
+		}			
 
 	}
 }
