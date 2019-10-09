@@ -132,7 +132,6 @@
   <ItemGroup>
     <ClCompile Include="src\canTouch\GameObject\GameClearObject\GameClearLogo\GameClearLogoScript.cpp" />
     <ClCompile Include="src\canTouch\GameObject\GameOverObject\GameOverLogo\GameOverLogoScript.cpp" />
-    <ClCompile Include="src\canTouch\GameObject\LoadObject\ModeManager\ModeManagerScript.h.cpp" />
     <ClCompile Include="src\canTouch\GameObject\MainObject\Item\Item.cpp" />
     <ClCompile Include="src\canTouch\GameObject\MainObject\Score_Screen\Score_Screen_Script.cpp" />
     <ClCompile Include="src\canTouch\GameObject\PauseObject\PauseLogo\PauseLogoScript.cpp" />
@@ -206,7 +205,6 @@
     <ClInclude Include="src\canTouch\Enums\EventMessageType.h" />
     <ClInclude Include="src\canTouch\Enums\GameObjectTag.h" />
     <ClInclude Include="src\canTouch\Enums\ImageId.h" />
-    <ClInclude Include="src\canTouch\Enums\Mode.h" />
     <ClInclude Include="src\canTouch\Enums\SceneType.h" />
     <ClInclude Include="src\canTouch\Enums\SeId.h" />
     <ClInclude Include="src\canTouch\GameObject\GameClearObject\GameClearLogo\GameClearBGM.h" />
@@ -217,8 +215,6 @@
     <ClInclude Include="src\canTouch\GameObject\GameOverObject\GameOverLogo\GameOverBGM.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\BgmLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\ImageLoadObject.h" />
-    <ClInclude Include="src\canTouch\GameObject\LoadObject\ModeManager\ModeManager.h" />
-    <ClInclude Include="src\canTouch\GameObject\LoadObject\ModeManager\ModeManagerScript.h" />
     <ClInclude Include="src\canTouch\GameObject\LoadObject\SeLoadObject.h" />
     <ClInclude Include="src\canTouch\GameObject\MainObject\Item\Item.h" />
     <ClInclude Include="src\canTouch\GameObject\MainObject\Item\ITemScript.h" />

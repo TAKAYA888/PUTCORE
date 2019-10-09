@@ -216,9 +216,6 @@
     <ClCompile Include="src\canTouch\GameObject\TestObject\Item\RecoveryItem\RecoveryItemScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="src\canTouch\GameObject\LoadObject\ModeManager\ModeManagerScript.h.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="src\canTouch\GameObject\StageSelectObject\BacktoTitileItem\BacktoTitileItemScript.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -639,15 +636,6 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\TestObject\Item\RecoveryItem\RecoveryItem.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="src\canTouch\Enums\Mode.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\LoadObject\ModeManager\ModeManager.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="src\canTouch\GameObject\LoadObject\ModeManager\ModeManagerScript.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="src\canTouch\GameObject\StageSelectObject\BacktoTitileItem\BacktoTitileItem.h">

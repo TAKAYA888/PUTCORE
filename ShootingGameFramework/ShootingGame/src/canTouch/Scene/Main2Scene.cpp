@@ -44,7 +44,7 @@ void Main2Scene::start()
 	GameEndChecker::create();
 
 	// ゲームプレイ用のBGMプレイヤーを生成
-	GamePlayBgmPlayer::create();
+	GamePlayBgmPlayer::game_2();
 }
 
 // 毎フレーム呼ばれる
