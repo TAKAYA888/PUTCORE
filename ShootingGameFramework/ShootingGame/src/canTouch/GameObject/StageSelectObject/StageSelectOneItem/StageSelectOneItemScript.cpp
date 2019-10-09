@@ -4,15 +4,25 @@
 StageSelectOneItemScript::StageSelectOneItemScript(float moveSpeed)
 	:m_moveSpeed(moveSpeed)
 {
+	timer = 0;
 }
 
 // 毎フレーム呼ばれる
 void StageSelectOneItemScript::update()
 {
+	timer -= TktkTime::deltaTime();
+
+	if (timer < -1.0f)
+	{
+		timer = -1.0f;
+	}
 	//追加
 	Move();
-	//左スティックの傾きを取得
-	moveVelocity = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
+	if (timer < 0.0f)
+	{
+		//左スティックの傾きを取得
+		moveVelocity = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
+	}
 
 	counter++;
 
@@ -82,6 +92,7 @@ void StageSelectOneItemScript::Move()
 	    if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x<1.0f))
 	    {
 		select = 1;
+		timer = 0.5f;
 
 	    }
 	}
@@ -90,11 +101,13 @@ void StageSelectOneItemScript::Move()
 		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f&& moveVelocity.x < 1.0f))
 		{
 			select = 2;
+			timer = 0.5f;
 
 		}
 		else if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || (moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f))
 		{
 			select = 0;
+			timer = 0.5f;
 		}
 	
 
@@ -106,6 +119,7 @@ void StageSelectOneItemScript::Move()
 	  if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) ||( moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f))
 	  {
 		 select = 1;
+		 timer = 0.5f;
 	  }
 
 	  getComponent<Sprite2dDrawer>().lock()->setActive(true);
