@@ -48,7 +48,7 @@ private:
 private:
 
 	// 体力
-	int m_hp{ 800 };
+	int m_hp{ 120 };
 
 	//タイマー
 	float timer;
