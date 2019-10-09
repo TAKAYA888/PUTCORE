@@ -11,6 +11,7 @@ VirusEnemyScript1_2::VirusEnemyScript1_2()
 	timer = 0;
 	add_core_bullet = 0;
 	counter = 0;
+	playerFrag = true;
 }
 
 //–ˆƒtƒŒ[ƒ€ŒÄ‚Î‚ê‚é
@@ -18,7 +19,10 @@ void VirusEnemyScript1_2::update()
 {
 	auto player = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER);
 
-	add_core_bullet = player.lock()->getComponent<PlayerScript>().lock()->add_core_bullet;
+	if (playerFrag)
+	{
+		add_core_bullet = player.lock()->getComponent<PlayerScript>().lock()->add_core_bullet;
+	}
 
 	timer += TktkTime::deltaTime();
 
@@ -112,6 +116,11 @@ void VirusEnemyScript1_2::handleMessage(int  eventMessageType, SafetyVoidSmartPt
 	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
 	{
 		getGameObject().lock()->destroy();
+	}
+
+	if (eventMessageType == DIE_PLAYER)
+	{
+		playerFrag = false;
 	}
 }
 //ˆÚ“®

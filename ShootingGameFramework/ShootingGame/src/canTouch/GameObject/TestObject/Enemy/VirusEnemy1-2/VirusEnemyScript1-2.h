@@ -52,4 +52,6 @@ private:
 	int add_core_bullet;
 
 	int counter;
+
+	bool playerFrag;
 };

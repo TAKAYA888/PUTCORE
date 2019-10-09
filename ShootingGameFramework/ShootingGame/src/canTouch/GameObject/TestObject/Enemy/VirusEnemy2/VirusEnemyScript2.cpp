@@ -24,7 +24,10 @@ void VirusEnemyScript2::update()
 {
 	auto player = GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER);
 
-	add_core_bullet = player.lock()->getComponent<PlayerScript>().lock()->add_core_bullet;
+	if (playerFrag)
+	{
+		add_core_bullet = player.lock()->getComponent<PlayerScript>().lock()->add_core_bullet;
+	}
 
 	Random::randomize();
 
