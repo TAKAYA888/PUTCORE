@@ -25,5 +25,5 @@ public:
 private:
 
 	float m_curAlpha = 0.0f;
-	const float m_increaseAlphaPerSec = 0.5f;
+	const float m_increaseAlphaPerSec = 2.5f;
 };

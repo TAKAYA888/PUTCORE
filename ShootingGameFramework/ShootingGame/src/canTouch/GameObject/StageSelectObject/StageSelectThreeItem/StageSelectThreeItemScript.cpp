@@ -76,7 +76,7 @@ void StageSelectThreeItemScript::handleMessage(int eventMessageType, SafetyVoidS
 //’Ç‰Á
 void StageSelectThreeItemScript::Move()
 {
-	if (select == 0)
+	if (select == 0 && counter >= 12)
 	{
 		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
 		{
@@ -86,7 +86,7 @@ void StageSelectThreeItemScript::Move()
 
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 	}
-	else if (select == 1)
+	else if (select == 1 && counter >= 12)
 	{
 		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f))
 		{
@@ -101,7 +101,7 @@ void StageSelectThreeItemScript::Move()
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 
 	}
-	else if (select >= 2)
+	else if (select >= 2 && counter >= 12)
 	{
 
 		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || ( moveVelocity.x < -0.1f && moveVelocity.x > -1.0f))
@@ -113,7 +113,7 @@ void StageSelectThreeItemScript::Move()
 	}
 
 
-	if (select == 2 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
+	if (select == 2 && counter >= 12 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
 	{
 		getComponent<SePlayer>().lock()->playSe();
 		counter = 0;
@@ -126,7 +126,7 @@ void StageSelectThreeItemScript::Move()
 		SceneManager::changeScene(STAGE_THREE_SCENE);
 	}
 
-	if (counter >= 130)
+	if (counter >= 10)
 	{
 		Stealth = 1;
 

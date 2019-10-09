@@ -77,7 +77,7 @@ void StageSelectOneItemScript::handleMessage(int eventMessageType, SafetyVoidSma
 //’Ç‰Á
 void StageSelectOneItemScript::Move()
 {
-    if (select == 0)
+    if (select == 0 && counter >= 12)
 	{
 	    if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x<1.0f))
 	    {
@@ -85,7 +85,7 @@ void StageSelectOneItemScript::Move()
 
 	    }
 	}
-	else if (select == 1)
+	else if (select == 1 && counter >= 12)
 	{
 		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f&& moveVelocity.x < 1.0f))
 		{
@@ -100,7 +100,7 @@ void StageSelectOneItemScript::Move()
 
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 	}
-	else if (select >= 2)
+	else if (select >= 2 && counter >= 12)
 	{
 
 	  if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) ||( moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f))
@@ -112,7 +112,7 @@ void StageSelectOneItemScript::Move()
 	}
 	
 
-	if (select == 0 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE)||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_B_BUTTON)))
+	if (select == 0 && counter >= 12 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE)||GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1,InputType::INPUT_BEGIN,GamePadButtonType::GAME_PAD_B_BUTTON)))
 	{
 		getComponent<SePlayer>().lock()->playSe();
 		counter = 0;
@@ -125,7 +125,7 @@ void StageSelectOneItemScript::Move()
 		SceneManager::changeScene(MAIN_SCENE);
 	}
 
-	if (counter >= 130)
+	if (counter >= 10)
 	{
 		Stealth = 1;
 
