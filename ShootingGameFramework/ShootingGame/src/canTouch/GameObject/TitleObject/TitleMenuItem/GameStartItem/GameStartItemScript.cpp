@@ -87,7 +87,7 @@ void GameStartItemScript::Move()
 {
 	if (counter >= 200 && select != 3 )
 	{
-		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP)|| (moveVelocity.y > 0.1 && moveVelocity.y < 1.0f))
+		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP)||(moveVelocity.y > 0.1 && moveVelocity.y < 1.0f))
 		{
 			select = 1;
 		}
@@ -98,7 +98,7 @@ void GameStartItemScript::Move()
 		}
 	}
 
-	if (select == 1 &&( Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
+	if (select == 1 &&(Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
 	{
 		getComponent<SePlayer>().lock()->playSe();
 		counter = 0;
@@ -107,6 +107,8 @@ void GameStartItemScript::Move()
 
 	else if (counter == 120 && select == 3 )
 	{
+		select = 0;
+		counter = 0;
 		// ƒƒCƒ“ƒV[ƒ“‚É‘JˆÚ‚·‚é
 		SceneManager::changeScene(MAIN_SCENE);
 	}
