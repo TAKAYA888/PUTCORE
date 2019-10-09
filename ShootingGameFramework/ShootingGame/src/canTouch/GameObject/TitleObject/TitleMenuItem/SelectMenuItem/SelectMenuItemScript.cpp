@@ -87,19 +87,19 @@ void SelectMenuItemScript::Move()
 {
 	if (select == 1 || select == 2 || select == 0)
 	{
-		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP) )
+		if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_UP) || (moveVelocity.y > 0.1 && moveVelocity.y < 1.0f))
 		{
 			select = 1;
 			getComponent<Sprite2dDrawer>().lock()->setActive(true);
 		}
-		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.y < -0.1 && moveVelocity.y > -1.0f) || (moveVelocity.y > 0.1 && moveVelocity.y < 1.0f))
+		else if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_DOWN) || (moveVelocity.y < -0.1 && moveVelocity.y > -1.0f))
 		{
 			select = 2;
 			
 		}
 	}
 
-	if (select == 2 && Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON))
+	if (select == 2 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
 	{
 		getComponent<SePlayer>().lock()->playSe();
 		counter = 0;
