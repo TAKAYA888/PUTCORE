@@ -133,7 +133,7 @@ void VirusEnemyScript1_1::move()
 	// 自身の回転角度
 	float rotationDeg = getComponent<Transform2D>().lock()->getWorldRotationDeg();
 
-	if (timer < 2.5f)
+	if (timer < 3.5f)
 	{
 		//プランナー、最後の数、変更可能
 		auto velocity = Vector2(MathHelper::sin(270), MathHelper::cos(270)) * 15.0f;
@@ -141,7 +141,7 @@ void VirusEnemyScript1_1::move()
 		// 移動する
 		getComponent<InertialMovement2D>().lock()->addForce(velocity);
 	}
-	else if (timer < 5.3f)
+	else if (timer < 7.3f)
 	{
 		auto velocity = Vector2(MathHelper::sin(420), MathHelper::cos(420)) * 15.0f;
 
