@@ -342,10 +342,6 @@
     <ClInclude Include="src\dontTouch\ProjectIncludePaths\ProjectIncludePaths.h" />
     <ClInclude Include="src\canTouch\Utility\SceneTypeSetter.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="C:\Users\g019g1017\Desktop\BACK TO TITLE2.png" />
-    <Image Include="F:\BACK TO TITLE2.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
