@@ -68,7 +68,7 @@ struct Player
 
 		// サウンドを再生するコンポーネント
 		player->addComponent(std::make_shared<SePlayer>(
-			INPUT_SE 	// サウンドの名前
+			player_bullet 	// サウンドの名前
 			));
 
 		// プレイヤーのスクリプト

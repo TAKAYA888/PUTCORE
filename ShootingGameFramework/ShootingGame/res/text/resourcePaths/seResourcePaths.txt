@@ -4,3 +4,4 @@
 4,res/sound/se/input.mp3
 5,res/sound/se/enemy_bullet.mp3
 6,res/sound/se/item_get.mp3
+10,res/sound/se/playerbullet.mp3
