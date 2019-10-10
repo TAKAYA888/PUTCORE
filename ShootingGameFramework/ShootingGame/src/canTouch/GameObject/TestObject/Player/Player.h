@@ -46,10 +46,10 @@ struct Player
 			));
 
 		// 円の当たり判定の範囲の描画
-		player->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
-			DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// 描画するレイヤー
-			Color::red				// 当たり判定の範囲の色
-			));
+		//player->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
+		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// 描画するレイヤー
+		//	Color::red				// 当たり判定の範囲の色
+		//	));
 
 		// ２次元画像の描画
 		player->addComponent(std::make_shared<Sprite2dDrawer>(
@@ -69,6 +69,11 @@ struct Player
 		// プレイヤーのスクリプト
 		player->addComponent(std::make_shared<PlayerScript>(
 			50.0f	// 移動速度
+			));
+
+		// 特定のメッセージを受信したら自身を殺すコンポーネントを追加
+		player->addComponent(std::make_shared<ReceiveMessageToSelfDestroyer>(
+			DIE_GAMEPLAY_OBJECT
 			));
 
 		// ゲームオブジェクトを追加

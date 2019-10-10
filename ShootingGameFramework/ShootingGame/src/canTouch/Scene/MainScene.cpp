@@ -43,7 +43,7 @@ void MainScene::start()
 	GameEndChecker::create();
 
 	// ゲームプレイ用のBGMプレイヤーを生成
-	GamePlayBgmPlayer::create();
+	GamePlayBgmPlayer::game_1();
 
 	// スコアを生成
 	Score::create();

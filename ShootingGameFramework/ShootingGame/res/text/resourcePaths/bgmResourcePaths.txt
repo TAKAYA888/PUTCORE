@@ -3,3 +3,6 @@
 3,res/sound/bgm/clear_bgm.mp3
 4,res/sound/bgm/kendo.wav
 5,res/sound/bgm/title_loop.mp3
+11,res/sound/bgm/game_bgm.mp3
+12,res/sound/bgm/game_bgm_2.mp3
+13,res/sound/bgm/game_bgm_3.mp3

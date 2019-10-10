@@ -40,6 +40,11 @@ struct BossTeleportation
 			false
 			));
 
+		// 特定のメッセージを受信したら自身を殺すコンポーネントを追加
+		bossteleportation->addComponent(std::make_shared<ReceiveMessageToSelfDestroyer>(
+			DIE_GAMEPLAY_OBJECT
+			));
+
 		//テレポのスクリプトを生成する
 		bossteleportation->addComponent(std::make_shared<BossTeleportationScript>());
 

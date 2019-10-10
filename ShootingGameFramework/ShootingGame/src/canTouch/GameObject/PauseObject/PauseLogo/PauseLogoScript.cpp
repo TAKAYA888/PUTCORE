@@ -14,4 +14,8 @@ void PauseLogoScript::handleMessage(int eventMessageType, SafetyVoidSmartPtr<std
 	{
 		getGameObject().lock()->destroy();
 	}
+	if (eventMessageType == DIE_GAMEPLAY_OBJECT)
+	{
+		getGameObject().lock()->destroy();
+	}
 }
