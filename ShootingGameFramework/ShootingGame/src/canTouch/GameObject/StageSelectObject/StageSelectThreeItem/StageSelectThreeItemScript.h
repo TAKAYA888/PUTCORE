@@ -47,6 +47,7 @@ private:
 
 	float timer = 0;
 	bool frag = true;
+	bool stickfrag = true;
 	float m_curAlpha = 0.0f;
 	const float m_increaseAlphaPerSec = 1.0f;
 	// ˆÚ“®•ûŒü

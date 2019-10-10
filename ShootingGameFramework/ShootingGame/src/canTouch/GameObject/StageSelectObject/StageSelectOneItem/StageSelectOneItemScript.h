@@ -45,6 +45,7 @@ public:
 
 private:
 
+	bool stickfrag = true;
 	float timer = 0;
 	bool frag = true;
 	float m_curAlpha = 0.0f;
