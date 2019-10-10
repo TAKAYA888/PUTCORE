@@ -252,6 +252,7 @@ void PlayerScript::BoxInputToMove()
 	Vector2 movePostion = curPos + moveVelocity * 9;;
 
 	// プレイヤーのローカルポジションをセット
+	// コントローラーをオンにしたいとき：コメントイン　キーボードオンにしたいとき：コメントアウト
 	//getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
 }
 
