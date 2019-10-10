@@ -126,7 +126,7 @@ void setCoreScript::update()
 
 
 	//‰æ–ÊŠO‚É‚Å‚½‚çÁ‹‚·‚é	
-	if (Postion.x > 1400)
+	if (Postion.x > SCREEN_SIZE_X+150.0f)
 	{
 		getGameObject().lock()->destroy();
 		counter = 0;

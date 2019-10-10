@@ -19,8 +19,11 @@ void StageSelectTwoItemScript::update()
 	}
 	//追加
 	Move();
-	//左スティックの傾きを取得
-	moveVelocity = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
+	if (stickfrag)
+	{
+		//左スティックの傾きを取得
+		moveVelocity = GamePad::getLeftStick(GamePadNumber::GAME_PAD_NUMBER_1);
+	}
 	counter++;
 
 	if (Stealth == 1)
@@ -127,11 +130,15 @@ void StageSelectTwoItemScript::Move()
 
 
 
-	if (select == 1 && counter >= 12 && (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
+	if ((Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
 	{
-		getComponent<SePlayer>().lock()->playSe();
-		counter = 0;
-		select = 3;
+		stickfrag = false;
+		if (select == 1 && counter >= 12)
+		{
+			getComponent<SePlayer>().lock()->playSe();
+			counter = 0;
+			select = 3;
+		}
 	}
 
 	else if (counter == 120 && select == 3)
