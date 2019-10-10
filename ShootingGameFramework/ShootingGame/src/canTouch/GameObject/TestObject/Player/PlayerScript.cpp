@@ -75,7 +75,6 @@ void PlayerScript::update()
 	// “ü—Í‚É‚æ‚é”­ŽË
 	inputToShot();
 
-
 	// ‘Ì—Í‚ª‚OˆÈ‰º‚É‚È‚Á‚½‚ç
 	if (m_curHp <= 0)
 	{

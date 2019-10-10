@@ -68,6 +68,11 @@ struct Core
 			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
 			));
 
+		// サウンドを再生するコンポーネント
+		core->addComponent(std::make_shared<SePlayer>(
+			player_bullet 	// サウンドの名前
+			));
+
 		// プレイヤーのスクリプト
 		core->addComponent(std::make_shared<CoreScript>(
 			));

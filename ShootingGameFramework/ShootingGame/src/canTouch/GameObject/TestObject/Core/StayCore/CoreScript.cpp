@@ -32,6 +32,10 @@ void CoreScript::update()
 		getComponent<CoreScript>().lock()->setActive(false);
 		CoreCoolTime = 10.5f;
 		DrawTime = 0;
+
+		// SE‚ğÄ¶
+		getComponent<SePlayer>().lock()->playSe();
+
 	}
 	else
 	{
