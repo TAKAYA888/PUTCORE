@@ -273,6 +273,9 @@ void Boss3Script::Shot1()
 		auto initVelocity = Vector2(MathHelper::sin(result + shotAngle1[i] + 180), MathHelper::cos(result + shotAngle1[i] + 180)) * 512.0f;
 
 		VirusEnemyBullet::create(Boss3Pos, initVelocity);
+
+		//íeî≠éÀÇÃSE
+		getComponent<SePlayer>().lock()->playSe();
 	}
 }
 
@@ -306,6 +309,9 @@ void Boss3Script::Shot2()
 
 		//éÀèo
 		VirusEnemyBullet::create(Boss3Pos, initVelocity);
+
+		//íeî≠éÀÇÃSE
+		getComponent<SePlayer>().lock()->playSe();
 	}
 }
 

@@ -43,6 +43,10 @@ struct  BossCore2
 			Vector2(64.0f, 64.0f)	// 衝突判定の大きさ
 			));
 
+		BossCore2->addComponent(std::make_shared<SePlayer>(
+			enemy_bullet 	// サウンドの名前
+			));
+
 		//// 長方形の当たり判定の範囲の描画
 		//BossCore2->addComponent(std::make_shared<RectColliderWireFrameDrawer>(
 		//	DrawPriority::DRAW_PRIORITY_DEBUG_FLAME,	// 描画するレイヤー

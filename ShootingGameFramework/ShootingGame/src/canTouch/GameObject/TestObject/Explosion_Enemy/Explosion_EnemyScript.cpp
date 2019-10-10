@@ -6,7 +6,6 @@ Explosion_EnemyScript::Explosion_EnemyScript()
 
 void Explosion_EnemyScript::start()
 {
-	getComponent<SePlayer>().lock()->playSe();
 }
 
 void Explosion_EnemyScript::update()

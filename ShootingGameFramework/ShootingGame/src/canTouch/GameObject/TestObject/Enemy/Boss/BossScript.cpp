@@ -221,5 +221,8 @@ void BossScript::Shot()
 		// “G‚Ì’Êí’e‚ğoŒ»
 		VirusEnemyBullet::create(spawnPos, initVelocity);
 
+		//’e”­Ë‚ÌSE
+		getComponent<SePlayer>().lock()->playSe();
+
 	}
 }

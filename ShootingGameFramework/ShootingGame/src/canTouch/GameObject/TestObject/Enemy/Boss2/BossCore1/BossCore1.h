@@ -56,6 +56,11 @@ struct  BossCore1
 			Vector2(0.5f, 0.5f)		// 画像の中心（割合）
 			));
 
+		// サウンドを再生するコンポーネント
+		BossCore1->addComponent(std::make_shared<SePlayer>(
+			enemy_bullet 	// サウンドの名前
+			));
+
 		BossCore1->addComponent(std::make_shared<AnimatedSprite2d>(
 			IMAGE_VIRUS_ENEMY_ONE,
 			0,

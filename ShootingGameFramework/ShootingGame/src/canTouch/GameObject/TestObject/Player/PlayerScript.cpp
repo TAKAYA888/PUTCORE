@@ -253,7 +253,7 @@ void PlayerScript::BoxInputToMove()
 
 	// プレイヤーのローカルポジションをセット
 	// コントローラーをオンにしたいとき：コメントイン　キーボードオンにしたいとき：コメントアウト
-	//getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
+	getComponent<Transform2D>().lock()->setLocalPosition(movePostion);
 }
 
 // 入力による回転
@@ -282,5 +282,8 @@ void PlayerScript::inputToShot()
 
 		// プレイヤーの弾を出現
 		PlayerBullet::create(bulletPos, initVelocity);
+
+		// SEを再生
+		//getComponent<SePlayer>().lock()->playSe();
 	}
 }

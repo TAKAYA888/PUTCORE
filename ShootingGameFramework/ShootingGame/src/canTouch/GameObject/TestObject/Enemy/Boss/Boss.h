@@ -42,6 +42,11 @@ struct Boss
 			Vector2(110.0f, 100.0f)	// 衝突判定の大きさ
 			));
 
+		// サウンドを再生するコンポーネント
+		Boss->addComponent(std::make_shared<SePlayer>(
+			enemy_bullet 	// サウンドの名前
+			));
+
 		// ２次元画像の描画
 		Boss->addComponent(std::make_shared<Sprite2dDrawer>(
 			DrawPriority::DRAW_PRIORITY_ENEMY,// 描画するレイヤー

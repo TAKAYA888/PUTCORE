@@ -30,6 +30,8 @@ void Boss2Script::update()
 			auto initVelocity1 = Vector2(MathHelper::sin(240.0f + i), MathHelper::cos(240.0f + i)) * 512.0f;
 			//弾の生成
 			VirusEnemyBullet::create(nowPos, initVelocity1);
+			//弾発射のSE
+			getComponent<SePlayer>().lock()->playSe();
 		}
 		//タイマーのリセット
 		timer = 0;

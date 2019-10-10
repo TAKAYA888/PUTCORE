@@ -19,4 +19,7 @@ enum SeId
 
 	//アイテムゲットのSE
 	item_get = 6,
+
+	//プレーヤーバレットのSE
+	player_bullet = 10
 };

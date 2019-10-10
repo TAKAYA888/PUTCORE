@@ -80,6 +80,9 @@ void BossCore2Script::update()
 		VirusEnemyBullet::create(nowPos, initVelocity1);
 		VirusEnemyBullet::create(nowPos, initVelocity2);
 		m_shotTimer = 0.5f;
+
+		//’e”­ŽË‚ÌSE
+		getComponent<SePlayer>().lock()->playSe();
 	}
 
 }

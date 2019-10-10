@@ -66,6 +66,11 @@ struct Player
 			true				// アニメーションをループさせるか？
 			));
 
+		// サウンドを再生するコンポーネント
+		player->addComponent(std::make_shared<SePlayer>(
+			INPUT_SE 	// サウンドの名前
+			));
+
 		// プレイヤーのスクリプト
 		player->addComponent(std::make_shared<PlayerScript>(
 			50.0f	// 移動速度

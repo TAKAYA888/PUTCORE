@@ -42,6 +42,11 @@ struct Boss3
 		//	Color::red				// 当たり判定の範囲の色
 		//	));
 
+		// サウンドを再生するコンポーネント
+		Boss3->addComponent(std::make_shared<SePlayer>(
+			enemy_bullet 	// サウンドの名前
+			));
+
 		// ２次元画像の描画
 		Boss3->addComponent(std::make_shared<Sprite2dDrawer>(
 			DrawPriority::DRAW_PRIORITY_ENEMY,// 描画するレイヤー
