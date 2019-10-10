@@ -77,7 +77,7 @@ void MyGame::update()
 
 	if (Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_ESCAPE)) MyGame::exitGame();
 
-	if (GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_PUSHING, GamePadButtonType::GAME_PAD_BACK_BUTTON) && GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_PUSHING, GamePadButtonType::GAME_PAD_BACK_BUTTON))
+	if (GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_PUSHING, GamePadButtonType::GAME_PAD_BACK_BUTTON) && GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_PUSHING, GamePadButtonType::GAME_PAD_START_BUTTON))
 	{
 		// ゲームリセット
 		SceneManager::changeScene(LOAD_SCENE);
