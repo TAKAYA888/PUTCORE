@@ -223,6 +223,5 @@ void BossScript::Shot()
 
 		//’e”­ŽË‚ÌSE
 		getComponent<SePlayer>().lock()->playSe();
-
 	}
 }

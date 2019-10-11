@@ -33,5 +33,5 @@
 
 int main()
 {
-	return MyGame(Vector2(SCREEN_SIZE), false).run();
+	return MyGame(Vector2(SCREEN_SIZE), true).run();
 }
