@@ -5,6 +5,7 @@
 #include "../../../TestObject/CoreBullet/CoreBullet.h"
 #include "../../Player/PlayerScript.h"
 
+#include "../../Explosion_Enemy/Explosion_Enemy.h"
 #include "../../Explosion/Explosion.h"
 
 #include <iostream>
@@ -141,7 +142,7 @@ void setCoreScript::onCollisionEnter(GameObjectPtr other)
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_ENEMY_BULLET || other.lock()->getTag() == GAME_OBJECT_TAG_ENEMY || other.lock()->getTag() == GAME_OBJECT_TAG_ENEMY_BOSS)
 	{
 		// ”š”­‚ð¶¬‚·‚é
-		Explosion::create(
+		Explosion_Enemy::create(
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 
@@ -156,7 +157,7 @@ void setCoreScript::onCollisionStay(GameObjectPtr other)
 	if (other.lock()->getTag() == GAME_OBJECT_TAG_ENEMY_BULLET || other.lock()->getTag() == GAME_OBJECT_TAG_ENEMY || other.lock()->getTag() == GAME_OBJECT_TAG_ENEMY_BOSS)
 	{
 		// ”š”­‚ð¶¬‚·‚é
-		Explosion::create(
+		Explosion_Enemy::create(
 			other.lock()->getComponent<Transform2D>().lock()->getWorldPosition()
 		);
 
