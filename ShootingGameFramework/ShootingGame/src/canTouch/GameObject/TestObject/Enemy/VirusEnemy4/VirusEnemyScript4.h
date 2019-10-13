@@ -45,7 +45,7 @@ private:
 private:
 
 	// ‘Ì—Í
-	int m_hp{ 2 };
+	int m_hp{ 3 };
 
 	float timer;
 

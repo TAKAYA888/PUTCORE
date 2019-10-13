@@ -48,7 +48,7 @@ private:
 private:
 
 	// ‘Ì—Í
-	int m_hp{ 1 };
+	int m_hp{ 6 };
 
 	// ’e‚ð”­ŽË‚·‚éŠÔŠu
 	const float m_shotInterval{ 1.0f };
