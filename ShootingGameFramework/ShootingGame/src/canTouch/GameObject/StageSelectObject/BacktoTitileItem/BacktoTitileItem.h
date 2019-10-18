@@ -56,7 +56,6 @@ struct BacktoTitileItem
 			3.0f					// 減速率
 			));
 
-
 		// ゲーム開始のメニュー項目のスクリプト
 		//stageSelectOneItem->addComponent(std::make_shared<GameStartItemScript>());
 
@@ -65,10 +64,7 @@ struct BacktoTitileItem
 			32.0f	// 移動速度
 			));
 
-
 		// ゲームオブジェクトを追加
 		GameObjectManager::addGameObject(backtoTitileItem);
-
-
 	}
 };

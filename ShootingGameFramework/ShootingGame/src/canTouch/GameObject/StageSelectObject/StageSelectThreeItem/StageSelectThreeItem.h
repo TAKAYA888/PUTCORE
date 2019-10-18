@@ -26,8 +26,6 @@ struct StageSelectThreeItem
 			0.0f					// 回転（度数法）
 			));
 
-	
-
 		// ２次元画像の描画
 		stageSelectThreeItem->addComponent(std::make_shared<Sprite2dDrawer>(
 			DrawPriority::DRAW_PRIORITY_UI - 0.1f,	// 描画するレイヤー
@@ -46,16 +44,12 @@ struct StageSelectThreeItem
 			3.0f					// 減速率
 			));
 
-
 		// プレイヤーのスクリプト（追加）
 		stageSelectThreeItem->addComponent(std::make_shared<StageSelectThreeItemScript>(
 			32.0f	// 移動速度
 			));
 
-
 		// ゲームオブジェクトを追加
 		GameObjectManager::addGameObject(stageSelectThreeItem);
-
-
 	}
 };

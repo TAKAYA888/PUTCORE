@@ -6,33 +6,27 @@
 #include "../GameObject/StageSelectObject/StageSelectThreeItem/StageSelectThreeItem.h"
 #include "../GameObject/StageSelectObject/BacktoTitileItem/BacktoTitileItem.h"
 
-
-
-
-
 SelectStageScene::SelectStageScene()
 {
-
 }
 
 // シーンの開始時に呼ばれる
 void SelectStageScene::start()
 {
-	//背景～この手紙～♪よんでーいるあなたはー♪
+	//背景～この手紙～♪よんでーいるあなたはー♪どこでなにをして～いるのでしょ～♪
 	StageSelectLogo::create();
 
-	//ステージ１のボタン
+	//ステージ１のボタン()
 	StageSelectOneItem::create(Vector2(SCREEN_SIZE.x / 5, 700.0f));
 
-	//ステージ２の牡丹
+	//ステージ２の牡丹()
 	StageSelectTwoItem::create(Vector2(SCREEN_SIZE.x / 2, 700.0f));
 
-	//ステージ３の釦
-	StageSelectThreeItem::create(Vector2(SCREEN_SIZE.x / 1,800.0f));	
+	//ステージ３の釦()
+	StageSelectThreeItem::create(Vector2(SCREEN_SIZE.x / 1, 800.0f));
 
-	//タイトルに戻るボタン
-	BacktoTitileItem::create(Vector2(SCREEN_SIZE.x / 2,500.0f));
-
+	//タイトルに戻るボトン
+	BacktoTitileItem::create(Vector2(SCREEN_SIZE.x / 2, 500.0f));
 }
 
 // 毎フレーム呼ばれる

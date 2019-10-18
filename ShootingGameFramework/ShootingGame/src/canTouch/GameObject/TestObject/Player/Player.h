@@ -23,7 +23,7 @@ struct Player
 		// 2次元の座標のクランパー
 		player->addComponent(std::make_shared<PositionClamper>(
 			Vector2(95, 60),			// 最小座標
-			Vector2(SCREEN_SIZE_X - 70.0f, SCREEN_SIZE_Y - 80.0f)				// 最大座標
+			Vector2(SCREEN_SIZE_X - 70.0f, SCREEN_SIZE_Y - 80.0f)	// 最大座標
 			));
 
 		// ２次元座標

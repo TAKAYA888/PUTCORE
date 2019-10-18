@@ -97,7 +97,7 @@ void Main2Scene::update()
 			// ŽžŠÔ‚ÌŒo‰ß‘¬“x‚ð1‚É‚·‚é
 			GameObjectManager::findGameObjectWithTag(GAME_OBJECT_TAG_PLAYER).lock()->getComponent<PlayerScript>().lock()->setActive(true);
 			// PlayerScript‚ð—LŒø‰»
-			TktkTime::setTimeScale(1.0f);
+			TktkTime::setTimeScale(4.0f);
 		}
 	}
 }

@@ -69,7 +69,6 @@ void StageSelectOneItemScript::onCollisionEnter(GameObjectPtr other)
 // Õ“Ë’†‚ÅŒÄ‚Î‚ê‚é
 void StageSelectOneItemScript::onCollisionStay(GameObjectPtr other)
 {
-
 }
 
 // Õ“ËI—¹‚ÅŒÄ‚Î‚ê‚é
@@ -88,15 +87,14 @@ void StageSelectOneItemScript::handleMessage(int eventMessageType, SafetyVoidSma
 //’Ç‰Á
 void StageSelectOneItemScript::Move()
 {
-    if (select == 0 && counter >= 12)
+	if (select == 0 && counter >= 12)
 	{
-	    if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x<1.0f) && frag)
-	    {
-		 select = 1;
-		 frag = false;
-		 timer = 0.5f;
-	    }
-
+		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_RIGHT) || (moveVelocity.x > 0.1f && moveVelocity.x < 1.0f) && frag)
+		{
+			select = 1;
+			frag = false;
+			timer = 0.5f;
+		}
 	}
 	else if (select == 1 && counter >= 12)
 	{
@@ -105,7 +103,6 @@ void StageSelectOneItemScript::Move()
 			select = 2;
 			frag = false;
 			timer = 0.5f;
-
 		}
 		else if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || (moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f) && frag)
 		{
@@ -113,24 +110,20 @@ void StageSelectOneItemScript::Move()
 			frag = false;
 			timer = 0.5f;
 		}
-	
 
 		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 	}
 	else if (select >= 2 && counter >= 12)
 	{
+		if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) || (moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f) && frag)
+		{
+			select = 1;
+			frag = false;
+			timer = 0.5f;
+		}
 
-	  if (Keyboard::getState(InputType::INPUT_BEGIN, KeyboardKeyType::KEYBOARD_LEFT) ||( moveVelocity.x < -0.1f&& moveVelocity.x > -1.0f) && frag)
-	  {
-		 select = 1;
-		 frag = false;
-		 timer = 0.5f;
-	  }
-
-	  getComponent<Sprite2dDrawer>().lock()->setActive(true);
+		getComponent<Sprite2dDrawer>().lock()->setActive(true);
 	}
-
-
 
 	if ((Keyboard::getState(InputType::INPUT_PUSHING, KeyboardKeyType::KEYBOARD_SPACE) || GamePad::getState(GamePadNumber::GAME_PAD_NUMBER_1, InputType::INPUT_BEGIN, GamePadButtonType::GAME_PAD_B_BUTTON)))
 	{
@@ -139,7 +132,7 @@ void StageSelectOneItemScript::Move()
 		{
 			getComponent<SePlayer>().lock()->playSe();
 			counter = 0;
-			select = 3;					
+			select = 3;
 		}
 	}
 
@@ -162,7 +155,6 @@ void StageSelectOneItemScript::Move()
 		moveVelocity = Vector2::normalize(moveVelocity);
 
 		getComponent<InertialMovement2D>().lock()->addForce(moveVelocity * m_moveSpeed);
-
 
 		if (selfPos.y > SCREEN_SIZE.y - 250)
 		{
